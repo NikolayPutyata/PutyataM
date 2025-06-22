@@ -1,0 +1,161 @@
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+
+function Contact() {
+  const initialValues = {
+    name: "",
+    phone: "",
+    message: "",
+  };
+
+  const validationSchema = Yup.object({
+    name: Yup.string().required("Введіть ім’я"),
+    phone: Yup.string().required("Введіть телефон"),
+    message: Yup.string(),
+  });
+
+  const handleSubmit = (values, { resetForm }) => {
+    console.log("Заявка:", values);
+    resetForm();
+  };
+
+  return (
+    <section
+      id="contact"
+      className="py-28 px-6 border-t border-gray-200 bg-gray-100"
+    >
+      <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden grid md:grid-cols-2">
+        {/* Форма */}
+        <div className="p-8 md:p-12">
+          <h2 className="text-3xl font-light mb-6 text-gray-800">
+            Залишити заявку
+          </h2>
+          <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={handleSubmit}
+          >
+            <Form className="flex flex-col gap-4 text-left">
+              <div>
+                <Field name="name">
+                  {({ field, meta }) => (
+                    <div>
+                      <label className="block text-sm font-medium mb-1">
+                        Ім’я
+                      </label>
+                      <input
+                        {...field}
+                        type="text"
+                        className={`w-full rounded-md px-4 py-2 border ${
+                          meta.touched && meta.error
+                            ? "border-red-500"
+                            : "border-gray-300"
+                        } focus:outline-none focus:ring-1 focus:ring-gray-400`}
+                      />
+                    </div>
+                  )}
+                </Field>
+              </div>
+
+              <div>
+                <Field name="phone">
+                  {({ field, meta }) => (
+                    <div>
+                      <label className="block text-sm font-medium mb-1">
+                        Телефон
+                      </label>
+                      <input
+                        {...field}
+                        type="tel"
+                        className={`w-full rounded-md px-4 py-2 border ${
+                          meta.touched && meta.error
+                            ? "border-red-500"
+                            : "border-gray-300"
+                        } focus:outline-none focus:ring-1 focus:ring-gray-400`}
+                      />
+                    </div>
+                  )}
+                </Field>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">
+                  Повідомлення
+                </label>
+                <Field
+                  name="message"
+                  as="textarea"
+                  rows="4"
+                  className="w-full border border-gray-300 rounded-md px-4 py-2 resize-none focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-gray-400"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="bg-neutral-900 text-white py-2 rounded-md hover:bg-neutral-800 transition"
+              >
+                Надіслати
+              </button>
+            </Form>
+          </Formik>
+        </div>
+
+        {/* Правий блок з логотипом */}
+        <div
+          className="hidden md:flex flex-col justify-between bg-cover bg-center relative rounded-xl text-center text-white overflow-hidden"
+          style={{ backgroundImage: "url('/images/contact-bg.jpg')" }} // змінити на свій шлях
+        >
+          {/* затемнення поверх фону */}
+          <div className="absolute inset-0 bg-neutral-500"></div>
+
+          <div className="relative z-10 p-10 flex flex-col h-full w-full justify-between">
+            <div>
+              <h3 className="text-4xl font-bold mb-6 leading-snug">
+                ЗАЛИШАЙ ЗАЯВКУ НА <br />
+                БЕЗКОШТОВНУ КОНСУЛЬТАЦІЮ
+              </h3>
+            </div>
+
+            <div>
+              <p className="text-2xl text-gray-200 font-medium">
+                ДЕЛЕГУЙ РУТИННУ РОБОТУ — ПРОФЕСІОНАЛАМ!
+              </p>
+            </div>
+
+            <div className="mt-10 flex justify-center items-center gap-6">
+              <a href="#">
+                <img
+                  src="/tg.png"
+                  alt="Telegram"
+                  width={48}
+                  height={48}
+                  className="hover:scale-110 transition"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="/wa.png"
+                  alt="WhatsApp"
+                  width={48}
+                  height={48}
+                  className="hover:scale-110 transition"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="/viber.png"
+                  alt="Viber"
+                  width={48}
+                  height={48}
+                  className="hover:scale-110 transition"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Contact;
