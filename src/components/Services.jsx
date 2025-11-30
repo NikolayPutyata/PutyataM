@@ -3,17 +3,32 @@ function Services() {
     {
       title: "Юридичний супровід",
       items: ["Контракти", "Суди", "Захист"],
-      image: "/images/legal.jpg",
+      image: "suprovid.jpg",
     },
     {
       title: "Бухгалтерія",
-      items: ["Звітність", "Облік"],
-      image: "/images/accounting.jpg",
+      items: ["Звітність", "Облік", "Введення"],
+      image: "buh1.jpg",
     },
     {
       title: "Реєстрація бізнесу",
       items: ["ФОП", "ТОВ"],
-      image: "/images/business.jpg",
+      image: "reg1.jpg",
+    },
+    {
+      title: "Отримання грантів",
+      items: ["Для ветеранів", "На бізнес"],
+      image: "grant1.jpg",
+    },
+    {
+      title: "Договори",
+      items: ["Підготовка", "Аналіз", "Консультація"],
+      image: "dogovvir.jpg",
+    },
+    {
+      title: "Отримання ліцензій",
+      items: ["Отримання", "Продовження"],
+      image: "lic1.jpg",
     },
   ];
 

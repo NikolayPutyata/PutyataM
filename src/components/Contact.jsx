@@ -133,10 +133,10 @@ function Contact() {
         {/* Правий блок з логотипом */}
         <div
           className="hidden md:flex flex-col justify-between bg-cover bg-center relative rounded-xl text-center text-white overflow-hidden"
-          style={{ backgroundImage: "url('/images/contact-bg.jpg')" }} // змінити на свій шлях
+          style={{ backgroundImage: "url('/form1.jpg')" }} // змінити на свій шлях
         >
           {/* затемнення поверх фону */}
-          <div className="absolute inset-0 bg-neutral-500"></div>
+          <div className="absolute inset-0 bg-neutral-800/50"></div>
 
           <div className="relative z-10 p-10 flex flex-col h-full w-full justify-between">
             <div>
