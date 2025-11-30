@@ -19,21 +19,29 @@ const TM = () => {
 
     {/* LEFT: Price + Order */}
     <div className="bg-white shadow-xl rounded-2xl p-10 flex flex-col justify-between h-full">
-      <div className="flex flex-col gap-3">
-        <h2 className="text-3xl font-bold text-gray-800 mb-4">Вартість реєстрації</h2>
-        <p className="text-5xl font-semibold text-green-600 mb-4">від 2900 ₴</p>
-        <p className="text-gray-600 text-lg mb-6">
-          Ціна залежить від кількості класів МКТП та формату подачі заявки.
-          Ми підберемо найкращий пакет саме для вашого бізнесу.
-        </p>
-        <a
-          href="#contact"
-          className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold"
-        >
-          Зареєструвати торгову марку
-        </a>
-      </div>
-    </div>
+  <div className="flex flex-col gap-3">
+    <h2 className="text-3xl font-bold text-gray-800 mb-4">Вартість реєстрації</h2>
+
+    {/* Цена с маленьким текстом для держ.зборів */}
+    <p className="text-5xl font-semibold text-green-800 mb-4 flex items-end gap-2">
+      4000 ₴
+      <span className="text-lg font-normal text-gray-500">+ держ.збори</span>
+    </p>
+
+    <p className="text-gray-600 text-lg mb-6">
+      Ціна залежить від кількості класів МКТП та формату подачі заявки.
+      Ми підберемо найкращий пакет саме для вашого бізнесу.
+    </p>
+
+    <a
+      href="#contact"
+      className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold"
+    >
+      Зареєструвати торгову марку
+    </a>
+  </div>
+</div>
+
 
     {/* RIGHT: Included Services */}
     <div className="bg-white shadow-xl rounded-2xl p-10 flex flex-col h-full">
@@ -123,20 +131,7 @@ const TM = () => {
         </div>
       </section>
 
-      {/* ===== СКІЛЬКИ ТРИВАЄ ===== */}
-      <section className="pb-16">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="card bg-white shadow-md p-8 rounded-2xl">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">Скільки триває реєстрація?</h2>
-
-            <ul className="space-y-3 text-lg text-gray-600">
-              <li>⏳ Стандартна процедура — <strong>18—22 місяці</strong></li>
-              <li>⚡ Прискорена реєстрація — <strong>6–7 місяців</strong></li>
-              <li>📄 Ми супроводжуємо весь процес: від підготовки заявки до отримання свідоцтва.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      
 
       {/* ===== ПЕРЕВАГИ ===== */}
       <section className="pb-16">
