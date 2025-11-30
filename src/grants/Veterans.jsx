@@ -1,7 +1,11 @@
+import Contact from "../components/Contact"
 
 const Veterans = () => {
   return (
-    <div>
+    <div className="bg-gray-50 min-h-screen">
+   
+      {/* Form Section */}
+      <Contact />
       
     </div>
   )

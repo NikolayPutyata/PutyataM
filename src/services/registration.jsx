@@ -1,8 +1,12 @@
 import React from 'react'
+import Contact from '../components/Contact'
 
 const registration = () => {
   return (
-    <div>
+    <div className="bg-gray-50 min-h-screen">
+   
+      {/* Form Section */}
+      <Contact />
       
     </div>
   )

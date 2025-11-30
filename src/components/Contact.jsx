@@ -79,7 +79,7 @@ function Contact() {
 
         <div>
           <label className="block text-sm font-medium mb-1">
-            Повідомлення
+            Ваше запитання
           </label>
           <Field
             name="message"
