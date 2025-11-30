@@ -20,12 +20,10 @@ function Services() {
   return (
     <section
       id="services"
-      className="py-28 px-6 border-t border-gray-200 bg-gray-50"
+      className="py-10 px-6 md:py-10"
     >
-      <div className="max-w-6xl mx-auto bg-white p-12 rounded-xl shadow-md">
-        <h2 className="text-3xl font-light text-center mb-16 text-gray-800">
-          Послуги
-        </h2>
+      <div className="max-w-6xl mx-auto  rounded-xl">
+        
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, i) => (
             <div

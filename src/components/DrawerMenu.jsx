@@ -1,42 +1,59 @@
+import { Link } from "react-router-dom";
+
 function DrawerMenu() {
+  const menu = [
+    {
+      label: "Юридичні послуги",
+      items: [
+        { name: "Реєстрація ФОП/ТОВ", path: "/services/registration" },
+        { name: "Зміни ФОП/ТОВ", path: "/services/changes" },
+        { name: "Ліквідація ФОП/ТОВ", path: "/services/liquidation" },
+        { name: "Реєстрація ТМ", path: "/services/tm" },
+        { name: "Реєстрація потужностей", path: "/services/power" },
+        { name: "Отримання/продовження ліцензій", path: "/services/license" },
+        { name: "Індивідуальна консультація", path: "/services/consultation" },
+        { name: "Договори", path: "/services/contracts" },
+      ],
+    },
+    {
+      label: "Бухгалтерія",
+      items: [
+        { name: "Ведення ФОП", path: "/accounting/fop" },
+        { name: "Реєстрація РРО/ПРРО", path: "/accounting/rro" },
+        { name: "Аудит", path: "/accounting/audit" },
+      ],
+    },
+    {
+      label: "Гранти",
+      items: [
+        { name: "На власну справу", path: "/grants/business" },
+        { name: "Для ветеранів", path: "/grants/veterans" },
+      ],
+    },
+    {
+      label: "Нотаріус",
+      items: [
+        { name: "Довіреність", path: "/notary/power" },
+        { name: "Завірення документів", path: "/notary/certification" },
+        { name: "Реєстраційні дії", path: "/notary/registration" },
+      ],
+    },
+  ];
+
   return (
     <div className="drawer-side z-50">
       <label htmlFor="nav-drawer" className="drawer-overlay"></label>
+
       <ul className="menu gap-3 p-6 w-64 min-h-full bg-white text-base-content">
-        {[
-          {
-            label: "Юридичні послуги",
-            items: [
-              "Реєстрація ФОП/ТОВ",
-              "Зміни ФОП/ТОВ",
-              "Ліквідація ФОП/ТОВ",
-              "Реєстрація ТМ",
-              "Реєстрація потужностей",
-              "Отримання/продовження ліцензій",
-              "Індивідуальна консультація",
-              "Договори",
-            ],
-          },
-          {
-            label: "Бухгалтерія",
-            items: ["Ведення ФОП", "Реєстрація РРО/ПРРО", "Аудит"],
-          },
-          {
-            label: "Гранти",
-            items: ["На власну справу", "Для ветеранів"],
-          },
-          {
-            label: "Нотаріус",
-            items: ["Довіреність", "Завірення документів", "Реєстраційні дії"],
-          },
-        ].map((section, index) => (
+        {menu.map((section, index) => (
           <li key={index}>
             <details>
               <summary className="uppercase">{section.label}</summary>
+
               <ul className="flex flex-col gap-1 mt-2">
                 {section.items.map((item, i) => (
                   <li key={i}>
-                    <a href="#services">{item}</a>
+                    <Link to={item.path}>{item.name}</Link>
                   </li>
                 ))}
               </ul>
@@ -45,19 +62,21 @@ function DrawerMenu() {
         ))}
 
         <li>
-          <a href="#contact" className="uppercase">
+          <Link to="/contacts" className="uppercase">
             Контакти
-          </a>
+          </Link>
         </li>
+
         <li>
-          <a href="#about" className="uppercase">
+          <Link to="/about" className="uppercase">
             Про нас
-          </a>
+          </Link>
         </li>
+
         <li className="uppercase bg-neutral-900 rounded-4xl hover:bg-neutral-800 px-2 py-1 mt-5 text-white">
-          <a href="#about" className="flex justify-center">
+          <Link to="/feedback" className="flex justify-center">
             Зворотній зв'язок
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
