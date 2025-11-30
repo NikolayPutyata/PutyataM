@@ -109,7 +109,7 @@ const TM = () => {
 
       {/* ===== НАВІЩО ПОТРІБНА ТМ ===== */}
       <section className="pb-16">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">
             Навіщо потрібна реєстрація торгової марки?
           </h2>
@@ -135,7 +135,7 @@ const TM = () => {
 
       {/* ===== ПЕРЕВАГИ ===== */}
       <section className="pb-16">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">
             Переваги реєстрації ТМ
           </h2>
@@ -159,7 +159,7 @@ const TM = () => {
 
       {/* ===== ФРАНЧАЙЗИНГ ===== */}
       <section className="pb-20">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="card bg-white shadow-md p-8 rounded-2xl">
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
               Франчайзинг через торговельну марку
