@@ -1,15 +1,127 @@
-import React from 'react'
-import Contact from '../components/Contact'
+import Contact from "../components/Contact";
 
 const Changes = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
-   
+
+      {/* Hero Section */}
+      <section className="bg-gray-50 py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-12 text-gray-800">
+            Внесення змін до ФОП або ТОВ
+          </h1>
+
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* ФОП */}
+            <div className="bg-white shadow-lg rounded-xl p-8 flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+              <h2 className="text-2xl font-bold mb-4 text-gray-800">ФОП</h2>
+              <p className="text-gray-600 mb-6">
+                Допомагаємо швидко та без зайвих клопотів внести зміни до вашого ФОП: зміна адреси, видів діяльності, системи оподаткування та ін.
+              </p>
+              <p className="text-3xl font-semibold text-green-600 mb-6">800 ₴</p>
+              <p className="text-gray-500 mb-6">
+                Включає всі супровідні документи та консультації.
+              </p>
+            </div>
+
+            {/* ТОВ */}
+            <div className="bg-white shadow-lg rounded-xl p-8 flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+              <h2 className="text-2xl font-bold mb-4 text-gray-800">ТОВ</h2>
+              <p className="text-gray-600 mb-6">
+                Повний супровід внесення змін у статут, керівництво, види діяльності та адресу ТОВ.
+              </p>
+              <div className="flex gap-2 justify-center"><span>Від</span><p className="text-3xl font-semibold text-green-600">1500 ₴</p></div>
+              <p className="text-gray-500 mb-6">
+                Включає перевірку документів та подачу в державні органи.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Info Section */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img
+              src="/business-changes.png"
+              alt="Внесення змін до ФОП/ТОВ"
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+          <div>
+            <h2 className="text-3xl font-semibold mb-4 text-gray-900">
+              Чому обирають нас
+            </h2>
+            <ul className="list-disc list-inside text-gray-600 space-y-2">
+              <li>Повний супровід внесення змін до ФОП та ТОВ</li>
+              <li>Швидке оформлення та подача документів</li>
+              <li>Консультації з юридичних та податкових питань</li>
+              <li>Контроль правильності заповнення всіх форм</li>
+              <li>Прозорі тарифи без прихованих платежів</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Common Mistakes Section */}
+      <section className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">
+            Найпоширеніші помилки при внесенні змін
+          </h2>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="card bg-white shadow-lg p-6 rounded-lg transform transition">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-9 flex justify-center items-center bg-red-100 rounded-full text-red-600 text-xl font-bold">
+                  1
+                </div>
+                <h3 className="ml-4 text-xl font-semibold text-gray-800">
+                  Неправильно заповнені документи
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                Помилки у формах можуть призвести до відмови або затримки внесення змін.
+              </p>
+            </div>
+
+            <div className="card bg-white shadow-lg p-6 rounded-lg transform transition">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-9 flex justify-center items-center bg-red-100 rounded-full text-red-600 text-xl font-bold">
+                  2
+                </div>
+                <h3 className="ml-4 text-xl font-semibold text-gray-800">
+                  Вибір неправильного виду зміни
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                Некоректний вид зміни може ускладнити облік та призвести до штрафів.
+              </p>
+            </div>
+
+            <div className="card bg-white shadow-lg p-6 rounded-lg transform transition">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-9 flex justify-center items-center bg-red-100 rounded-full text-red-600 text-xl font-bold">
+                  3
+                </div>
+                <h3 className="ml-4 text-xl font-semibold text-gray-800">
+                  Пропущені строки подачі документів
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                Невчасна подача може затримати внесення змін і спровокувати штрафи.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Form Section */}
       <Contact />
-      
-    </div>
-  )
-}
 
-export default Changes
+    </div>
+  );
+};
+
+export default Changes;
