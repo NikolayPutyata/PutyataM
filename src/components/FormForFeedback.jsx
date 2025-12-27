@@ -45,6 +45,7 @@ const FormForFeedback = () => {
                   onSubmit={(values, { resetForm }) => {
                     console.log(values);
                     resetForm();
+                    document.getElementById("my_modal_2")?.close();
                   }}
                 >
                   {({ isSubmitting, touched, errors }) => (
