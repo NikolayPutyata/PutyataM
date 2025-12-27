@@ -25,7 +25,7 @@ const FOP = () => {
         <p className="text-gray-500 mb-6">
           Включає всі послуги та консультації для реєстрації ФОП.
         </p>
-        <button className="btn btn-neutral" onClick={()=>document.getElementById('my_modal_2').showModal()}>Зареєструвати ФОП</button>
+        <button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Зареєструвати ФОП</button>
          
         
       </div>
@@ -40,7 +40,7 @@ const FOP = () => {
         <p className="text-gray-500 mb-6">
           Включає всі необхідні документи та консультації.
         </p>
-        <button className="btn btn-neutral" onClick={()=>document.getElementById('my_modal_2').showModal()}>Зареєструвати ТОВ</button>
+        <button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Зареєструвати ТОВ</button>
       </div>
     </div>
   </div>
