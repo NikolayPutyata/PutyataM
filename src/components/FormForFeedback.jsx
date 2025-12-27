@@ -55,7 +55,7 @@ const FormForFeedback = () => {
                         <Field
                           name="name"
                           placeholder="Ваше ім'я"
-                          className={`w-full rounded-xl border px-4 py-3 text-sm transition focus:outline-none focus:ring-2
+                          className={`w-full rounded-xl border px-4 py-3 text-base transition focus:outline-none focus:ring-2
                             ${
                               touched.name && errors.name
                                 ? "border-red-400 focus:ring-red-200"
@@ -70,7 +70,7 @@ const FormForFeedback = () => {
                         <Field
                           name="phone"
                           placeholder="+380 XX XXX XX XX"
-                          className={`w-full rounded-xl border px-4 py-3 text-sm transition focus:outline-none focus:ring-2
+                          className={`w-full rounded-xl border px-4 py-3 text-base transition focus:outline-none focus:ring-2
                             ${
                               touched.phone && errors.phone
                                 ? "border-red-400 focus:ring-red-200"
