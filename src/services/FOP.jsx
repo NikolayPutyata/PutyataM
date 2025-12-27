@@ -1,6 +1,10 @@
 import Contact from "../components/Contact";
+import FormForFeedback from "../components/FormForFeedback";
+
 
 const FOP = () => {
+
+
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
@@ -21,6 +25,8 @@ const FOP = () => {
         <p className="text-gray-500 mb-6">
           Включає всі послуги та консультації для реєстрації ФОП.
         </p>
+        <button className="btn btn-neutral" onClick={()=>document.getElementById('my_modal_2').showModal()}>Зареєструвати ФОП</button>
+         
         
       </div>
 
@@ -34,7 +40,7 @@ const FOP = () => {
         <p className="text-gray-500 mb-6">
           Включає всі необхідні документи та консультації.
         </p>
-        
+        <button className="btn btn-neutral" onClick={()=>document.getElementById('my_modal_2').showModal()}>Зареєструвати ТОВ</button>
       </div>
     </div>
   </div>
@@ -124,6 +130,18 @@ const FOP = () => {
 
       {/* Form Section */}
       <Contact />
+      
+      
+
+<dialog id="my_modal_2" className="modal">
+  <div className="modal-box p-0 md:w-6/8 md:max-w-5xl">
+    <FormForFeedback />
+    
+  </div>
+  <form method="dialog" className="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
       
     </div>
   );

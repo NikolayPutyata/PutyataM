@@ -1,5 +1,6 @@
 import React from "react";
 import Contact from "../components/Contact";
+import FormForFeedback from "../components/FormForFeedback";
 
 const Power = () => {
   const services = [
@@ -111,7 +112,6 @@ const Power = () => {
       <section className="pt-20">
         <Contact />
       </section>
-
     </div>
   );
 };
