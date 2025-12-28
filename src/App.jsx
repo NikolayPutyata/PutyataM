@@ -32,6 +32,16 @@ import NotaryRegistration from "./notary/Registration.jsx";
 
 /* --- Статичні --- */
 import About from "./components/About.jsx";
+import AccountingTOV from "./accounting/AccountingTOV.jsx";
+import Advokatcon from "./advokat/advokatcon.jsx";
+import Advokatsud from "./advokat/advokatsud.jsx";
+import TranslateDoc from "./translate/TranslateDoc.jsx";
+import TranslatePer from "./translate/TranslatePer.jsx";
+import IPN from "./inosem/IPN.jsx";
+import Posvidka from "./inosem/Posvidka.jsx";
+import Work from "./inosem/Work.jsx";
+import Paper from "./accounting/Paper.jsx";
+import KIK from "./accounting/KIK.jsx";
 
 function App() {
   return (
@@ -59,7 +69,10 @@ function App() {
 
               {/* Бухгалтерія */}
               <Route path="/accounting/fop" element={<AccountingFOP />} />
+              <Route path="/accounting/tov" element={<AccountingTOV />} />
+              <Route path="/accounting/paper" element={<Paper />} />
               <Route path="/accounting/rro" element={<AccountingRRO />} />
+              <Route path="/accounting/kik" element={<KIK />} />
               <Route path="/accounting/audit" element={<AccountingAudit />} />
 
               {/* Гранти */}
@@ -70,6 +83,20 @@ function App() {
               <Route path="/notary/power" element={<NotaryPower />} />
               <Route path="/notary/certification" element={<NotaryCertification />} />
               <Route path="/notary/registration" element={<NotaryRegistration />} />
+
+              {/* Адвокат */}
+              <Route path="/advokat/sud" element={<Advokatsud />} />
+              <Route path="/advokat/cons" element={<Advokatcon />} />
+
+              {/* Бюро */}
+              <Route path="/translate/doc" element={<TranslateDoc />} />
+              <Route path="/translate/per" element={<TranslatePer />} />
+
+              {/* Іноземцям */}
+              <Route path="/ino/ipn" element={<IPN />} />
+              <Route path="/ino/pos" element={<Posvidka />} />
+              <Route path="/ino/work" element={<Work />} />
+              
 
               {/* Статичні */}
               <Route path="/about" element={<About />} />

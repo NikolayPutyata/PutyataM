@@ -31,6 +31,9 @@ function Header() {
       label: "Бухгалтерія",
       items: [
         { name: "Ведення ФОП", path: "/accounting/fop" },
+        { name: "Ведення ТОВ", path: "/accounting/tov" },
+        { name: "Подання звітності", path: "/accounting/paper" },
+        { name: "КІК", path: "/accounting/kik" },
         { name: "Реєстрація РРО/ПРРО", path: "/accounting/rro" },
         { name: "Аудит", path: "/accounting/audit" },
       ],
@@ -48,6 +51,30 @@ function Header() {
         { name: "Довіреність", path: "/notary/power" },
         { name: "Завірення документів", path: "/notary/certification" },
         { name: "Реєстраційні дії", path: "/notary/registration" },
+      ],
+    },
+    {
+      label: "Адвокат",
+      items: [
+        { name: "Захист інтересів у суді", path: "/advokat/sud" },
+        { name: "Консультації адвоката", path: "/advokat/cons" },
+        
+      ],
+    },
+    {
+      label: "Бюро перекладів",
+      items: [
+        { name: "Завірений переклад документів", path: "/translate/doc" },
+        { name: "Послуги перекладача", path: "/translate/per" },
+        
+      ],
+    },
+    {
+      label: "Іноземцям",
+      items: [
+        { name: "Отримання ІПН", path: "/ino/ipn" },
+        { name: "Тимчасова посвідка", path: "/ino/pos" },
+        { name: "Дозвіл на працевлаштування", path: "/ino/work" },
       ],
     },
   ].map((menu, index) => (
@@ -78,17 +105,12 @@ function Header() {
     </div>
   ))}
 
-  <Link to="/contacts" className="uppercase hover:underline">
-    Контакти
-  </Link>
-
-  <Link to="/about" className="uppercase hover:underline">
-    Про нас
-  </Link>
+  
 </nav>
 
         <div className="text-sm lg:text-md">
-          <a href="tel:+380441234567">+38(044)123-45-67</a>
+          <p>&#127482;&#127462;</p>
+          
         </div>
 
         {/* Mobile burger */}
