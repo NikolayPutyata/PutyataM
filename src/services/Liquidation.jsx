@@ -7,7 +7,7 @@ const Liquidation = () => {
     <div className="bg-gray-50 min-h-screen">
 
       {/* Hero Section */}
-      <section className="pt-10 text-center">
+      <section className="py-20 text-center">
         <div className="max-w-6xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
             Ліквідація ФОП та ТОВ
