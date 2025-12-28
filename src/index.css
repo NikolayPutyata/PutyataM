@@ -1,2 +1,23 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #FFD700,  /* яскраво-жовтий */
+    #FFA500,  /* насичений оранжевий */
+    #FFB700,  /* світліший золотий */
+    #FF8C00,  /* темний оранжевий для контрасту */
+    #FFD700
+  );
+  background-size: 300% 100%; /* зробимо рух більш плавним і помітним */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 4s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
