@@ -66,6 +66,7 @@ function DrawerMenu() {
         { name: "Дозвіл на працевлаштування", path: "/ino/work" },
       ],
     },
+    
   ];
 
   return (

@@ -60,7 +60,7 @@ const Contracts = () => {
           </p>
           
         </div>
-        <button className="btn w-72  btn-neutral text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Замовити договір</button>
+        <button className="btn w-80 py-5 btn-neutral text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Замовити договір</button>
    
       </section>
 
