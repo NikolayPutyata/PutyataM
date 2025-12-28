@@ -1,4 +1,5 @@
 import Contact from "../components/Contact";
+import FormForFeedback from "../components/FormForFeedback";
 
 const TM = () => {
   return (
@@ -33,12 +34,8 @@ const TM = () => {
       Ми підберемо найкращий пакет саме для вашого бізнесу.
     </p>
 
-    <a
-      href="#contact"
-      className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold"
-    >
-      Зареєструвати торгову марку
-    </a>
+<button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Зареєструвати торгову марку</button>
+    
   </div>
 </div>
 
@@ -178,6 +175,16 @@ const TM = () => {
 
       {/* ===== КОНТАКТНА ФОРМА ===== */}
       <Contact />
+
+      <dialog id="my_modal_2" className="modal">
+  <div className="modal-box p-0 md:w-6/8 md:max-w-5xl">
+    <FormForFeedback />
+    
+  </div>
+  <form method="dialog" className="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import Contact from "../components/Contact";
+import FormForFeedback from "../components/FormForFeedback";
 
 const Liquidation = () => {
   return (
@@ -27,13 +28,9 @@ const Liquidation = () => {
             <p className="text-gray-600 mb-6">
               Ліквідація ФОП без штрафів та затримок. Повний супровід, подача документів до державних органів.
             </p>
-            <p className="text-3xl font-semibold text-green-600 mb-6">800 ₴</p>
-            <a
-              href="#contact"
-              className="btn btn-neutral px-8 py-3 text-lg font-semibold"
-            >
-              Замовити ліквідацію
-            </a>
+            <p className="text-3xl font-semibold text-green-600 mb-6">3500 ₴</p>
+            <button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Ліквідувати ФОП</button>
+   
           </div>
 
           {/* ТОВ */}
@@ -42,13 +39,9 @@ const Liquidation = () => {
             <p className="text-gray-600 mb-6">
               Повний супровід ліквідації ТОВ: статутні зміни, звіти, подання документів у держреєстр.
             </p>
-            <p className="text-3xl font-semibold text-green-600 mb-6">від 1500 ₴</p>
-            <a
-              href="#contact"
-              className="btn btn-neutral px-8 py-3 text-lg font-semibold"
-            >
-              Замовити ліквідацію
-            </a>
+            <p className="text-3xl font-semibold text-green-600 mb-6">від 4000 ₴</p>
+            <button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Ліквідувати ТОВ</button>
+   
           </div>
         </div>
       </section>
@@ -113,6 +106,16 @@ const Liquidation = () => {
 
       {/* Contact Section */}
       <Contact />
+
+      <dialog id="my_modal_2" className="modal">
+  <div className="modal-box p-0 md:w-6/8 md:max-w-5xl">
+    <FormForFeedback />
+    
+  </div>
+  <form method="dialog" className="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
       
     </div>
   );

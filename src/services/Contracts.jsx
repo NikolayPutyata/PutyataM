@@ -1,5 +1,6 @@
 import React from "react";
 import Contact from "../components/Contact";
+import FormForFeedback from "../components/FormForFeedback";
 
 const Contracts = () => {
   const contractCategories = [
@@ -48,7 +49,7 @@ const Contracts = () => {
     <div className="bg-gray-50 min-h-screen">
 
       {/* Hero Section */}
-      <section className="py-20 text-center">
+      <section className="py-15 text-center flex flex-col gap-10 items-center">
         <div className="max-w-6xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
             Юридичне оформлення договорів
@@ -57,7 +58,10 @@ const Contracts = () => {
             Професійно готуємо та перевіряємо договори будь-якої складності. 
             Захистіть свої права та бізнес, не ризикуючи через помилки у документах.
           </p>
+          
         </div>
+        <button className="btn btn-wide btn-neutral text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Замовити договір</button>
+   
       </section>
 
       {/* Contracts List */}
@@ -131,6 +135,16 @@ const Contracts = () => {
 
       {/* Contact Form */}
       <Contact />
+
+      <dialog id="my_modal_2" className="modal">
+  <div className="modal-box p-0 md:w-6/8 md:max-w-5xl">
+    <FormForFeedback />
+    
+  </div>
+  <form method="dialog" className="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
 
     </div>
   );

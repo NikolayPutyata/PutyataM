@@ -1,4 +1,5 @@
 import Contact from "../components/Contact";
+import FormForFeedback from "../components/FormForFeedback";
 
 const Changes = () => {
   return (
@@ -22,6 +23,8 @@ const Changes = () => {
               <p className="text-gray-500 mb-6">
                 Включає всі супровідні документи та консультації.
               </p>
+              <button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Внести зміни до ФОП</button>
+         
             </div>
 
             {/* ТОВ */}
@@ -34,6 +37,7 @@ const Changes = () => {
               <p className="text-gray-500 mb-6">
                 Включає перевірку документів та подачу в державні органи.
               </p>
+              <button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Внести зміни до ТОВ</button>
             </div>
           </div>
         </div>
@@ -119,6 +123,16 @@ const Changes = () => {
 
       {/* Form Section */}
       <Contact />
+
+      <dialog id="my_modal_2" className="modal">
+  <div className="modal-box p-0 md:w-6/8 md:max-w-5xl">
+    <FormForFeedback />
+    
+  </div>
+  <form method="dialog" className="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
 
     </div>
   );

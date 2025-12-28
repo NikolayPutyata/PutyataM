@@ -47,12 +47,9 @@ const Power = () => {
             <p className="text-gray-600 text-lg mb-6">
               Ціна залежить від розміру та типу потужностей, а також від сфери діяльності.
             </p>
-            <a
-              href="#contact"
-              className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold"
-            >
-              Зареєструвати потужності
-            </a>
+            
+            <button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Зареєструвати потужності</button>
+   
           </div>
 
           {/* RIGHT: Що входить */}
@@ -111,6 +108,16 @@ const Power = () => {
       {/* ===== Контактна форма ===== */}
       <section className="pt-20">
         <Contact />
+
+        <dialog id="my_modal_2" className="modal">
+  <div className="modal-box p-0 md:w-6/8 md:max-w-5xl">
+    <FormForFeedback />
+    
+  </div>
+  <form method="dialog" className="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
       </section>
     </div>
   );
