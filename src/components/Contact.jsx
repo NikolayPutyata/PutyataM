@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { sendOrder } from "../api/sendOrder";
 
 function Contact() {
   const initialValues = {
@@ -14,10 +15,14 @@ function Contact() {
     message: Yup.string(),
   });
 
-  const handleSubmit = (values, { resetForm }) => {
-    console.log("Заявка:", values);
+  const handleSubmit = async (values, { resetForm }) => {
+  try {
+    await sendOrder(values);
     resetForm();
-  };
+  } catch (error) {
+    console.error(error);
+  }
+};
 
   return (
     <section

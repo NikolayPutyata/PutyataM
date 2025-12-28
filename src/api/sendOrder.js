@@ -7,12 +7,17 @@ const api = axios.create({
   },
 });
 
-export const sendOrder = async ({ name, phone }) => {
-  const text = `${name}\n${phone}`;
+export const sendOrder = async ({ name, phone, message }) => {
+  let text = `${name}\n${phone}`;
+
+  if (message) {
+    text += `\n${message}`;
+  }
 
   const { data } = await api.post("/telegram/send", {
     text,
   });
 
   return data;
+
 };
