@@ -15,6 +15,8 @@ const Audit = () => {
             Повна перевірка фінансового та податкового стану ФОП,
             звітності та сплати податків без ризиків і сюрпризів
           </p>
+          <button className="btn w-80 py-5 btn-neutral text-lg font-semibold mt-10" onClick={()=>document.getElementById('my_modal_2').showModal()}>Замовити аудит</button>
+  
         </div>
       </section>
 
@@ -40,14 +42,7 @@ const Audit = () => {
                 <span className="text-4xl font-semibold text-gray-900">
                   3000 ₴
                 </span>
-                <button
-                  className="btn btn-neutral"
-                  onClick={() =>
-                    document.getElementById("my_modal_2").showModal()
-                  }
-                >
-                  Замовити аудит
-                </button>
+                
               </div>
             </div>
 
@@ -79,7 +74,10 @@ const Audit = () => {
                 key={i}
                 className="bg-white p-6 shadow-sm border border-gray-100 rounded-xl"
               >
-                <p className="text-gray-700 text-lg">{item}</p>
+                <li key={i} className="flex items-start gap-3">
+            <span className="text-green-600 font-bold text-xl">✓</span>
+            <span>{item}</span>
+          </li>
               </div>
             ))}
           </div>

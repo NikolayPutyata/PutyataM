@@ -67,7 +67,7 @@ const AccountingTOV = () => {
                   "Взаємодія з податковими органами"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="font-bold text-xl">✓</span>
+                    <span className="text-green-600 font-bold text-xl">✓</span>
                     <span>{item}</span>
                   </li>
                 ))}

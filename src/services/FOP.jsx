@@ -8,44 +8,80 @@ const FOP = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gray-50 py-20">
-  <div className="max-w-6xl mx-auto px-6 text-center">
-    <h1 className="text-4xl md:text-5xl font-bold mb-12 text-gray-800">
-      Реєстрація Вашого бізнесу
-    </h1>
-    
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6 text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Реєстрація Вашого бізнесу
+          </h1>
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            Швидка та безпечна реєстрація ФОП або ТОВ з повним юридичним супроводом
+          </p>
+        </div>
 
-    <div className="flex flex-col md:flex-row gap-8">
-      {/* ФОП */}
-      <div className="bg-white shadow-lg rounded-xl p-8 flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-        <h2 className="text-2xl font-bold mb-4 text-gray-800">ФОП</h2>
-        <p className="text-gray-600 mb-6">
-          Швидко та без зайвих клопотів допоможемо зареєструвати ваш ФОП.
-        </p>
-        <p className="text-3xl font-semibold text-green-600 mb-6">1000 ₴</p>
-        <p className="text-gray-500 mb-6">
-          Включає всі послуги та консультації для реєстрації ФОП.
-        </p>
-        <button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Зареєструвати ФОП</button>
-         
-        
-      </div>
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-8">
 
-      {/* ТОВ */}
-      <div className="bg-white shadow-lg rounded-xl p-8 flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-        <h2 className="text-2xl font-bold mb-4 text-gray-800">ТОВ</h2>
-        <p className="text-gray-600 mb-6">
-          Повний супровід відкриття ТОВ, юридична підтримка та податкові консультації.
-        </p>
-        <div className="flex gap-2 justify-center"><span>Від</span><p className="text-3xl font-semibold text-green-600">2500 ₴</p></div>
-        <p className="text-gray-500 mb-6">
-          Включає всі необхідні документи та консультації.
-        </p>
-        <button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Зареєструвати ТОВ</button>
-      </div>
-    </div>
-  </div>
-</section>
+            {/* ФОП */}
+            <div className="bg-white shadow-xl border border-gray-100 rounded-2xl p-10 flex flex-col justify-between">
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  Реєстрація ФОП
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  Реєструємо ФОП під ключ без помилок, відмов та зайвої бюрократії.
+                </p>
+
+                <p className="text-4xl font-semibold text-gray-900 mb-6">
+                  1000 ₴
+                </p>
+
+                <p className="text-gray-500 mb-6">
+                  Включає підбір КВЕДів, систему оподаткування та консультацію.
+                </p>
+              </div>
+
+              <button
+                className="btn btn-neutral w-full md:w-auto"
+                onClick={() =>
+                  document.getElementById("my_modal_2").showModal()
+                }
+              >
+                Зареєструвати ФОП
+              </button>
+            </div>
+
+            {/* ТОВ */}
+            <div className="bg-white shadow-xl border border-gray-100 rounded-2xl p-10 flex flex-col justify-between">
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  Реєстрація ТОВ
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  Повний юридичний супровід створення ТОВ з урахуванням податків.
+                </p>
+
+                <p className="text-4xl font-semibold text-gray-900 mb-6">
+                  від 2500 ₴
+                </p>
+
+                <p className="text-gray-500 mb-6">
+                  Підготовка документів, статут, консультації та податкові налаштування.
+                </p>
+              </div>
+
+              <button
+                className="btn btn-neutral w-full md:w-auto"
+                onClick={() =>
+                  document.getElementById("my_modal_2").showModal()
+                }
+              >
+                Зареєструвати ТОВ
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
 
 
@@ -65,11 +101,11 @@ const FOP = () => {
             <h2 className="text-3xl font-semibold mb-4 text-gray-900">
               Чому обирають нас
             </h2>
-            <ul className="list-disc list-inside text-gray-600 space-y-2">
-              <li>Повний супровід процесу реєстрації ФОП</li>
-              <li>Швидке оформлення документів</li>
-              <li>Консультації з юридичних та податкових питань</li>
-              <li>Прозорі тарифи без прихованих платежів</li>
+            <ul className=" text-gray-600 space-y-2">
+              <li className="flex items-start gap-3"><span className="text-green-600 font-bold text-xl">✓</span> <span>Повний супровід процесу реєстрації ФОП</span></li>
+              <li className="flex items-start gap-3"><span className="text-green-600 font-bold text-xl">✓</span> <span>Швидке оформлення документів</span></li>
+              <li className="flex items-start gap-3"><span className="text-green-600 font-bold text-xl">✓</span> <span>Консультації з юридичних та податкових питань</span></li>
+              <li className="flex items-start gap-3"><span className="text-green-600 font-bold text-xl">✓</span> <span>Прозорі тарифи без прихованих платежів</span></li>
             </ul>
           </div>
         </div>
