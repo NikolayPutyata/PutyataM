@@ -10,6 +10,7 @@ function Main() {
       <About />
       <Services />
       <Contact />
+      
     </main>
   );
 }
