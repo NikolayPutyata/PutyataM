@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { sendOrder } from "../api/sendOrder";
 
 const validationSchema = Yup.object({
   name: Yup.string()
@@ -42,11 +43,16 @@ const FormForFeedback = () => {
                 <Formik
                   initialValues={{ name: "", phone: "" }}
                   validationSchema={validationSchema}
-                  onSubmit={(values, { resetForm }) => {
-                    console.log(values);
-                    resetForm();
-                    document.getElementById("my_modal_2")?.close();
-                  }}
+                  onSubmit={async (values, { resetForm }) => {
+                  try {
+                    await sendOrder(values);
+
+                   resetForm();
+                  document.getElementById("my_modal_2")?.close();
+                   } catch (error) {
+                     console.error(error);
+                           }
+  }}
                 >
                   {({ isSubmitting, touched, errors }) => (
                     <Form className="space-y-5">
