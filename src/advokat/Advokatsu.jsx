@@ -1,7 +1,7 @@
 import React from 'react'
 import Contact from '../components/Contact'
 
-const Advokatcon = () => {
+const Advokatsu = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
    
@@ -12,4 +12,4 @@ const Advokatcon = () => {
   )
 }
 
-export default Advokatcon
+export default Advokatsu

@@ -33,8 +33,7 @@ import NotaryRegistration from "./notary/Registration.jsx";
 /* --- Статичні --- */
 import About from "./components/About.jsx";
 import AccountingTOV from "./accounting/AccountingTOV.jsx";
-import Advokatcon from "./advokat/advokatcon.jsx";
-import Advokatsud from "./advokat/advokatsud.jsx";
+
 import TranslateDoc from "./translate/TranslateDoc.jsx";
 import TranslatePer from "./translate/TranslatePer.jsx";
 import IPN from "./inosem/IPN.jsx";
@@ -42,6 +41,10 @@ import Posvidka from "./inosem/Posvidka.jsx";
 import Work from "./inosem/Work.jsx";
 import Paper from "./accounting/Paper.jsx";
 import KIK from "./accounting/KIK.jsx";
+import Advokatsu from "./advokat/Advokatsu.jsx";
+import Advokatco from "./advokat/Advokatco.jsx";
+
+
 
 function App() {
   return (
@@ -85,8 +88,8 @@ function App() {
               <Route path="/notary/registration" element={<NotaryRegistration />} />
 
               {/* Адвокат */}
-              <Route path="/advokat/sud" element={<Advokatsud />} />
-              <Route path="/advokat/cons" element={<Advokatcon />} />
+              <Route path="/advokat/sud" element={<Advokatsu />} />
+              <Route path="/advokat/cons" element={<Advokatco />} />
 
               {/* Бюро */}
               <Route path="/translate/doc" element={<TranslateDoc />} />
