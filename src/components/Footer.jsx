@@ -25,6 +25,13 @@ function Footer() {
               >
                 Публічна оферта
               </a>
+              <a
+                href="/public-offer.pdf"
+                target="_blank"
+                className="hover:text-white transition"
+              >
+                Політика конфіденційності
+              </a>
             </nav>
           </div>
 
