@@ -5,9 +5,9 @@ function Header() {
     <header className="top-0 left-0 w-full bg-white/90 backdrop-blur border-b border-gray-300 z-40">
       <div className="mx-3 p-1 md:mx-10 md:p-2 flex justify-between items-center">
         <div className="flex justify-center items-center gap-2">
-          <img src="/miniLogo.png" alt="" className="w-18 md:w-22" />
+          
           <p className="text-xl md:text-2xl font-semibold tracking-tight">
-            Путята <br />& Партнери
+            Партнерське об'єднання <br />Unium
           </p>
         </div>
 

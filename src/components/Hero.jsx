@@ -14,7 +14,7 @@ function Hero() {
       className="text-yellow-500 font-semibold"
       style={{ fontFamily: "'DM Serif Text', serif" }}
     >
-      Юнітраст
+      Юніум
     </span>
   </h1>
 
