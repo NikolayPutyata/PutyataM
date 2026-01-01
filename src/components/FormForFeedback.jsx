@@ -90,7 +90,7 @@ const FormForFeedback = () => {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="btn btn-neutral mt-2 w-full py-3 text-sm font-semibold text-white transition
+                        className="btn btn-neutral mt-2  w-full py-5 font-semibold text-white transition
                           disabled:cursor-not-allowed disabled:opacity-60"
                       >
                         Надіслати заявку
