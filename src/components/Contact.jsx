@@ -31,7 +31,7 @@ function Contact() {
     >
       <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden grid md:grid-cols-2">
         <div className="p-8 md:p-12">
-    <h2 className="text-3xl font-light mb-6 text-gray-800">
+    <h2 className="text-3xl font-bold mb-6 text-gray-800">
       Залишити заявку
     </h2>
     <Formik
