@@ -175,7 +175,143 @@ const Veterans = () => {
           </div>
         </div>
       </section>
+<section className="pb-24">
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      Етапи отримання гранту
+    </h2>
+    <p className="text-gray-600 text-lg mb-14 max-w-3xl">
+      Ми супроводжуємо вас на кожному етапі — від ідеї до зарахування коштів.
+      Ви розумієте, що відбувається, і знаєте, який наступний крок.
+    </p>
 
+    
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+  {/* Step 1 */}
+  <div className="flex gap-3 items-start">
+    <div className="flex-shrink-0">
+      <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-semibold">
+        1
+      </div>
+    </div>
+
+    <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 w-full">
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+        Консультація та оцінка ідеї
+      </h3>
+      <p className="text-gray-600 text-base leading-relaxed">
+        Аналізуємо вашу бізнес-ідею, досвід, регіон та відповідність
+        умовам грантової програми. Одразу кажемо, на яку суму
+        реально можна претендувати.
+      </p>
+    </div>
+  </div>
+
+  {/* Step 2 */}
+  <div className="flex gap-3 items-start">
+    <div className="flex-shrink-0">
+      <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-semibold">
+        2
+      </div>
+    </div>
+
+    <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 w-full">
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+        Вибір суми та стратегії
+      </h3>
+      <p className="text-gray-600 text-base leading-relaxed">
+        Підбираємо оптимальну суму гранту, формуємо бізнес-логіку,
+        визначаємо кількість робочих місць та фінансову модель,
+        яка виглядатиме переконливо для комісії.
+      </p>
+    </div>
+  </div>
+
+  {/* Step 3 */}
+  <div className="flex gap-3 items-start">
+    <div className="flex-shrink-0">
+      <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-semibold">
+        3
+      </div>
+    </div>
+
+    <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 w-full">
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+        Підготовка бізнес-плану
+      </h3>
+      <p className="text-gray-600 text-base leading-relaxed">
+        Готуємо бізнес-план відповідно до вимог державної програми:
+        розрахунки, витрати, прибутковість, робочі місця.
+        Без шаблонів і формальностей.
+      </p>
+    </div>
+  </div>
+
+  {/* Step 4 */}
+  <div className="flex gap-3 items-start">
+    <div className="flex-shrink-0">
+      <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-semibold">
+        4
+      </div>
+    </div>
+
+    <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 w-full">
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+        Подача заявки через Дію
+      </h3>
+      <p className="text-gray-600 text-base leading-relaxed">
+        Допомагаємо правильно подати заявку через портал Дія,
+        перевіряємо всі дані та супроводжуємо процес,
+        щоб уникнути технічних помилок.
+      </p>
+    </div>
+  </div>
+
+  {/* Step 5 */}
+  <div className="flex gap-3 items-start">
+    <div className="flex-shrink-0">
+      <div className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-semibold">
+        5
+      </div>
+    </div>
+
+    <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 w-full">
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+        Розгляд та рішення комісії
+      </h3>
+      <p className="text-gray-600 text-base leading-relaxed">
+        Очікуємо рішення, за потреби готуємо пояснення
+        або коригування. Ви постійно на звʼязку та знаєте статус заявки.
+      </p>
+    </div>
+  </div>
+
+  {/* Step 6 */}
+  <div className="flex gap-3 items-start">
+    <div className="flex-shrink-0">
+      <div className="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center font-semibold">
+        ✓
+      </div>
+    </div>
+
+    <div className="bg-green-50 p-8 rounded-2xl border border-green-200 w-full">
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+        Зарахування коштів
+      </h3>
+      <p className="text-gray-700 text-base leading-relaxed">
+        Після позитивного рішення кошти зараховуються на рахунок.
+        За потреби — консультуємо щодо використання гранту
+        та звітності.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+    
+  </div>
+</section>
       {/* ===== ДЛЯ КОГО ===== */}
       <section className="pb-20">
         <div className="max-w-6xl mx-auto px-6">
