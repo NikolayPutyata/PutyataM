@@ -2,7 +2,7 @@
 
 function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 text-center bg-[url('/public/fon3.jpg')]
+    <section className="min-h-screen flex items-center justify-center px-6 text-center bg-[url('/fon3.jpg')]
     bg-cover bg-center bg-no-repeat
     relative">
       <div className="absolute inset-0 bg-white/30 z-0"></div>
