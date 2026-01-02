@@ -1,5 +1,6 @@
 import React from "react";
 import Contact from "../components/Contact";
+import FormForFeedback from "../components/FormForFeedback";
 
 const License = () => {
   const licenses = [
@@ -103,9 +104,14 @@ const License = () => {
                 {lic.price} <span className="text-lg font-normal text-gray-500">{lic.note}</span>
               </p>
               <p className="text-gray-600 mb-6">{lic.description}</p>
-              <a href="#contact" className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold">
+              <button
+                className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold"
+                onClick={() =>
+                  document.getElementById("my_modal_2").showModal()
+                }
+              >
                 Отримати ліцензію
-              </a>
+              </button>
             </div>
 
             {/* RIGHT: Послуги */}
@@ -176,6 +182,15 @@ const License = () => {
       {/* ===== КОНТАКТНА ФОРМА ===== */}
       <Contact />
 
+<dialog id="my_modal_2" className="modal">
+  <div className="modal-box p-0 md:w-6/8 md:max-w-5xl">
+    <FormForFeedback />
+    
+  </div>
+  <form method="dialog" className="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
     </div>
   );
 };

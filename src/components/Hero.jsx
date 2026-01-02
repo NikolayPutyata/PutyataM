@@ -24,7 +24,7 @@ function Hero() {
 
   {/* Підзаголовок */}
   <p
-    className="text-gray-600 text-2xl max-w-xl mx-auto"
+    className="text-gray-700 text-2xl max-w-xl mx-auto"
     style={{ fontFamily: "'DM Serif Text', serif" }}
   >
     Ви не клієнт. Ви —{" "}

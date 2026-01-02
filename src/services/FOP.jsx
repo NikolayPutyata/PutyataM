@@ -41,7 +41,7 @@ const FOP = () => {
               </div>
 
               <button
-                className="btn btn-neutral w-full md:w-auto"
+                className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold"
                 onClick={() =>
                   document.getElementById("my_modal_2").showModal()
                 }
@@ -70,7 +70,7 @@ const FOP = () => {
               </div>
 
               <button
-                className="btn btn-neutral w-full md:w-auto"
+                className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold"
                 onClick={() =>
                   document.getElementById("my_modal_2").showModal()
                 }

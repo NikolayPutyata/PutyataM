@@ -6,10 +6,11 @@ function Header() {
       <div className="mx-3 p-1 md:mx-10 md:p-2 flex justify-between items-center">
         <div className="flex justify-center items-center gap-2">
           
-          <p className="text-2xl md:text-4xl font-semibold tracking-tight py-2 px-4"
+          <a href="/">
+          <p className="text-3xl md:text-4xl font-semibold tracking-tight py-2 px-4"
           style={{ fontFamily: "'DM Serif Text', serif" }}>
            UNIUM
-          </p>
+          </p></a>
         </div>
 
         {/* Desktop nav */}
