@@ -2,17 +2,18 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="top-0 left-0 w-full bg-white/90 backdrop-blur border-b border-gray-300 z-40">
+    <header className="relative top-0 left-0 w-full bg-white/90 backdrop-blur border-b border-gray-300 z-50">
       <div className="mx-3 p-1 md:mx-10 md:p-2 flex justify-between items-center">
         <div className="flex justify-center items-center gap-2">
           
-          <p className="text-xl md:text-2xl font-semibold tracking-tight">
-            Партнерське об'єднання <br />Unium
+          <p className="text-2xl md:text-4xl font-semibold tracking-tight py-2 px-4"
+          style={{ fontFamily: "'DM Serif Text', serif" }}>
+           UNIUM
           </p>
         </div>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex space-x-6 text-md tracking-wider items-center">
+        <nav className="hidden lg:flex space-x-6 text-md tracking-wider items-center">
   {[
     {
       label: "Юридичні послуги",
@@ -115,7 +116,7 @@ function Header() {
         </div>
 
         {/* Mobile burger */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <label htmlFor="nav-drawer" className="btn btn-ghost btn-sm">
             <svg
               xmlns="http://www.w3.org/2000/svg"
