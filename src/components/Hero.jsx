@@ -5,7 +5,7 @@ function Hero() {
     <section className="min-h-screen flex items-center justify-center px-6 text-center bg-[url('/fon3.jpg')]
     bg-cover bg-center bg-no-repeat
     relative">
-      <div className="absolute inset-0 bg-white/0 z-0"></div>
+      <div className="absolute inset-0 bg-white/10 z-0"></div>
 
   <div className="relative z-10 max-w-3xl mx-auto text-center">
   {/* Заголовок */}
