@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
   return (
     <footer className="bg-neutral-900 text-white px-6 py-6 md:py-10">
@@ -18,20 +20,13 @@ function Footer() {
               <a href="#services" className="hover:text-white transition">
                 Гранти
               </a>
-              <a
-                href="/public-offer.pdf"
-                target="_blank"
-                className="hover:text-white transition"
-              >
-                Публічна оферта
-              </a>
-              <a
-                href="/public-offer.pdf"
-                target="_blank"
-                className="hover:text-white transition"
-              >
-                Політика конфіденційності
-              </a>
+              <Link to="/public"  className="hover:text-white transition">
+              Публічна оферта
+            </Link>
+            <Link to="/politics"  className="hover:text-white transition">
+              Політика конфіденційності
+            </Link>
+              
             </nav>
           </div>
 
@@ -72,7 +67,7 @@ function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-6 text-center text-gray-500 text-xs">
-          © 2025 Путята & Партнери. Всі права захищено.
+          © {new Date().getFullYear()} Партнерське об'єднання Unium. Всі права захищено.
         </div>
       </div>
     </footer>

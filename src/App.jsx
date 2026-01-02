@@ -43,6 +43,8 @@ import Paper from "./accounting/Paper.jsx";
 import KIK from "./accounting/KIK.jsx";
 import Advokatsu from "./advokat/Advokatsu.jsx";
 import Advokatco from "./advokat/Advokatco.jsx";
+import Public from "./components/Public.jsx";
+import Politics from "./components/Politics.jsx";
 
 
 
@@ -104,6 +106,8 @@ function App() {
               {/* Статичні */}
               <Route path="/about" element={<About />} />
               <Route path="/contacts" element={<Contacts />} />
+              <Route path="/public" element={<Public />} />
+              <Route path="/politics" element={<Politics />} />
             </Routes>
 
             <Footer />
