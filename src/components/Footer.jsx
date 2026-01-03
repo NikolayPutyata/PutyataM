@@ -8,16 +8,16 @@ function Footer() {
           {/* Лінки на розділи */}
           <div>
             <nav className="flex flex-col gap-4 justify-start md:flex-row md:justify-center md:gap-12 md:items-center text-gray-300">
-              <a href="#services" className="hover:text-white transition">
+              <a href="/services/registration" className="hover:text-white transition">
                 Юридичні послуги
               </a>
-              <a href="#services" className="hover:text-white transition">
+              <a href="/accounting/fop" className="hover:text-white transition">
                 Бухгалтерія
               </a>
-              <a href="#services" className="hover:text-white transition">
+              <a href="/notary/certification" className="hover:text-white transition">
                 Нотаріус
               </a>
-              <a href="#services" className="hover:text-white transition">
+              <a href="/grants/business" className="hover:text-white transition">
                 Гранти
               </a>
               <Link to="/public"  className="hover:text-white transition">

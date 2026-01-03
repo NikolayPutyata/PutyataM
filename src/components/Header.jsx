@@ -50,7 +50,6 @@ function Header() {
     {
       label: "Нотаріус",
       items: [
-        { name: "Довіреність", path: "/notary/power" },
         { name: "Завірення документів", path: "/notary/certification" },
         { name: "Реєстраційні дії", path: "/notary/registration" },
       ],

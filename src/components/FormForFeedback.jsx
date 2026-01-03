@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { sendOrder } from "../api/sendOrder";
+import { useState } from "react";
 
 const validationSchema = Yup.object({
   name: Yup.string()
@@ -12,6 +13,8 @@ const validationSchema = Yup.object({
 });
 
 const FormForFeedback = () => {
+  const [agreed, setAgreed] = useState(false);
+
   return (
     <div className="flex flex-col md:flex-row">
               {/* LEFT IMAGE */}
@@ -85,13 +88,49 @@ const FormForFeedback = () => {
                         />
                         
                       </div>
+                      <div className="mt-4 max-w-md">
+  <label className="flex items-start gap-3 cursor-pointer">
+    <input
+      type="checkbox"
+      required
+      className="checkbox checkbox-xs mt-1"
+      checked={agreed}
+          onChange={(e) => setAgreed(e.target.checked)}
+    />
+
+    <span className="text-xs text-gray-500 leading-relaxed">
+      Даю згоду на обробку персональних даних відповідно до{" "}
+      <a
+        href="/politics"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline font-medium hover:text-gray-900"
+      >
+        Політики конфіденційності
+      </a>{" "}
+      та погоджуюсь з умовами{" "}
+      <a
+        href="/offer"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline font-medium hover:text-gray-900"
+      >
+        Публічної оферти
+      </a>
+      .
+    </span>
+  </label>
+</div>
+
+
+
     
                       {/* Кнопка */}
                       <button
                         type="submit"
-                        disabled={isSubmitting}
-                        className="btn btn-neutral mt-2  w-full py-5 font-semibold text-white transition
-                          disabled:cursor-not-allowed disabled:opacity-60"
+                        disabled={!agreed || isSubmitting}
+                        className={`btn btn-neutral mt-2 w-full ${!agreed || isSubmitting ? "bg-gray-500 text-gray-300 cursor-not-allowed" : ""} py-5 font-semibold text-white transition
+                          disabled:cursor-not-allowed disabled:opacity-60`}
                       >
                         Надіслати заявку
                       </button>

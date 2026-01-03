@@ -96,7 +96,7 @@ function Contact() {
 
         <button
           type="submit"
-          className="bg-neutral-900 text-white py-2 rounded-md hover:bg-neutral-800 transition"
+          className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold"
         >
           Надіслати
         </button>

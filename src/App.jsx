@@ -26,7 +26,6 @@ import GrantsBusiness from "./grants/Business.jsx";
 import GrantsVeterans from "./grants/Veterans.jsx";
 
 /* --- Нотаріус --- */
-import NotaryPower from "./notary/Power.jsx";
 import NotaryCertification from "./notary/Certification.jsx";
 import NotaryRegistration from "./notary/Registration.jsx";
 
@@ -85,7 +84,6 @@ function App() {
               <Route path="/grants/veterans" element={<GrantsVeterans />} />
 
               {/* Нотаріус */}
-              <Route path="/notary/power" element={<NotaryPower />} />
               <Route path="/notary/certification" element={<NotaryCertification />} />
               <Route path="/notary/registration" element={<NotaryRegistration />} />
 
