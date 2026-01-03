@@ -78,7 +78,9 @@ const FormForFeedback = () => {
                       <div>
                         <Field
                           name="phone"
-                          placeholder="+380 XX XXX XX XX"
+                          type="tel"
+                          inputMode="numeric"
+                          placeholder="099 000 00 00"
                           className={`w-full rounded-xl border px-4 py-3 text-base transition focus:outline-none focus:ring-2
                             ${
                               touched.phone && errors.phone
