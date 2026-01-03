@@ -82,29 +82,43 @@ const Advokatsu = () => {
       </section>
 
       {/* ===== WHY LAWYER ===== */}
+      
+
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
-          <div className="relative h-72 md:h-full w-full">
-            <img
-              src="/court.jpg" // заміни при потребі
-              alt="Захист у суді"
-              className="object-cover w-full h-full rounded-l-2xl"
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent"></div>
-          </div>
-          <div className="flex flex-col justify-center p-6">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">
-              Навіщо потрібен адвокат у суді?
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Судовий процес вимагає чіткого дотримання процедур, правильного
+  <div className="max-w-6xl mx-auto px-6">
+    <div className="card bg-white shadow-md rounded-2xl overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        {/* LEFT: Image collage */}
+        <div className="relative h-64 md:h-[300px] w-full">
+          <img
+            src="/ads.jpg"
+            alt="Відомі бренди"
+            className="object-cover w-full h-full md:rounded-l-2xl"
+          />
+
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent md:rounded-l-2xl"></div>
+        </div>
+
+        {/* RIGHT: Text */}
+        <div className="p-8 flex flex-col justify-center">
+          <h2 className="text-3xl font-bold mb-4 text-gray-800">
+          Навіщо потрібен адвокат у суді?
+          </h2>
+
+         <p className="text-gray-600 leading-relaxed">
+                Судовий процес вимагає чіткого дотримання процедур, правильного
               застосування норм права та вміння відстоювати свою позицію.
               Адвокат забезпечує професійний захист і підвищує шанси на
               позитивний результат.
-            </p>
-          </div>
+                </p>
         </div>
-      </section>
+
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* ===== BENEFITS ===== */}
       <section className="py-16">

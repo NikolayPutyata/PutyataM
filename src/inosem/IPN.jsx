@@ -17,7 +17,7 @@ const IPN = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Послуги для іноземців: отримання ІПН
+            Отримання ІПН
           </h1>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             Оформлення Ідентифікаційного номеру платника податків для іноземців з повним супроводом документів.

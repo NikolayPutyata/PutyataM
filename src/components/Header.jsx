@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LanguageSelector from "./LanguageSelector";
 
 function Header() {
   return (
@@ -111,19 +112,7 @@ function Header() {
 </nav>
 
         <div className="hidden lg:flex">
-          <details className="dropdown">
-  <summary className="btn btn-ghost m-1"><img src="/ukr.svg" alt="" width={20}/></summary>
-  <ul className="menu dropdown-content bg-base-100 rounded-box z-1 p-2 shadow-sm">
-    <li><a><img src="/ukr.svg" alt="" width={22}/></a></li>
-    <li><a><img src="/unit.svg" alt="" width={22}/></a></li>
-    <li><a><img src="/azer.svg" alt="" width={22}/></a></li>
-    <li><a><img src="/arm.svg" alt="" width={22}/></a></li>
-    <li><a><img src="/isr.svg" alt="" width={22}/></a></li>
-    <li><a><img src="/tur.svg" alt="" width={22}/></a></li>
-    <li><a><img src="/uzbe.svg" alt="" width={22}/></a></li>
-  </ul>
-</details>
-          
+          <LanguageSelector />
         </div>
 
         

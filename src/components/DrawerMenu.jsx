@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LanguageSelector from "./LanguageSelector";
 
 function DrawerMenu() {
   const menu = [
@@ -101,20 +102,9 @@ function DrawerMenu() {
           </Link>
         </li>
 
-        <li>
-          <Link to="/about" className="uppercase" onClick={() => {
-                    const drawerCheckbox = document.getElementById("nav-drawer");
-                    if (drawerCheckbox) drawerCheckbox.checked = false;
-                  }}>
-            Про нас
-          </Link>
-        </li>
+        
 
-        <li className="uppercase bg-neutral-900 rounded-4xl hover:bg-neutral-800 px-2 py-1 mt-5 text-white">
-          <Link to="/feedback" className="flex justify-center">
-            Зворотній зв'язок
-          </Link>
-        </li>
+        
       </ul>
     </div>
   );

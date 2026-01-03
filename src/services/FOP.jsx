@@ -88,28 +88,45 @@ const FOP = () => {
 
 
       {/* Info Section */}
+      
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img
-              src="/business-registration.png"
-              alt="Регистрация бизнеса"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
-          <div>
-            <h2 className="text-3xl font-semibold mb-4 text-gray-900">
-              Чому обирають нас
-            </h2>
-            <ul className=" text-gray-600 space-y-2">
+  <div className="max-w-6xl mx-auto px-6">
+    <div className="card bg-white shadow-md rounded-2xl overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        {/* LEFT: Image collage */}
+        <div className="relative h-64 md:h-[300px] w-full">
+          <img
+            src="/regis.jpg"
+            alt="Відомі бренди"
+            className="object-cover w-full h-full md:rounded-l-2xl"
+          />
+
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent "></div>
+        </div>
+
+        {/* RIGHT: Text */}
+        <div className="p-8 flex flex-col justify-center">
+          <h2 className="text-3xl font-bold mb-4 text-gray-800">
+            Чому обирають нас
+          </h2>
+
+          <ul className=" text-gray-600 space-y-2">
               <li className="flex items-start gap-3"><span className="text-green-600 font-bold text-xl">✓</span> <span>Повний супровід процесу реєстрації ФОП</span></li>
               <li className="flex items-start gap-3"><span className="text-green-600 font-bold text-xl">✓</span> <span>Швидке оформлення документів</span></li>
               <li className="flex items-start gap-3"><span className="text-green-600 font-bold text-xl">✓</span> <span>Консультації з юридичних та податкових питань</span></li>
               <li className="flex items-start gap-3"><span className="text-green-600 font-bold text-xl">✓</span> <span>Прозорі тарифи без прихованих платежів</span></li>
             </ul>
-          </div>
         </div>
-      </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <section className="bg-white py-20">
   <div className="max-w-6xl mx-auto px-6">
     <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">

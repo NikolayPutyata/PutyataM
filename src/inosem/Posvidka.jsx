@@ -17,7 +17,7 @@ const Posvidka = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Послуги для іноземців: отримання тимчасової посвідки
+            Отримання тимчасової посвідки
           </h1>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             Оформлення тимчасової посвідки для іноземців з повним супроводом документів та консультаціями.
@@ -34,7 +34,7 @@ const Posvidka = () => {
                 </h2>
 
                 <p className="text-4xl font-semibold text-gray-900 mb-6">
-                  2500 ₴{" "}
+                  10 000 ₴{" "}
                   <span className="text-lg font-normal text-gray-500">
                     за оформлення
                   </span>

@@ -73,9 +73,9 @@ const TM = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
         {/* LEFT: Image collage */}
-        <div className="relative h-72 md:h-full w-full">
+        <div className="relative h-64 md:h-[300px] w-full">
           <img
-            src="/tm2.jpg" // замени на свой коллаж
+            src="/tm2.jpg" 
             alt="Відомі бренди"
             className="object-cover w-full h-full rounded-l-2xl"
           />

@@ -89,7 +89,7 @@ const Liquidation = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-gray-800">ФОП</h3>
+              <h3 className="text-2xl  font-semibold text-gray-800">ФОП</h3>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
                 <li>Підготовка та подача заяви на ліквідацію</li>
                 <li>Закриття рахунків та бухгалтерські звіти</li>
@@ -98,7 +98,7 @@ const Liquidation = () => {
               </ul>
             </div>
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-gray-800">ТОВ</h3>
+              <h3 className="text-2xl font-semibold text-gray-800">ТОВ</h3>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
                 <li>Прийняття рішення про ліквідацію та оформлення протоколу</li>
                 <li>Підготовка документів для держреєстру та податкової</li>

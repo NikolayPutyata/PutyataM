@@ -81,29 +81,46 @@ const Changes = () => {
       </section>
 
       {/* Info Section */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img
-              src="/business-changes.png"
-              alt="Внесення змін до ФОП/ТОВ"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
-          <div>
-            <h2 className="text-3xl font-semibold mb-4 text-gray-900">
-              Чому обирають нас
-            </h2>
-            <ul className="list-disc list-inside text-gray-600 space-y-2">
-              <li>Повний супровід внесення змін до ФОП та ТОВ</li>
-              <li>Швидке оформлення та подача документів</li>
-              <li>Консультації з юридичних та податкових питань</li>
-              <li>Контроль правильності заповнення всіх форм</li>
-              <li>Прозорі тарифи без прихованих платежів</li>
-            </ul>
-          </div>
+      
+<section className="py-16">
+  <div className="max-w-6xl mx-auto px-6">
+    <div className="card bg-white shadow-md rounded-2xl overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        {/* LEFT: Image collage */}
+        <div className="relative h-64 md:h-[300px] w-full">
+          <img
+            src="/zm.jpg"
+            alt="Відомі бренди"
+            className="object-cover w-full h-full md:rounded-l-2xl"
+          />
+
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent "></div>
         </div>
-      </section>
+
+        {/* RIGHT: Text */}
+        <div className="p-8 flex flex-col justify-center">
+          <h2 className="text-3xl font-bold mb-4 text-gray-800">
+            Чому обирають нас
+          </h2>
+
+          <ul className=" text-gray-600 space-y-2">
+              <li><span className="text-green-600 font-bold text-xl">✓</span> Повний супровід внесення змін до ФОП та ТОВ</li>
+              <li><span className="text-green-600 font-bold text-xl">✓</span> Швидке оформлення та подача документів</li>
+              <li><span className="text-green-600 font-bold text-xl">✓</span> Консультації з юридичних та податкових питань</li>
+              <li><span className="text-green-600 font-bold text-xl">✓</span> Контроль правильності заповнення всіх форм</li>
+              <li><span className="text-green-600 font-bold text-xl">✓</span> Прозорі тарифи без прихованих платежів</li>
+            </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      
 
       {/* Common Mistakes Section */}
       <section className="bg-white py-20">

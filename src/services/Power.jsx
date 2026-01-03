@@ -73,28 +73,44 @@ const Power = () => {
 
 </section>
 
-      {/* ===== Що таке реєстрація потужностей ===== */}
-      <section className="pb-16">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
-          <div className="relative h-72 md:h-full w-full">
-            <img
-              src="/power.jpg" // заміни на своє фото
-              alt="Реєстрація потужностей"
-              className="object-cover w-full h-full rounded-l-2xl"
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent"></div>
-          </div>
-          <div className="flex flex-col justify-center p-6">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">Що таке реєстрація потужностей?</h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
+
+<section className="pb-16">
+  <div className="max-w-6xl mx-auto px-6">
+    <div className="card bg-white shadow-md rounded-2xl overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        {/* LEFT: Image collage */}
+        <div className="relative h-64 md:h-[300px] w-full">
+          <img
+            src="/pot2.jpg"
+            alt="Відомі бренди"
+            className="object-cover w-full h-full md:rounded-l-2xl"
+          />
+
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent "></div>
+        </div>
+
+        {/* RIGHT: Text */}
+        <div className="p-8 flex flex-col justify-center">
+          <h2 className="text-3xl font-bold mb-4 text-gray-800">
+            Що таке реєстрація потужності?
+          </h2>
+
+          <p className="text-gray-600 text-lg leading-relaxed">
               Реєстрація потужностей оператора ринку — це офіційне підтвердження
               вашої здатності виробляти, зберігати або реалізовувати продукцію
               у відповідності до вимог держави. Це гарантує легальність діяльності
               та контроль якості продукції.
             </p>
-          </div>
         </div>
-      </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+      
+
 
       {/* ===== Навіщо потрібна ===== */}
       <section className="pb-16">

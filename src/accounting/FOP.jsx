@@ -78,40 +78,47 @@ const FOP = () => {
       </section>
 
       {/* ===== ОПИС ===== */}
-      <section className="pb-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="bg-white shadow-md rounded-2xl overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
 
-              {/* LEFT IMAGE */}
-              <div className="relative h-72 md:h-full w-full">
-                <img
-                  src="/fop.jpg"
-                  alt="Бухгалтерія ФОП"
-                  className="object-cover w-full h-full rounded-l-2xl"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent"></div>
-              </div>
+       <section className="pb-16">
+  <div className="max-w-6xl mx-auto px-6">
+    <div className="card bg-white shadow-md rounded-2xl overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-              {/* RIGHT TEXT */}
-              <div className="p-8 flex flex-col justify-center">
-                <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                  Що таке бухгалтерський супровід ФОП?
-                </h2>
+        {/* LEFT: Image collage */}
+        <div className="relative h-64 md:h-[300px] w-full">
+          <img
+            src="/buhf.jpg"
+            alt="Відомі бренди"
+            className="object-cover w-full h-full md:rounded-l-2xl"
+          />
 
-                <p className="text-gray-600 leading-relaxed text-lg">
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent md:rounded-l-2xl"></div>
+        </div>
+
+        {/* RIGHT: Text */}
+        <div className="p-8 flex flex-col justify-center">
+          <h2 className="text-3xl font-bold mb-4 text-gray-800">
+           Що таке бухгалтерський супровід ФОП?
+          </h2>
+
+         <p className="text-gray-600 leading-relaxed">
                   Ведення бухгалтерії ФОП — це системний контроль фінансової
                   діяльності підприємця: облік доходів і витрат, податки,
                   звітність та взаємодія з податковими органами.
                   Професійний супровід дозволяє вам зосередитись на бізнесі,
                   не переймаючись паперовою роботою та штрафами.
                 </p>
-              </div>
-
-            </div>
-          </div>
         </div>
-      </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      
 
       {/* ===== НАВІЩО ===== */}
       <section className="pb-16">
