@@ -58,7 +58,7 @@ const FormForFeedback = () => {
   }}
                 >
                   {({ isSubmitting, touched, errors }) => (
-                    <Form className="space-y-5">
+                    <Form className="space-y-3">
                       {/* Ім'я */}
                       <div>
                         <Field
@@ -132,7 +132,7 @@ const FormForFeedback = () => {
                         type="submit"
                         disabled={!agreed || isSubmitting}
                         className={`btn btn-neutral mt-2 w-full ${!agreed || isSubmitting ? "bg-gray-500 text-gray-300 cursor-not-allowed" : ""} py-5 font-semibold text-white transition
-                          disabled:cursor-not-allowed disabled:opacity-60`}
+                          disabled:cursor-not-allowed disabled:opacity-60 mt-4`}
                       >
                         Надіслати заявку
                       </button>
