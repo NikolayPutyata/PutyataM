@@ -24,12 +24,12 @@ const TM = () => {
     <h2 className="text-3xl font-bold text-gray-800 mb-4">Вартість реєстрації</h2>
 
     {/* Цена с маленьким текстом для держ.зборів */}
-    <p className="text-5xl font-semibold text-green-800 mb-4 flex items-end gap-2">
+    <p className="text-4xl font-semibold text-gray-900 mb-4">
       4000 ₴
-      <span className="text-lg font-normal text-gray-500">+ держ.збори</span>
+      <span className="text-lg font-normal text-gray-500 ml-2">+ держ.збори</span>
     </p>
 
-    <p className="text-gray-600 text-lg mb-6">
+    <p className="text-gray-600 mb-6">
       Ціна залежить від кількості класів МКТП та формату подачі заявки.
       Ми підберемо найкращий пакет саме для вашого бізнесу.
     </p>

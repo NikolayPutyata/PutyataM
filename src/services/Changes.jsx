@@ -5,40 +5,77 @@ const Changes = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
 
-      {/* Hero Section */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-12 text-gray-800">
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6 text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Внесення змін до ФОП або ТОВ
           </h1>
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            Швидке та безпечне внесення змін до ФОП або ТОВ з повним юридичним супроводом
+          </p>
+        </div>
 
-          <div className="flex flex-col md:flex-row gap-8">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-8">
+
             {/* ФОП */}
-            <div className="bg-white shadow-lg rounded-xl p-8 flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-              <h2 className="text-2xl font-bold mb-4 text-gray-800">ФОП</h2>
-              <p className="text-gray-600 mb-6">
-                Допомагаємо швидко та без зайвих клопотів внести зміни до вашого ФОП: зміна адреси, видів діяльності, системи оподаткування та ін.
-              </p>
-              <p className="text-3xl font-semibold text-green-600 mb-6">800 ₴</p>
-              <p className="text-gray-500 mb-6">
-                Включає всі супровідні документи та консультації.
-              </p>
-              <button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Внести зміни до ФОП</button>
-         
+            <div className="bg-white shadow-xl border border-gray-100 rounded-2xl p-10 flex flex-col justify-between">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  ФОП
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  Зміна адреси, видів діяльності, системи оподаткування та ін.
+                </p>
+
+                <p className="text-4xl font-semibold text-gray-900 mb-6">
+                  1000 ₴
+                </p>
+
+                <p className="text-gray-500 mb-6">
+                  Включає підбір КВЕДів, систему оподаткування та консультацію.
+                </p>
+              </div>
+
+              <button
+                className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold"
+                onClick={() =>
+                  document.getElementById("my_modal_2").showModal()
+                }
+              >
+                Внесети зміни до ФОП
+              </button>
             </div>
 
             {/* ТОВ */}
-            <div className="bg-white shadow-lg rounded-xl p-8 flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-              <h2 className="text-2xl font-bold mb-4 text-gray-800">ТОВ</h2>
-              <p className="text-gray-600 mb-6">
-                Повний супровід внесення змін у статут, керівництво, види діяльності та адресу ТОВ.
-              </p>
-              <div className="flex gap-2 justify-center"><span>Від</span><p className="text-3xl font-semibold text-green-600">1500 ₴</p></div>
-              <p className="text-gray-500 mb-6">
-                Включає перевірку документів та подачу в державні органи.
-              </p>
-              <button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Внести зміни до ТОВ</button>
+            <div className="bg-white shadow-xl border border-gray-100 rounded-2xl p-10 flex flex-col justify-between">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  ТОВ
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  Повний юридичний супровід внесення змін до ТОВ.
+                </p>
+
+                <p className="text-4xl font-semibold text-gray-900 mb-6">
+                  від 2500 ₴
+                </p>
+
+                <p className="text-gray-500 mb-6">
+                  Повний супровід внесення змін у статут, керівництво, види діяльності та адресу ТОВ.
+                </p>
+              </div>
+
+              <button
+                className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold"
+                onClick={() =>
+                  document.getElementById("my_modal_2").showModal()
+                }
+              >
+                Внесети зміни до ТОВ
+              </button>
             </div>
+
           </div>
         </div>
       </section>

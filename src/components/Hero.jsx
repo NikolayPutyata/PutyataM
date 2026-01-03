@@ -29,7 +29,7 @@ function Hero() {
     style={{ fontFamily: "'Montserrat', serif" }}
   >
     Ви не клієнт. Ви —{" "}
-    <span className="font-semibold italic gradient-text pr-2">
+    <span className=" italic pr-2">
       Партнер
     </span>
     

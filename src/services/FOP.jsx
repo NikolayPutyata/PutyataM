@@ -24,7 +24,7 @@ const FOP = () => {
             {/* ФОП */}
             <div className="bg-white shadow-xl border border-gray-100 rounded-2xl p-10 flex flex-col justify-between">
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
                   Реєстрація ФОП
                 </h2>
                 <p className="text-gray-600 mb-6">
@@ -53,7 +53,7 @@ const FOP = () => {
             {/* ТОВ */}
             <div className="bg-white shadow-xl border border-gray-100 rounded-2xl p-10 flex flex-col justify-between">
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
                   Реєстрація ТОВ
                 </h2>
                 <p className="text-gray-600 mb-6">

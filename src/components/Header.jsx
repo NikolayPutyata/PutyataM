@@ -111,7 +111,7 @@ function Header() {
   
 </nav>
 
-        <div className="text-sm lg:text-md">
+        <div className="hidden lg:flex">
           <p>&#127482;&#127462;</p>
           
         </div>

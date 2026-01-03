@@ -95,12 +95,12 @@ const License = () => {
       {/* ===== КАРТКИ ЛІЦЕНЗІЙ ===== */}
       <div className="max-w-6xl mx-auto px-6 grid gap-12">
         {licenses.map((lic, i) => (
-          <div key={i} className="bg-white shadow-xl rounded-2xl p-10 grid md:grid-cols-2 gap-8">
+          <div key={i} className="bg-white shadow-xl rounded-2xl p-10 grid md:grid-cols-2 gap-15">
 
             {/* LEFT: Основна ліцензія */}
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col justify-between gap-5">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">{lic.title}</h2>
-              <p className="text-5xl font-semibold text-green-800 mb-4 flex items-end gap-2">
+              <p className="text-4xl font-semibold mb-4 flex items-end gap-2">
                 {lic.price} <span className="text-lg font-normal text-gray-500">{lic.note}</span>
               </p>
               <p className="text-gray-600 mb-6">{lic.description}</p>
@@ -116,7 +116,7 @@ const License = () => {
 
             {/* RIGHT: Послуги */}
             <div className="flex flex-col">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Що входить у послугу</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-6">Що входить у послугу</h3>
               <ul className="space-y-2 mb-6 text-gray-700 text-lg">
                 {lic.services.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
@@ -126,15 +126,7 @@ const License = () => {
                 ))}
               </ul>
 
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Продовження ліцензії</h3>
-              <ul className="space-y-2 text-gray-700 text-lg">
-                {lic.extension.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="text-blue-600 font-bold text-xl">↻</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              
             </div>
 
           </div>
