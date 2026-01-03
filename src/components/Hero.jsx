@@ -7,16 +7,16 @@ function Hero() {
     relative">
       <div className="absolute inset-0 bg-white/10 z-0"></div>
 
-  <div className="relative z-10 max-w-3xl mx-auto text-center">
+  <div className="relative z-10 max-w-3xl mx-auto text-start md:text-center">
   {/* Заголовок */}
   <h1
-    className="text-5xl md:text-6xl font-light leading-tight mb-6 text-gray-900"
-    style={{ fontFamily: "'DM Serif Text', serif" }}
+    className="text-6xl font-light leading-tight mb-6 text-gray-900"
+    style={{ fontFamily: "'Montserrat', serif" }}
   >
     Партнерське об'єднання{" "}
     <span
       className="text-yellow-500 font-semibold gradient-text"
-      style={{ fontFamily: "'DM Serif Text', serif" }}
+      style={{ fontFamily: "'Playfair Display', serif" }}
     >
       UNIUM
     </span>
@@ -24,11 +24,11 @@ function Hero() {
 
   {/* Підзаголовок */}
   <p
-    className="text-gray-700 text-2xl max-w-xl mx-auto"
-    style={{ fontFamily: "'DM Serif Text', serif" }}
+    className="text-gray-700 text-xl max-w-4xl mx-auto"
+    style={{ fontFamily: "'Montserrat', serif" }}
   >
     Ви не клієнт. Ви —{" "}
-    <span className="font-semibold italic gradient-text">
+    <span className="font-semibold italic gradient-text pr-2">
       Партнер
     </span>
     

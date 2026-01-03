@@ -8,7 +8,7 @@ function Header() {
           
           <a href="/">
           <p className="text-3xl md:text-4xl font-semibold tracking-tight py-2 px-4"
-          style={{ fontFamily: "'DM Serif Text', serif" }}>
+          style={{ fontFamily: "'Playfair Display', serif" }}>
            UNIUM
           </p></a>
         </div>
