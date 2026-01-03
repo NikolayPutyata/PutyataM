@@ -81,7 +81,10 @@ function DrawerMenu() {
               <ul className="flex flex-col gap-1 mt-2">
                 {section.items.map((item, i) => (
                   <li key={i}>
-                    <Link to={item.path}>{item.name}</Link>
+                    <Link to={item.path} onClick={() => {
+                    const drawerCheckbox = document.getElementById("nav-drawer");
+                    if (drawerCheckbox) drawerCheckbox.checked = false;
+                  }}>{item.name}</Link>
                   </li>
                 ))}
               </ul>
@@ -90,13 +93,19 @@ function DrawerMenu() {
         ))}
 
         <li>
-          <Link to="/contacts" className="uppercase">
+          <Link to="/contacts" className="uppercase" onClick={() => {
+                    const drawerCheckbox = document.getElementById("nav-drawer");
+                    if (drawerCheckbox) drawerCheckbox.checked = false;
+                  }}>
             Контакти
           </Link>
         </li>
 
         <li>
-          <Link to="/about" className="uppercase">
+          <Link to="/about" className="uppercase" onClick={() => {
+                    const drawerCheckbox = document.getElementById("nav-drawer");
+                    if (drawerCheckbox) drawerCheckbox.checked = false;
+                  }}>
             Про нас
           </Link>
         </li>
