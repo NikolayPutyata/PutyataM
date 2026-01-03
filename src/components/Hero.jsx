@@ -7,7 +7,7 @@ function Hero() {
     relative">
       <div className="absolute inset-0 bg-white/10 z-0"></div>
 
-  <div className="relative z-10 max-w-3xl mx-auto text-start md:text-center">
+  <div className="relative z-10 max-w-3xl mx-auto text-start md:text-center mb-15 md:mb-0">
   {/* Заголовок */}
   <h1
     className="text-6xl font-light leading-tight mb-6 text-gray-900"
