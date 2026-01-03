@@ -171,7 +171,7 @@ const RRO = () => {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
+              <div className="p-3">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Перше порушення
                 </h3>
@@ -181,7 +181,7 @@ const RRO = () => {
                 </p>
               </div>
 
-              <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
+              <div className="p-3">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Повторне порушення
                 </h3>

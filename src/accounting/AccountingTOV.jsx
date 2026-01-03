@@ -27,14 +27,14 @@ const AccountingTOV = () => {
                   Вартість обслуговування
                 </h2>
 
-                <p className="text-5xl font-semibold text-gray-900 mb-4">
+                <p className="text-4xl font-semibold text-gray-900 mb-4">
                   від 6000 ₴
                   <span className="text-lg font-normal text-gray-500 ml-2">
                     / місяць
                   </span>
                 </p>
 
-                <p className="text-gray-600 text-lg mb-6">
+                <p className="text-gray-600 mb-6">
                   Вартість залежить від системи оподаткування, кількості
                   операцій, працівників та ПДВ.
                   Ми підберемо оптимальний формат супроводу для вашого ТОВ.
@@ -64,7 +64,7 @@ const AccountingTOV = () => {
                   "Облік ПДВ (за наявності)",
                   "Розрахунок зарплат та податків",
                   "Контроль податкових зобовʼязань",
-                  "Взаємодія з податковими органами"
+                  
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="text-green-600 font-bold text-xl">✓</span>

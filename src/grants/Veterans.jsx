@@ -28,11 +28,11 @@ const Veterans = () => {
                   Вартість отримання
                 </h2>
 
-                <p className="text-5xl font-semibold text-gray-900 mb-4">
+                <p className="text-4xl font-semibold text-gray-900 mb-4">
                   10 000 ₴
                 </p>
 
-                <p className="text-gray-600 text-lg mb-6">
+                <p className="text-gray-600 mb-6">
                   Остаточна ціна залежить від суми гранту
                   та складності бізнес-проєкту.
                   Працюємо індивідуально, без шаблонів.
@@ -62,7 +62,7 @@ const Veterans = () => {
                   "Підбір оптимальної суми ветеранського гранту",
                   "Підготовка бізнес-плану під вимоги комісії",
                   "Заповнення та подача заявки через Дію",
-                  "Супровід до отримання рішення та коштів",
+                  
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="text-green-600 font-bold text-xl">✓</span>
@@ -92,7 +92,7 @@ const Veterans = () => {
 
             <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
               <span className="text-sm text-gray-500 mb-2">Початок</span>
-              <h3 className="text-2xl font-bold text-gray-900 mb-1">
+              <h3 className="text-3xl font-bold text-gray-900 mb-1">
                 250 000 ₴
               </h3>
 
@@ -122,7 +122,7 @@ const Veterans = () => {
               </span>
 
               <span className="text-sm text-gray-500 mb-2">Розвиток</span>
-              <h3 className="text-2xl font-bold text-gray-900 mb-1">
+              <h3 className="text-3xl font-bold text-gray-900 mb-1">
                 500 000 ₴
               </h3>
 
@@ -148,7 +148,7 @@ const Veterans = () => {
 
             <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
               <span className="text-sm text-gray-500 mb-2">Масштаб</span>
-              <h3 className="text-2xl font-bold text-gray-900 mb-1">
+              <h3 className="text-3xl font-bold text-gray-900 mb-1">
                 1 000 000 ₴
               </h3>
 

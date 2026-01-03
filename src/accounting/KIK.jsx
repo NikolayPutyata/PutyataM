@@ -106,7 +106,7 @@ const KIK = () => {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="bg-gray-50 border border-gray-200 rounded-xl p-6"
+                  className=" p-3"
                 >
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {item.title}

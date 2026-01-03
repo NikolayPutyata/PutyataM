@@ -27,11 +27,11 @@ const Business = () => {
                   Вартість послуги
                 </h2>
 
-                <p className="text-5xl font-semibold text-gray-900 mb-4">
+                <p className="text-4xl font-semibold text-gray-900 mb-4">
                   10 000 ₴
                 </p>
 
-                <p className="text-gray-600 text-lg mb-6">
+                <p className="text-gray-600 mb-6">
                   Ціна залежить від типу гранту та складності бізнес-плану.
                   Працюємо під ключ — без шаблонів і формальностей.
                 </p>
@@ -61,7 +61,7 @@ const Business = () => {
                   "Підготовка бізнес-плану під вимоги комісії",
                   "Заповнення та подача заявки",
                   "Супровід до прийняття рішення",
-                  "Консультації після отримання гранту"
+                  
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="text-green-600 font-bold text-xl">✓</span>
@@ -90,7 +90,7 @@ const Business = () => {
       {/* 75 000 */}
       <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
         <span className="text-sm text-gray-500 mb-2">Старт</span>
-        <h3 className="text-2xl font-bold text-gray-900 mb-1">
+        <h3 className="text-3xl font-bold text-gray-900 mb-1">
           75 000 ₴
         </h3>
 
@@ -113,7 +113,7 @@ const Business = () => {
       {/* 150 000 */}
       <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
         <span className="text-sm text-gray-500 mb-2">Малий бізнес</span>
-        <h3 className="text-2xl font-bold text-gray-900 mb-1">
+        <h3 className="text-3xl font-bold text-gray-900 mb-1">
           150 000 ₴
         </h3>
 
@@ -140,7 +140,7 @@ const Business = () => {
         </span>
 
         <span className="text-sm text-gray-500 mb-2">Розвиток</span>
-        <h3 className="text-2xl font-bold text-gray-900 mb-1">
+        <h3 className="text-3xl font-bold text-gray-900 mb-1">
           250 000 ₴
         </h3>
 
@@ -163,7 +163,7 @@ const Business = () => {
       {/* 500 000 */}
       <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
         <span className="text-sm text-gray-500 mb-2">Масштабування</span>
-        <h3 className="text-2xl font-bold text-gray-900 mb-1">
+        <h3 className="text-3xl font-bold text-gray-900 mb-1">
           500 000 ₴
         </h3>
 
