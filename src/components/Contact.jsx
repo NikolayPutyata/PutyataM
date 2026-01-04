@@ -121,7 +121,7 @@ function Contact() {
                   className="hover:scale-110 transition"
                 />
               </a>
-              <a href="https://viber.me/380961987961">
+              <a href="viber://chat?number=%2B380961987961">
                 <img
                   src="/viber.png"
                   alt="Viber"
@@ -176,7 +176,7 @@ function Contact() {
                   className="hover:scale-110 transition"
                 />
               </a>
-              <a href="https://viber.me/380961987961">
+              <a href="viber://chat?number=%2B380961987961">
                 <img
                   src="/viber.png"
                   alt="Viber"
