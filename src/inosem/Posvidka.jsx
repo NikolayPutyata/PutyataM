@@ -80,26 +80,7 @@ const Posvidka = () => {
       </section>
 
       {/* ===== WHY SERVICE ===== */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
-          <div className="relative h-72 md:h-full w-full">
-            <img
-              src="/posvidka.jpg" // заміни на фото тимчасової посвідки
-              alt="Отримання тимчасової посвідки для іноземців"
-              className="object-cover w-full h-full rounded-l-2xl"
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent"></div>
-          </div>
-          <div className="flex flex-col justify-center p-6">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">
-              Навіщо іноземцям потрібна тимчасова посвідка?
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Тимчасова посвідка дозволяє легально перебувати в Україні, офіційно працювати та мати доступ до державних послуг. Наші спеціалісти забезпечують швидке та безпомилкове оформлення з повним супроводом.
-            </p>
-          </div>
-        </div>
-      </section>
+      
 
       {/* ===== BENEFITS ===== */}
       <section className="py-16">

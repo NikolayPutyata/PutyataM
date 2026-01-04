@@ -158,7 +158,7 @@ function Contact() {
             </div>
 
             <div className="mt-10 flex justify-center items-center gap-6">
-              <a href="#">
+              <a href="https://t.me/unium_lawyer">
                 <img
                   src="/tg.png"
                   alt="Telegram"
@@ -167,7 +167,7 @@ function Contact() {
                   className="hover:scale-110 transition"
                 />
               </a>
-              <a href="#">
+              <a href="https://wa.me/380961987961">
                 <img
                   src="/wa.png"
                   alt="WhatsApp"
@@ -176,7 +176,7 @@ function Contact() {
                   className="hover:scale-110 transition"
                 />
               </a>
-              <a href="#">
+              <a href="https://viber.me/380961987961">
                 <img
                   src="/viber.png"
                   alt="Viber"
