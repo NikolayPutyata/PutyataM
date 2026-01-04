@@ -103,33 +103,33 @@ function Contact() {
 
         {/* Иконки под формой */}
         <div className="md:hidden mt-6 flex justify-center items-center gap-6">
-          <a href="#">
-            <img
-              src="/tg.png"
-              alt="Telegram"
-              width={48}
-              height={48}
-              className="hover:scale-110 transition"
-            />
-          </a>
-          <a href="#">
-            <img
-              src="/wa.png"
-              alt="WhatsApp"
-              width={48}
-              height={48}
-              className="hover:scale-110 transition"
-            />
-          </a>
-          <a href="#">
-            <img
-              src="/viber.png"
-              alt="Viber"
-              width={48}
-              height={48}
-              className="hover:scale-110 transition"
-            />
-          </a>
+          <a href="https://t.me/unium_lawyer">
+                <img
+                  src="/tg.png"
+                  alt="Telegram"
+                  width={48}
+                  height={48}
+                  className="hover:scale-110 transition"
+                />
+              </a>
+              <a href="https://wa.me/380961987961">
+                <img
+                  src="/wa.png"
+                  alt="WhatsApp"
+                  width={48}
+                  height={48}
+                  className="hover:scale-110 transition"
+                />
+              </a>
+              <a href="https://viber.me/380961987961">
+                <img
+                  src="/viber.png"
+                  alt="Viber"
+                  width={48}
+                  height={48}
+                  className="hover:scale-110 transition"
+                />
+              </a>
         </div>
       </Form>
     </Formik>
