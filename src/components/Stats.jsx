@@ -8,7 +8,7 @@ const Stats = () => {
     stats 
     stats-vertical 
     lg:stats-horizontal 
-    shadow 
+    shadow-md
     w-full
     text-center
     grid
