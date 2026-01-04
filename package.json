@@ -15,6 +15,7 @@
     "daisyui": "^5.5.14",
     "formik": "^2.4.9",
     "react": "^19.1.0",
+    "react-countup": "^6.5.3",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.9.6",
     "tailwindcss": "^4.1.10",

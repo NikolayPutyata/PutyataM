@@ -11,7 +11,7 @@ function Hero() {
   mt-[-140px] md:mt-0">
   {/* Заголовок */}
   <h1
-    className="text-6xl font-light leading-tight mb-6 text-gray-900"
+    className="text-6xl lg:text-7xl font-light leading-tight mb-6 text-gray-900"
     style={{ fontFamily: "'Montserrat', serif" }}
   >
     Партнерське об'єднання{" "}
@@ -25,7 +25,7 @@ function Hero() {
 
   {/* Підзаголовок */}
   <p
-    className="text-gray-700 text-xl max-w-4xl mx-auto"
+    className="text-gray-700 text-xl lg:text-2xl max-w-4xl mx-auto"
     style={{ fontFamily: "'Montserrat', serif" }}
   >
     Ви не клієнт. Ви —{" "}

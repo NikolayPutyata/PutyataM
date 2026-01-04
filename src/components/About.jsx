@@ -45,15 +45,15 @@ function About() {
   return (
     <section
       id="about"
-      className="py-16 px-6 bg-gray-100 border-t border-gray-200"
+      className="py-20 px-6 bg-gray-100 border-t border-gray-200"
     >
       <div className="max-w-7xl mx-auto">
         {/* Заголовок */}
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+        <div className="text-center mb-15 ">
+          <h2 className="text-3xl md:text-5xl font-light text-gray-900 mb-4">
             Сфери діяльності
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-600 text-lg max-w-3xl md:hidden mx-auto">
             Ми супроводжуємо бізнес у різних галузях, враховуючи особливості
             кожної сфери та вимоги законодавства.
           </p>
