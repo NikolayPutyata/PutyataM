@@ -38,7 +38,7 @@ const FormForFeedback = () => {
               </div>
     
               {/* RIGHT FORM */}
-              <div className="flex w-full flex-col justify-center p-10 md:p-12 md:w-7/12">
+              <div className="flex w-full flex-col justify-center p-8 md:p-10 md:w-7/12">
                 <h2 className="mb-6 text-2xl font-semibold text-gray-800">
                   Залишити заявку
                 </h2>
