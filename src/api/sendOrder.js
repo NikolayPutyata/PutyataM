@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://your-server-url",
+  baseURL: "https://unium-server-q8g7u.ondigitalocean.app",
   headers: {
     "Content-Type": "application/json",
   },
