@@ -14,7 +14,7 @@ const Politics = () => {
         <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
           <p>
             Ця Політика конфіденційності визначає порядок обробки та захисту
-            персональних даних користувачів сайту <strong>UNIUM</strong> (unium.com.ua) (далі —
+            персональних даних користувачів сайту <strong>Фенеріум</strong> (fenerium.com.ua) (далі —
             «Сайт»).
           </p>
 
