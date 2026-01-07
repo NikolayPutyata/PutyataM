@@ -10,7 +10,7 @@ function Header() {
           <a href="/">
           <p className="text-3xl md:text-4xl font-semibold tracking-tight py-2 px-4"
           style={{ fontFamily: "'Playfair Display', serif" }}>
-           UNIUM
+           ФЕНЕРІУМ
           </p></a>
         </div>
 

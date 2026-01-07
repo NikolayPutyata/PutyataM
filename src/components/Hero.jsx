@@ -19,7 +19,7 @@ function Hero() {
       className="text-yellow-500 font-semibold gradient-text"
       style={{ fontFamily: "'Playfair Display', serif" }}
     >
-      UNIUM
+      ФЕНЕРІУМ
     </span>
   </h1>
 

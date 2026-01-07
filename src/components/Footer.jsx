@@ -67,7 +67,7 @@ function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-6 text-center text-gray-500 text-xs">
-          © {new Date().getFullYear()} Партнерське об'єднання Unium. Всі права захищено.
+          © {new Date().getFullYear()} Партнерське об'єднання Фенеріум. Всі права захищено.
         </div>
       </div>
     </footer>
