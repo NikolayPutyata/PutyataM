@@ -103,7 +103,7 @@ function Contact() {
 
         {/* Иконки под формой */}
         <div className="md:hidden mt-6 flex justify-center items-center gap-6">
-          <a href="https://t.me/unium_lawyer">
+          <a href="https://t.me/putyata_lawyer">
                 <img
                   src="/tg.png"
                   alt="Telegram"
@@ -158,7 +158,7 @@ function Contact() {
             </div>
 
             <div className="mt-10 flex justify-center items-center gap-6">
-              <a href="https://t.me/unium_lawyer">
+              <a href="https://t.me/putyata_lawyer">
                 <img
                   src="/tg.png"
                   alt="Telegram"
