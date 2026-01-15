@@ -19,7 +19,7 @@ function Hero() {
       className="text-yellow-500 font-semibold gradient-text"
       style={{ fontFamily: "'Playfair Display', serif" }}
     >
-      ФЕНЕРІУМ
+      WEKSAR
     </span>
   </h1>
 
