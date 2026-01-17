@@ -91,7 +91,7 @@ const Business = () => {
       <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
         <span className="text-sm text-gray-500 mb-2">Старт</span>
         <h3 className="text-3xl font-bold text-gray-900 mb-1">
-          75 000 ₴
+          100 000 ₴
         </h3>
 
         <ul className="space-y-3 text-gray-700 text-base mt-6 flex-1">
@@ -114,7 +114,7 @@ const Business = () => {
       <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
         <span className="text-sm text-gray-500 mb-2">Малий бізнес</span>
         <h3 className="text-3xl font-bold text-gray-900 mb-1">
-          150 000 ₴
+          200 000 ₴
         </h3>
 
         <ul className="space-y-3 text-gray-700 text-base mt-6 flex-1">
@@ -141,7 +141,7 @@ const Business = () => {
 
         <span className="text-sm text-gray-500 mb-2">Розвиток</span>
         <h3 className="text-3xl font-bold text-gray-900 mb-1">
-          250 000 ₴
+          350 000 ₴
         </h3>
 
         <ul className="space-y-3 text-gray-700 text-base mt-6 flex-1">
@@ -182,6 +182,133 @@ const Business = () => {
           </li>
         </ul>
       </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section className="pb-20">
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      Креативні індустрії
+    </h2>
+    <p className="text-gray-600 text-lg mb-10 max-w-3xl">
+      Розміри гранту для отримувачів що провадять підприємницьку діяльність у сфері креатичних індустрій
+    </p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+
+      {/* 75 000 */}
+      <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
+        <span className="text-sm text-gray-500 mb-2">Розвиток</span>
+        <h3 className="text-3xl font-bold text-gray-900 mb-1">
+          500 000 ₴
+        </h3>
+
+        <ul className="space-y-3 text-gray-700 text-base mt-6 flex-1">
+          <li className="flex gap-2">
+            <span className="text-green-600 font-bold">✓</span>
+            Зареєстрований бізнес
+          </li>
+          <li className="flex gap-2">
+            <span className="text-green-600 font-bold">✓</span>
+            Бізнес-план
+          </li>
+          <li className="flex gap-2">
+            <span className="text-green-600 font-bold">✓</span>
+            2 робочі місця
+          </li>
+        </ul>
+      </div>
+
+      {/* 150 000 */}
+      <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
+        <span className="text-sm text-gray-500 mb-2">Масштабування</span>
+        <h3 className="text-3xl font-bold text-gray-900 mb-1">
+          1 000 000 ₴
+        </h3>
+
+        <ul className="space-y-3 text-gray-700 text-base mt-6 flex-1">
+          <li className="flex gap-2">
+            <span className="text-green-600 font-bold">✓</span>
+            ФОП або ТОВ
+          </li>
+          <li className="flex gap-2">
+            <span className="text-green-600 font-bold">✓</span>
+            Бізнес-план з фінансовими розрахунками
+          </li>
+          <li className="flex gap-2">
+            <span className="text-green-600 font-bold">✓</span>
+            4 робочі місця
+          </li>
+        </ul>
+      </div>
+
+      
+
+    </div>
+  </div>
+</section>
+
+<section className="pb-20">
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      Дошкільна освіта
+    </h2>
+    <p className="text-gray-600 text-lg mb-10 max-w-3xl">
+      Розміри гранту для отримувачів що провадять підприємницьку діяльність у сфері дошкільної освіти, дитячі садки, центри розвитку дитини, ясла
+    </p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+
+      {/* 75 000 */}
+      <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
+        <span className="text-sm text-gray-500 mb-2">Розвиток</span>
+        <h3 className="text-3xl font-bold text-gray-900 mb-1">
+          500 000 ₴
+        </h3>
+
+        <ul className="space-y-3 text-gray-700 text-base mt-6 flex-1">
+          <li className="flex gap-2">
+            <span className="text-green-600 font-bold">✓</span>
+            Зареєстрований бізнес мінімум рік
+          </li>
+          <li className="flex gap-2">
+            <span className="text-green-600 font-bold">✓</span>
+            Бізнес-план
+          </li>
+          <li className="flex gap-2">
+            <span className="text-green-600 font-bold">✓</span>
+            2 робочі місця
+          </li>
+        </ul>
+      </div>
+
+      {/* 150 000 */}
+      <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
+        <span className="text-sm text-gray-500 mb-2">Масштабування</span>
+        <h3 className="text-3xl font-bold text-gray-900 mb-1">
+          1 000 000 ₴
+        </h3>
+
+        <ul className="space-y-3 text-gray-700 text-base mt-6 flex-1">
+          <li className="flex gap-2">
+            <span className="text-green-600 font-bold">✓</span>
+            ФОП або ТОВ, що працює мінімум рік
+          </li>
+          <li className="flex gap-2">
+            <span className="text-green-600 font-bold">✓</span>
+            Бізнес-план з фінансовими розрахунками
+          </li>
+          <li className="flex gap-2">
+            <span className="text-green-600 font-bold">✓</span>
+            4 робочі місця
+          </li>
+        </ul>
+      </div>
+
+      
 
     </div>
   </div>

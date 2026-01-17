@@ -104,7 +104,6 @@ const FormForFeedback = () => {
       Даю згоду на обробку персональних даних відповідно до{" "}
       <a
         href="/politics"
-        target="_blank"
         rel="noopener noreferrer"
         className="underline font-medium hover:text-gray-900"
       >
@@ -112,8 +111,7 @@ const FormForFeedback = () => {
       </a>{" "}
       та погоджуюсь з умовами{" "}
       <a
-        href="/offer"
-        target="_blank"
+        href="/public"
         rel="noopener noreferrer"
         className="underline font-medium hover:text-gray-900"
       >

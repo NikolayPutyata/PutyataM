@@ -33,7 +33,7 @@ function Footer() {
           {/* Соцмережі */}
           <div className="flex flex-col gap-4">
             <div className="flex gap-5 text-gray-300">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer">
+              <a href="https://instagram.com/m_putyata" target="_blank" rel="noreferrer">
                 <img
                   src="/in.png"
                   alt=""
@@ -41,7 +41,7 @@ function Footer() {
                   className="hover:scale-110 transition"
                 />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">
+              <a href="https://www.tiktok.com/@mykola.putyata" target="_blank" rel="noreferrer">
                 <img
                   src="/tok.png"
                   alt=""
@@ -50,7 +50,7 @@ function Footer() {
                 />
               </a>
               <a
-                href="https://t.me/yourchannel"
+                href="/"
                 target="_blank"
                 rel="noreferrer"
               >
