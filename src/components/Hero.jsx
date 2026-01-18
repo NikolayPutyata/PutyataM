@@ -11,15 +11,7 @@ function Hero() {
   mt-[-140px] md:mt-0">
   {/* Заголовок */}
   <h1
-    className="
-  text-5xl
-  min-[440px]:text-6xl
-  min-[720px]:text-7xl
-  font-light
-  leading-tight
-  mb-6
-  text-gray-900
-"
+    className="text-[50px] min-[400px]:text-6xl lg:text-7xl font-light leading-tight mb-6 text-gray-900"
 
     style={{ fontFamily: "'Montserrat', serif" }}
   >
