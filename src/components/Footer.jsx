@@ -8,24 +8,32 @@ function Footer() {
           {/* Лінки на розділи */}
           <div>
             <nav className="flex flex-col gap-4 justify-start md:flex-row md:justify-center md:gap-12 md:items-center text-gray-300">
-              <a href="/services/registration" className="hover:text-white transition">
-                Юридичні послуги
-              </a>
-              <a href="/accounting/fop" className="hover:text-white transition">
-                Бухгалтерія
-              </a>
-              <a href="/notary/certification" className="hover:text-white transition">
-                Нотаріус
-              </a>
-              <a href="/grants/business" className="hover:text-white transition">
-                Гранти
-              </a>
-              <Link to="/public"  className="hover:text-white transition">
-              Публічна оферта
-            </Link>
-            <Link to="/politics"  className="hover:text-white transition">
-              Політика конфіденційності
-            </Link>
+              
+
+<Link to="/services/registration" className="hover:text-white transition">
+  Юридичні послуги
+</Link>
+
+<Link to="/accounting/fop" className="hover:text-white transition">
+  Бухгалтерія
+</Link>
+
+<Link to="/notary/certification" className="hover:text-white transition">
+  Нотаріус
+</Link>
+
+<Link to="/grants/business" className="hover:text-white transition">
+  Гранти
+</Link>
+
+<Link to="/public" className="hover:text-white transition">
+  Публічна оферта
+</Link>
+
+<Link to="/politics" className="hover:text-white transition">
+  Політика конфіденційності
+</Link>
+
               
             </nav>
           </div>
