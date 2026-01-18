@@ -2,10 +2,10 @@ import React from "react";
 
 const Politics = () => {
   return (
-    <div className="bg-gray-50 min-h-screen md:px-6 md:py-16">
-      <div className=" mx-auto  p-10 ">
+    <div className="bg-gray-50 min-h-screen p-7 md:p-10 lg:px-25">
+      <div className=" mx-auto">
         <h1
-          className="text-3xl md:text-4xl font-semibold mb-8 text-gray-900"
+          className="text-3xl md:text-4xl text-center font-semibold mb-8 text-gray-900"
           style={{ fontFamily: "'DM Serif Text', serif" }}
         >
           Політика конфіденційності
@@ -14,7 +14,7 @@ const Politics = () => {
         <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
           <p>
             Ця Політика конфіденційності визначає порядок обробки та захисту
-            персональних даних користувачів сайту <strong>Фенеріум</strong> (fenerium.com.ua) (далі —
+            персональних даних користувачів сайту <strong>Weksar</strong> (weksar.com) (далі —
             «Сайт»).
           </p>
 
