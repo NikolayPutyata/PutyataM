@@ -26,3 +26,7 @@ html {
   color-scheme: light;
 }
 
+.menu details > ul::before {
+  background-color: #e0e3e7; /* gray-400 */
+  opacity: 1;
+}

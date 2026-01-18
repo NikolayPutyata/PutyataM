@@ -95,7 +95,7 @@ const FormForFeedback = () => {
     <input
       type="checkbox"
       required
-      className="checkbox checkbox-xs mt-1"
+      className="checkbox checkbox-xs mt-1 text-black"
       checked={agreed}
           onChange={(e) => setAgreed(e.target.checked)}
     />
