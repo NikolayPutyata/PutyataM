@@ -77,12 +77,12 @@ function DrawerMenu() {
         {menu.map((section, index) => (
           <li key={index}>
             <details>
-              <summary className="uppercase">{section.label}</summary>
+              <summary className="uppercase text-black">{section.label}</summary>
 
               <ul className="flex flex-col gap-1 mt-2">
                 {section.items.map((item, i) => (
                   <li key={i}>
-                    <Link to={item.path} onClick={() => {
+                    <Link to={item.path} className="text-black" onClick={() => {
                     const drawerCheckbox = document.getElementById("nav-drawer");
                     if (drawerCheckbox) drawerCheckbox.checked = false;
                   }}>{item.name}</Link>
@@ -94,7 +94,7 @@ function DrawerMenu() {
         ))}
 
         <li>
-          <Link to="/contacts" className="uppercase" onClick={() => {
+          <Link to="/contacts" className="uppercase text-black" onClick={() => {
                     const drawerCheckbox = document.getElementById("nav-drawer");
                     if (drawerCheckbox) drawerCheckbox.checked = false;
                   }}>

@@ -38,7 +38,7 @@ const FormForFeedback = () => {
               </div>
     
               {/* RIGHT FORM */}
-              <div className="flex w-full flex-col justify-center p-8 md:p-10 md:w-7/12">
+              <div className="flex w-full flex-col justify-center p-8 md:p-10 md:w-7/12 bg-white">
                 <h2 className="mb-6 text-2xl font-semibold text-gray-800">
                   Залишити заявку
                 </h2>
@@ -56,9 +56,9 @@ const FormForFeedback = () => {
                      console.error(error);
                            }
   }}
-                >
+                className="bg-white">
                   {({ isSubmitting, touched, errors }) => (
-                    <Form className="space-y-3">
+                    <Form className="space-y-3 bg-white">
                       {/* Ім'я */}
                       <div>
                         <Field

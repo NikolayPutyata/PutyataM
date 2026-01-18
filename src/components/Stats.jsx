@@ -17,7 +17,7 @@ const Stats = () => {
   ">
     {/* STAT 1 */}
     <div className="stat px-6 py-8 lg:px-10 lg:py-12">
-      <div className="stat-title text-lg ">
+      <div className="stat-title text-lg text-black opacity-50">
         Зареєстровано ФОП
       </div>
       <div className="stat-value text-5xl md:text-6xl font-light mt-3">
@@ -33,7 +33,7 @@ const Stats = () => {
 
     {/* STAT 2 */}
     <div className="stat px-6 py-8 lg:px-10 lg:py-12">
-      <div className="stat-title text-lg ">
+      <div className="stat-title text-lg text-black opacity-50">
         Відкритих підприємств
       </div>
       <div className="stat-value text-5xl md:text-6xl font-light mt-3">
@@ -49,7 +49,7 @@ const Stats = () => {
 
     {/* STAT 3 */}
     <div className="stat px-6 py-8 lg:px-10 lg:py-12">
-      <div className="stat-title text-lg ">
+      <div className="stat-title text-lg text-black opacity-50">
         Задоволених клієнтів
       </div>
       <div className="stat-value text-5xl  md:text-6xl font-light mt-3">
@@ -64,7 +64,7 @@ const Stats = () => {
     </div>
 
     <div className="stat px-6 py-8 lg:px-10 lg:py-12">
-      <div className="stat-title text-lg ">
+      <div className="stat-title text-lg text-black opacity-50">
         Звертаються щомісяця
       </div>
       <div className="stat-value text-5xl  md:text-6xl font-light mt-3">
