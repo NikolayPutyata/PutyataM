@@ -7,11 +7,20 @@ function Hero() {
     relative">
       <div className="absolute inset-0 bg-white/10 z-0"></div>
 
-  <div className="relative z-10 max-w-3xl mx-auto text-start md:text-center
+  <div className="relative z-10 max-w-3xl mx-auto text-start lg:text-center
   mt-[-140px] md:mt-0">
   {/* Заголовок */}
   <h1
-    className="text-6xl lg:text-7xl font-light leading-tight mb-6 text-gray-900"
+    className="
+  text-5xl
+  min-[440px]:text-6xl
+  min-[720px]:text-7xl
+  font-light
+  leading-tight
+  mb-6
+  text-gray-900
+"
+
     style={{ fontFamily: "'Montserrat', serif" }}
   >
     Партнерське об'єднання{" "}
