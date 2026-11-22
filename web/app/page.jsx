@@ -6,9 +6,9 @@ import JsonLd from "@/components/JsonLd";
 import { CATALOG, CONTACTS, FACTS, PRIMARY_SERVICES, SITE_URL, STATS, TOP_SERVICES } from "@/lib/site";
 
 export const metadata = {
-  title: { absolute: "Weksar — ліквідація ТОВ і тендерний супровід бізнесу" },
+  title: { absolute: "Weksar — реєстрація і ліквідація ТОВ, тендери, ліцензії" },
   description:
-    "Ліквідація ТОВ від 12 000 грн, тендерний супровід у Prozorro, зміни ТОВ, ліцензії, бухгалтерія. Понад 10 років досвіду. Ціни на сайті.",
+    "Реєстрація ТОВ і ФОП, ліквідація ТОВ від 20 000 грн, тендерний супровід у Prozorro, ліцензії. Понад 10 років досвіду. Ціни на сайті.",
   alternates: { canonical: "/" },
 };
 
@@ -39,7 +39,7 @@ export default function HomePage() {
     <>
       <Hero
         eyebrow="Понад 10 років досвіду"
-        title="Ліквідація ТОВ і тендерний супровід бізнесу"
+        title="Реєстрація і ліквідація бізнесу, тендери та ліцензії"
         slogan={FACTS.slogan}
         offers={PRIMARY_SERVICES}
       />
@@ -48,7 +48,7 @@ export default function HomePage() {
       <section className="py-16 sm:py-20">
         <div className="container-site">
           <p className="eyebrow text-amber-ink">Головні послуги</p>
-          <h2 className="h2 mt-3 max-w-2xl">Закриваємо компанії і заводимо їх на тендерний ринок</h2>
+          <h2 className="h2 mt-3 max-w-2xl">Відкриваємо, закриваємо, ліцензуємо і виводимо на тендери</h2>
           <ul className="mt-10 grid gap-4 md:grid-cols-2">
             {PRIMARY_SERVICES.map((s) => (
               <li key={s.href}>
@@ -65,7 +65,7 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
-          <ul className="mt-4 grid gap-4 md:grid-cols-2">
+          <ul className="mt-4 grid gap-4 md:grid-cols-3">
             {TOP_SERVICES.map((s) => (
               <li key={s.href}>
                 <Link href={s.href} className="group flex h-full flex-col rounded-[var(--radius-card)] border border-line bg-paper p-6 transition-shadow hover:shadow-[0_10px_30px_-12px_rgba(20,22,26,0.25)]">

@@ -14,15 +14,15 @@ export default function Hero({ eyebrow, title, lead, slogan, facts = null, offer
           {slogan && <p className="mt-4 text-on-dark-muted">{slogan}</p>}
           {lead && <p className="mt-4 max-w-[58ch] text-[1.05rem] text-on-dark-muted">{lead}</p>}
           {offers && (
-            <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+            <ul className="mt-7 grid grid-cols-2 gap-2 sm:gap-3">
               {offers.map((o) => (
                 <li key={o.href}>
-                  <Link href={o.href} className="group flex h-full flex-col rounded-[var(--radius-card)] border border-graphite-line bg-graphite-2 p-4 transition-colors hover:border-amber sm:p-5">
-                    <span className="flex items-center justify-between gap-3 font-display text-[1.05rem] font-semibold sm:text-[1.15rem]">
+                  <Link href={o.href} className="group flex h-full flex-col rounded-[var(--radius-card)] border border-graphite-line bg-graphite-2 p-3 transition-colors hover:border-amber sm:p-5">
+                    <span className="flex items-start justify-between gap-2 font-display text-[0.88rem] leading-snug font-semibold sm:text-[1.1rem]">
                       {o.title}
                       <span aria-hidden className="text-amber transition-transform group-hover:translate-x-1">→</span>
                     </span>
-                    <span className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm font-bold text-amber">
+                    <span className="mt-2 flex flex-col gap-0.5 text-[0.78rem] font-bold text-amber sm:flex-row sm:flex-wrap sm:gap-x-3 sm:text-sm">
                       {o.facts.map((f) => <span key={f}>{f}</span>)}
                     </span>
                   </Link>
