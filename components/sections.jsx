@@ -46,7 +46,7 @@ export function Cards({ eyebrow, title, intro, items, columns = 2, locale = "uk"
               )}
               {m.href && (
                 <Link href={m.href} className="mt-5 font-bold underline decoration-amber decoration-2 underline-offset-4">
-                  {d.more}
+                  {d.more}<span className="sr-only">: {m.name}</span>
                 </Link>
               )}
             </li>

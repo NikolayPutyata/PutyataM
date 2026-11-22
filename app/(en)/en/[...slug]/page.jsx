@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import ServicePage from "@/components/ServicePage";
-import { EN_PAGES } from "@/content/en/pages";
+import { EN_PAGES } from "@/content/en";
 import { pageMeta } from "@/lib/seo";
 
-// English pages are built from content/en/pages.js.
+// English pages are built from the registry content/en/index.js.
 export const dynamicParams = false;
 
 export function generateStaticParams() {

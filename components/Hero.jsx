@@ -6,13 +6,15 @@ import { t } from "@/lib/i18n";
 // Темний перший екран: заголовок, факти або дві головні пропозиції, кнопки; на десктопі — форма праворуч.
 export default function Hero({ eyebrow, title, lead, slogan, facts = null, offers = null, note = "", top = null, cta = "", locale = "uk" }) {
   const d = t(locale);
+  // Довге слово (напр. «працевлаштування») не влазить у 375 px шрифтом 1.85rem — для таких заголовків менший кегль на телефоні.
+  const longWord = typeof title === "string" && title.split(/\s+/).some((w) => w.length >= 15);
   return (
     <section className="bg-graphite text-on-dark">
       <div className="container-site grid gap-10 pt-7 pb-12 sm:pt-12 lg:grid-cols-[1.25fr_1fr] lg:items-start lg:gap-14 lg:pb-20">
         <div>
           {top}
           <p className={`eyebrow text-amber ${top ? "mt-5" : ""}`}>{eyebrow}</p>
-          <h1 className="mt-4 text-[1.85rem] leading-[1.12] font-bold sm:text-[2.6rem] lg:text-[3.1rem]">{title}</h1>
+          <h1 className={`mt-4 ${longWord ? "text-[1.55rem]" : "text-[1.85rem]"} leading-[1.12] font-bold break-words sm:text-[2.6rem] lg:text-[3.1rem]`}>{title}</h1>
           {slogan && <p className="mt-4 text-on-dark-muted">{slogan}</p>}
           {lead && <p className="mt-4 max-w-[58ch] text-[1.05rem] text-on-dark-muted">{lead}</p>}
           {offers && (

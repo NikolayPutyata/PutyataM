@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Logo from "./Logo";
-import { CATALOG, CONTACTS, FACTS, FACTS_EN, NAV_EN } from "@/lib/site";
+import { CATALOG, CATALOG_EN, CONTACTS, FACTS, FACTS_EN } from "@/lib/site";
 import { t } from "@/lib/i18n";
 
 export default function Footer({ locale = "uk" }) {
   const d = t(locale);
-  const groups = locale === "en" ? [{ group: "Services", items: NAV_EN.filter((n) => !["/en/prices", "/en/contacts"].includes(n.href)) }] : CATALOG.slice(0, 2);
+  const groups = (locale === "en" ? CATALOG_EN : CATALOG).slice(0, 2);
   const slogan = locale === "en" ? FACTS_EN.slogan : FACTS.slogan;
   return (
     <footer className="bg-graphite pb-24 text-on-dark md:pb-0">

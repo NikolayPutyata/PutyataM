@@ -52,7 +52,7 @@ npm run build
 | `https://weksar.com/qwerty` | сторінка «Сторінку не знайдено» |
 | `https://www.weksar.com` | перекидає на `https://weksar.com` |
 | `https://weksar.com/robots.txt` | `Allow: /` і посилання на sitemap |
-| `https://weksar.com/sitemap.xml` | список з 63 сторінок (українська, блог, англійська) |
+| `https://weksar.com/sitemap.xml` | список зі 110 сторінок (55 українських і 55 англійських) |
 | `http://weksar.com` | перекидає на `https://`. Якщо ні, увімкни в панелі фрихосту перенаправлення на HTTPS |
 
 **Тестова заявка:** форма на будь-якій сторінці. Поки сервер заявок вимкнений, форма запропонує надіслати заявку у WhatsApp — так і має бути.

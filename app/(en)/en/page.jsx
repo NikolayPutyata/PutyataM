@@ -4,7 +4,7 @@ import Faq from "@/components/Faq";
 import LeadSection from "@/components/LeadSection";
 import JsonLd from "@/components/JsonLd";
 import { Stats } from "@/components/sections";
-import { CONTACTS, FACTS_EN, SITE_URL } from "@/lib/site";
+import { CATALOG_EN, CONTACTS, FACTS_EN, SITE_URL, STATS_EN } from "@/lib/site";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata = pageMeta({
@@ -25,13 +25,6 @@ const WHY = [
   { t: "Kyiv and the Kyiv region", d: "We meet clients in person and accompany them to the notary. Tender support — across Ukraine." },
   { t: "Open prices", d: "A “from” price for every service, right on the website." },
   { t: "One team", d: "Lawyers, accountants and translators; a notary and an attorney as partners." },
-];
-
-const STATS_EN = [
-  { value: "1000+", label: "sole proprietors registered" },
-  { value: "100+", label: "companies set up" },
-  { value: "3000+", label: "satisfied clients" },
-  { value: "100+", label: "requests every month" },
 ];
 
 const FAQ = [
@@ -58,10 +51,27 @@ export default function HomeEn() {
         </div>
       </section>
       <Stats items={STATS_EN} />
-      <section className="py-16 sm:py-20">
+      <section id="services" className="scroll-mt-4 bg-mist py-16 sm:py-20">
         <div className="container-site">
-          <h2 className="h2">Services for foreigners</h2>
-          <p className="mt-4 max-w-[60ch] text-muted">Tax number (RNOKPP), temporary residence permit, work permit, certified translations — see <Link href="/en/prices" className="underline decoration-amber decoration-2 underline-offset-4">prices</Link>.</p>
+          <h2 className="h2">All services</h2>
+          <div className="mt-10 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+            {CATALOG_EN.map((g) => (
+              <div key={g.group}>
+                <p className="eyebrow text-muted">{g.group}</p>
+                <ul className="mt-4 divide-y divide-line border-y border-line">
+                  {g.items.map((i) => (
+                    <li key={i.href}>
+                      <Link href={i.href} className="flex items-baseline justify-between gap-3 py-3 hover:text-amber-ink">
+                        <span className="font-semibold">{i.name}</span>
+                        {i.price && <span className="shrink-0 text-sm text-muted tabular-nums">{i.price}</span>}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <Link href="/en/prices" className="btn-ghost-light mt-10">All prices</Link>
         </div>
       </section>
       <Faq items={FAQ} locale="en" />

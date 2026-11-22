@@ -66,8 +66,17 @@ export const enChangesAccountingPages = {
     sections: [
       { type: "cards", title: "Changes we register", columns: 3, items: CHANGES.map((c) => ({ name: c.name, text: c.text, price: "from UAH 4,000", href: `/en/llc-changes-ukraine/${c.slug}` })) },
       { type: "steps", title: "How it works", tone: "mist", items: STEPS },
+      {
+        type: "split",
+        left: { title: "We also register", items: ["Change of the LLC name", "Change of ultimate beneficial owner information", "Change of shareholders' passport details and address", "Several changes at once — in one package"] },
+        right: { title: "Why not file it yourself via Diia", intro: "Some changes can be filed online, but mistakes here are costly:", items: ["A decision taken by the wrong body or without enough votes", "A change that contradicts the charter", "The bank, tax office or counterparties not notified", "A new address or activity code with tax or licensing consequences"] },
+      },
+      { type: "related", items: [{ name: "LLC liquidation", href: "/en/llc-liquidation-ukraine", price: "from UAH 20,000" }, { name: "Sole proprietor changes", href: "/en/sole-proprietor-changes-ukraine", price: "UAH 1,000" }, { name: "LLC registration", href: "/en/company-registration-ukraine", price: "from UAH 2,500" }] },
     ],
-    faq: [{ q: "Is a notary required?", a: "For some changes signatures must be notarized. We accompany you to the notary in person." }],
+    faq: [
+      { q: "How much do changes to an LLC cost?", a: "From UAH 4,000. The price depends on the type and number of changes; several changes can be registered in one package." },
+      { q: "Is a notary required?", a: "For some changes signatures on decisions and agreements must be notarized. We accompany you to the notary in person." },
+    ],
     lead: { title: "Tell us what needs to change" },
     schema: { name: "Changes to an LLC", serviceType: "Registration of changes to a legal entity", price: "4000" },
   },

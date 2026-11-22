@@ -34,7 +34,7 @@ export default function ServicePage({ page }) {
         const Block = BLOCKS[s.type];
         return <Block key={i} locale={locale} {...s} />;
       })}
-      {locale === "uk" && <ArticlesBlock path={page.path} />}
+      <ArticlesBlock path={page.path} locale={locale} />
       {page.faq && <Faq items={page.faq} title={page.faqTitle} locale={locale} />}
       <LeadSection title={page.lead?.title} text={page.lead?.text} cta={page.cta} locale={locale} />
       {page.schema && (

@@ -340,22 +340,32 @@
 
 **Рішення Колі (22.11):** перекладаємо весь сайт.
 
-**Зроблено (22.11):**
-- **Основа:** окремий кореневий шаблон з `lang="en"`, словник інтерфейсу (`lib/i18n.js`), перемикач UA/EN, hreflang uk/en/x-default для кожної пари сторінок (`lib/alternates.js`), англійські сторінки в sitemap.
-- **8 сторінок** (`content/en/pages.js`):
+**Зроблено (22.11): весь сайт двома мовами — 55 українських і 55 англійських сторінок, кожна має пару.**
+- **Основа:** окремий кореневий шаблон з `lang="en"`, словник інтерфейсу (`lib/i18n.js`), перемикач UA/EN, hreflang uk/en/x-default для кожної пари (`lib/alternates.js`), англійські сторінки в sitemap.
+- **Тексти:** реєстр `content/en/index.js` збирає `pages.js` (головні напрями, ціни, контакти, політика), `liquidation.js`, `tenders-licenses.js`, `changes-accounting.js`, `services.js` (інші послуги, іноземцям, «Про нас»); блог — `content/en/blog.js` (поле `uk` — адреса українського оригіналу).
+- **Головна `/en`:** каталог «All services» (`CATALOG_EN` у `lib/site.js`), пункт меню «All services».
+- **Як додати нову пару:** сторінка в одному з файлів `content/en/*.js` + рядок у `lib/alternates.js`. Для статті — запис у `content/en/blog.js` з полем `uk`.
 
 | UA | EN |
 |---|---|
 | `/` | `/en` |
-| `/reiestratsiia-tov` | `/en/company-registration-ukraine` |
-| `/likvidatsiia-tov` | `/en/llc-liquidation-ukraine` |
-| `/tendernyi-suprovid` | `/en/tender-support-ukraine` |
-| `/litsenzii` | `/en/business-licenses-ukraine` |
-| `/tsiny` | `/en/prices` |
-| `/kontakty` | `/en/contacts` |
-| `/polityka-konfidentsiinosti` | `/en/privacy-policy` |
-
-**Далі:** решта сторінок (підсторінки ліквідації, тендерів і ліцензій, зміни ТОВ, бухгалтерія, послуги для іноземців, «Про нас», блог). Нова пара додається так: сторінка в `content/en/pages.js` + пара в `lib/alternates.js`.
+| `/reiestratsiia-tov`, `/reiestratsiia-fop` | `/en/company-registration-ukraine`, `/en/sole-proprietor-registration-ukraine` |
+| `/likvidatsiia-tov` (+ `/alternatyvna`, `/z-borhamy`) | `/en/llc-liquidation-ukraine` (+ `/change-of-owner`, `/with-debts-bankruptcy`) |
+| `/reorhanizatsiia-tov`, `/zakryttia-fop` | `/en/llc-reorganization-ukraine`, `/en/close-sole-proprietorship-ukraine` |
+| `/tendernyi-suprovid` (+ `/pidhotovka-tendernoi-propozytsii`, `/dlia-zamovnykiv`) | `/en/tender-support-ukraine` (+ `/bid-preparation`, `/for-contracting-authorities`) |
+| `/litsenzii` (+ `/alkohol`, `/tiutiun`, `/budivelna`) | `/en/business-licenses-ukraine` (+ `/alcohol`, `/tobacco`, `/construction`) |
+| `/zminy-tov` (+ `/zmina-dyrektora`, `/zmina-uchasnykiv`, `/yurydychna-adresa`, `/kved`, `/statut`, `/statutnyi-kapital`) | `/en/llc-changes-ukraine` (+ `/change-of-director`, `/change-of-shareholders`, `/registered-address`, `/activity-codes`, `/charter`, `/share-capital`) |
+| `/zminy-fop` | `/en/sole-proprietor-changes-ukraine` |
+| `/bukhhalteriia` (+ `/fop`, `/tov`, `/zvitnist`, `/kik`, `/rro-prro`, `/audyt-fop`) | `/en/accounting-services-ukraine` (+ `/sole-proprietor`, `/llc`, `/tax-reporting`, `/cfc-reporting`, `/cash-registers`, `/sole-proprietor-audit`) |
+| `/reiestratsiia-torhovelnoi-marky`, `/reiestratsiia-potuzhnostei` | `/en/trademark-registration-ukraine`, `/en/food-facility-registration-ukraine` |
+| `/dohovory`, `/konsultatsiia-yurysta` | `/en/contracts`, `/en/legal-consultation` |
+| `/advokat-u-sudi`, `/konsultatsiia-advokata` | `/en/litigation-attorney-kyiv`, `/en/attorney-consultation` |
+| `/notarialne-zasvidchennia-dokumentiv`, `/notarialni-reiestratsiini-dii` | `/en/notarization-kyiv`, `/en/notary-registration-services` |
+| `/pereklad-dokumentiv`, `/posluhy-perekladacha` | `/en/certified-translation-kyiv`, `/en/interpreter-kyiv` |
+| `/hrant-vlasna-sprava`, `/hrant-dlia-veteraniv` | `/en/business-grants-ukraine`, `/en/veteran-business-grants-ukraine` |
+| `/inozemtsiam` (+ `/rnokpp`, `/posvidka`, `/dozvil-na-pratsevlashtuvannia`) | `/en/services-for-foreigners` (+ `/tax-number`, `/temporary-residence-permit`, `/work-permit`) |
+| `/tsiny`, `/kontakty`, `/pro-nas`, `/polityka-konfidentsiinosti` | `/en/prices`, `/en/contacts`, `/en/about`, `/en/privacy-policy` |
+| `/blog` + 4 статті | `/en/blog` + 4 статті (`how-to-liquidate-llc-ukraine`, `alternative-llc-liquidation-risks`, `how-to-bid-prozorro`, `why-tender-bids-are-rejected`) |
 
 - Мовний закон: українська версія основна і вантажиться за замовчуванням; англійська — додаткова. Схема відповідає вимогам.
 

@@ -5,8 +5,9 @@ import { FACTS_EN } from "@/lib/site";
 
 const ALL_INCLUSIVE = "The quoted price covers everything: notary, state fees and documents. No extra payments.";
 const exp = { value: FACTS_EN.experience, label: "of experience" };
+const row = (name, href, price, text) => ({ name, href, price, text });
 
-const enPages = {
+export const enCorePages = {
   "en/company-registration-ukraine": {
     meta: {
       title: "Company Registration in Ukraine (LLC) | Weksar",
@@ -52,6 +53,7 @@ const enPages = {
           { t: "Taxes", d: "Registration as a single tax or VAT payer, advice on bank account and accounting." },
         ],
       },
+      { type: "related", items: [{ name: "Sole proprietor registration", href: "/en/sole-proprietor-registration-ukraine", price: "UAH 1,000" }, { name: "Changes to an LLC", href: "/en/llc-changes-ukraine", price: "from UAH 4,000" }, { name: "Tax number for a foreigner", href: "/en/services-for-foreigners/tax-number", price: "UAH 2,000" }] },
     ],
     faq: [
       { q: "How much does LLC registration cost?", a: "From UAH 2,500. Sole proprietor registration — UAH 1,000." },
@@ -82,9 +84,9 @@ const enPages = {
         intro: ALL_INCLUSIVE,
         items: [
           { name: "Voluntary liquidation", text: "Liquidation by the shareholders' decision through a liquidation commission: creditors, tax audit, liquidation balance sheet, record of termination.", term: "2.5 months", price: "from UAH 20,000" },
-          { name: "Change of owner", text: "The shares and the director's position pass to a new owner. The fastest way, but legally the company continues to exist.", term: "from 2 days", price: "from UAH 20,000" },
-          { name: "With debts / bankruptcy", text: "When the company owes the tax authority, banks or counterparties: analysis and the right procedure, including bankruptcy.", term: "from 2 days to 2.5 months", price: "from UAH 25,000" },
-          { name: "Reorganization", text: "Termination by merger with or accession to another company; rights and obligations pass to the successor.", term: "2.5 months", price: "from UAH 25,000" },
+          { name: "Change of owner", text: "The shares and the director's position pass to a new owner. The fastest way, but legally the company continues to exist.", term: "from 2 days", price: "from UAH 20,000", href: "/en/llc-liquidation-ukraine/change-of-owner" },
+          { name: "With debts / bankruptcy", text: "When the company owes the tax authority, banks or counterparties: analysis and the right procedure, including bankruptcy.", term: "from 2 days to 2.5 months", price: "from UAH 25,000", href: "/en/llc-liquidation-ukraine/with-debts-bankruptcy" },
+          { name: "Reorganization", text: "Termination by merger with or accession to another company; rights and obligations pass to the successor.", term: "2.5 months", price: "from UAH 25,000", href: "/en/llc-reorganization-ukraine" },
         ],
       },
       {
@@ -99,6 +101,7 @@ const enPages = {
           { t: "Record of termination", d: "The registrar records the termination of the company." },
         ],
       },
+      { type: "related", items: [{ name: "Closing a sole proprietorship", href: "/en/close-sole-proprietorship-ukraine", price: "UAH 3,500" }, { name: "Change of shareholders", href: "/en/llc-changes-ukraine/change-of-shareholders", price: "from UAH 4,000" }, { name: "Accounting for an LLC", href: "/en/accounting-services-ukraine/llc", price: "from UAH 6,000/month" }] },
     ],
     faq: [
       { q: "How much does LLC liquidation cost?", a: "Voluntary liquidation and change of owner — from UAH 20,000; liquidation with debts and reorganization — from UAH 25,000. The quoted price covers everything." },
@@ -140,12 +143,13 @@ const enPages = {
         title: "Formats and prices",
         items: [
           { name: "Capability assessment", price: "from UAH 3,000" },
-          { name: "Bid preparation", price: "from UAH 5,000" },
+          { name: "Bid preparation", href: "/en/tender-support-ukraine/bid-preparation", price: "from UAH 5,000" },
           { name: "Support for one procurement", price: "from UAH 8,000" },
           { name: "Ongoing support (subscription)", price: "from UAH 8,000/month" },
           { name: "Success fee", text: "Paid only after winning", price: "5% of the contract value" },
         ],
       },
+      { type: "related", items: [{ name: "For contracting authorities", href: "/en/tender-support-ukraine/for-contracting-authorities", price: "from UAH 5,000" }, { name: "Contracts", href: "/en/contracts", price: "from UAH 2,000" }, { name: "Construction license", href: "/en/business-licenses-ukraine/construction", price: "UAH 15,000 + state fee" }] },
     ],
     faq: [
       { q: "Do you guarantee winning?", a: "No. The buyer chooses the winner under the evaluation criteria. We prepare a bid without formal errors and pick procurements where you have real chances." },
@@ -174,12 +178,12 @@ const enPages = {
         title: "Licenses and prices",
         intro: "The state license fee is paid separately at the current rates.",
         items: [
-          { name: "Retail sale of alcoholic beverages", price: "UAH 12,000" },
-          { name: "Retail sale of cider and perry", price: "UAH 9,000" },
-          { name: "Retail sale of tobacco products", price: "UAH 10,000" },
+          { name: "Retail sale of alcoholic beverages", href: "/en/business-licenses-ukraine/alcohol", price: "UAH 12,000" },
+          { name: "Retail sale of cider and perry", href: "/en/business-licenses-ukraine/alcohol", price: "UAH 9,000" },
+          { name: "Retail sale of tobacco products", href: "/en/business-licenses-ukraine/tobacco", price: "UAH 10,000" },
           { name: "License renewal (alcohol, tobacco)", text: "Per license", price: "UAH 2,000" },
-          { name: "Construction license (CC2, CC3)", price: "UAH 15,000" },
-          { name: "Amendments to a construction license", text: "Per license", price: "UAH 4,000" },
+          { name: "Construction license (CC2, CC3)", href: "/en/business-licenses-ukraine/construction", price: "UAH 15,000" },
+          { name: "Amendments to a construction license", text: "Per license", href: "/en/business-licenses-ukraine/construction", price: "UAH 4,000" },
         ],
       },
     ],
@@ -202,24 +206,58 @@ const enPages = {
       facts: [{ value: "UAH 1,000", label: "from" }, { value: "no extras", label: "for LLC liquidation" }, exp],
     },
     sections: [
-      { type: "prices", tone: "plain", title: "Main services", items: [
-        { name: "LLC registration", href: "/en/company-registration-ukraine", price: "from UAH 2,500" },
-        { name: "Sole proprietor registration", href: "/en/company-registration-ukraine", price: "UAH 1,000" },
-        { name: "LLC liquidation", href: "/en/llc-liquidation-ukraine", price: "from UAH 20,000" },
-        { name: "Tender support", href: "/en/tender-support-ukraine", price: "from UAH 3,000" },
-        { name: "Licenses", href: "/en/business-licenses-ukraine", price: "from UAH 9,000 + state fee" },
+      { type: "prices", tone: "plain", title: "Registration and changes", items: [
+        row("LLC registration", "/en/company-registration-ukraine", "from UAH 2,500"),
+        row("Sole proprietor registration", "/en/sole-proprietor-registration-ukraine", "UAH 1,000"),
+        row("Changes to an LLC", "/en/llc-changes-ukraine", "from UAH 4,000", "director, shareholders, address, activity codes, charter, capital"),
+        row("Sole proprietor changes", "/en/sole-proprietor-changes-ukraine", "UAH 1,000"),
+      ] },
+      { type: "prices", title: "Liquidation and closing", items: [
+        row("Voluntary LLC liquidation", "/en/llc-liquidation-ukraine", "from UAH 20,000", "2.5 months"),
+        row("Change of owner (“alternative liquidation”)", "/en/llc-liquidation-ukraine/change-of-owner", "from UAH 20,000", "from 2 days"),
+        row("Liquidation with debts and bankruptcy", "/en/llc-liquidation-ukraine/with-debts-bankruptcy", "from UAH 25,000"),
+        row("LLC reorganization", "/en/llc-reorganization-ukraine", "from UAH 25,000"),
+        row("Closing a sole proprietorship", "/en/close-sole-proprietorship-ukraine", "UAH 3,500", "3 days"),
+      ] },
+      { type: "prices", tone: "plain", title: "Tender support", items: [
+        row("Capability assessment", "/en/tender-support-ukraine", "from UAH 3,000"),
+        row("Bid preparation", "/en/tender-support-ukraine/bid-preparation", "from UAH 5,000"),
+        row("Support for one procurement", "/en/tender-support-ukraine", "from UAH 8,000"),
+        row("Ongoing support (subscription)", "/en/tender-support-ukraine", "from UAH 8,000/month"),
+        row("Success fee", "/en/tender-support-ukraine", "5% of the contract value"),
+        row("Documentation for contracting authorities", "/en/tender-support-ukraine/for-contracting-authorities", "from UAH 5,000"),
+      ] },
+      { type: "prices", title: "Licenses", items: [
+        row("Alcohol", "/en/business-licenses-ukraine/alcohol", "UAH 12,000", "+ state fee"),
+        row("Cider and perry", "/en/business-licenses-ukraine/alcohol", "UAH 9,000", "+ state fee"),
+        row("Tobacco products", "/en/business-licenses-ukraine/tobacco", "UAH 10,000", "+ state fee"),
+        row("License renewal", "/en/business-licenses-ukraine", "UAH 2,000", "per license"),
+        row("Construction license CC2 and CC3", "/en/business-licenses-ukraine/construction", "UAH 15,000", "+ state fee"),
+        row("Amendments to a construction license", "/en/business-licenses-ukraine/construction", "UAH 4,000"),
+      ] },
+      { type: "prices", tone: "plain", title: "Accounting", items: [
+        row("Accounting for a sole proprietor", "/en/accounting-services-ukraine/sole-proprietor", "from UAH 2,500/month"),
+        row("Accounting for an LLC", "/en/accounting-services-ukraine/llc", "from UAH 6,000/month"),
+        row("Tax reporting", "/en/accounting-services-ukraine/tax-reporting", "from UAH 1,000"),
+        row("CFC reporting", "/en/accounting-services-ukraine/cfc-reporting", "from UAH 2,000"),
+        row("Cash register (RRO/PRRO) registration", "/en/accounting-services-ukraine/cash-registers", "from UAH 2,500"),
+        row("Sole proprietor audit", "/en/accounting-services-ukraine/sole-proprietor-audit", "UAH 3,000"),
       ] },
       { type: "prices", title: "Other services", items: [
-        { name: "Changes to an LLC (director, shareholders, address, activity codes)", price: "from UAH 4,000" },
-        { name: "Closing a sole proprietorship", price: "UAH 3,500" },
-        { name: "Accounting for an LLC", price: "from UAH 6,000/month" },
-        { name: "Accounting for a sole proprietor", price: "from UAH 2,500/month" },
-        { name: "Contracts", price: "from UAH 2,000" },
-        { name: "Legal consultation", price: "UAH 2,000/hour" },
-        { name: "Tax number (RNOKPP) for a foreigner", price: "UAH 2,000" },
-        { name: "Temporary residence permit", price: "UAH 10,000" },
-        { name: "Work permit for a foreigner", price: "UAH 10,000 + state fee" },
-        { name: "Certified translation", price: "from UAH 400 per document" },
+        row("Legal consultation", "/en/legal-consultation", "UAH 2,000/hour"),
+        row("Contracts", "/en/contracts", "from UAH 2,000"),
+        row("Trademark registration", "/en/trademark-registration-ukraine", "UAH 4,000", "+ official fees"),
+        row("Food facility registration", "/en/food-facility-registration-ukraine", "UAH 2,000"),
+        row("Attorney in court", "/en/litigation-attorney-kyiv", "from UAH 3,000"),
+        row("Attorney consultation", "/en/attorney-consultation", "from UAH 1,000"),
+        row("Notarization", "/en/notarization-kyiv", "from UAH 300"),
+        row("Notary registration services", "/en/notary-registration-services", "from UAH 1,500"),
+        row("Certified translation", "/en/certified-translation-kyiv", "from UAH 400"),
+        row("Interpreter", "/en/interpreter-kyiv", "from UAH 500"),
+        row("“Own Business” grants", "/en/business-grants-ukraine", "UAH 10,000"),
+        row("Tax number for a foreigner", "/en/services-for-foreigners/tax-number", "UAH 2,000"),
+        row("Temporary residence permit", "/en/services-for-foreigners/temporary-residence-permit", "UAH 10,000"),
+        row("Work permit", "/en/services-for-foreigners/work-permit", "UAH 10,000"),
       ] },
     ],
     lead: { title: "We'll calculate the exact price for you" },
@@ -242,8 +280,6 @@ const enPages = {
     lead: { title: "Or leave a request" },
   },
 };
-
-export const EN_PAGES = Object.fromEntries(Object.entries(enPages).map(([path, p]) => [path, { ...p, path, locale: "en" }]));
 
 export const enPrivacyPage = {
   path: "en/privacy-policy",
