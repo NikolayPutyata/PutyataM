@@ -1,6 +1,6 @@
 import { useState } from "react";
 import * as Yup from "yup";
-import { sendOrder } from "../api/sendOrder";
+import { messengerFallbackText, sendOrder } from "../api/sendOrder";
 
 // Телефон: 10–15 цифр, дозволені +, пробіли, дефіси, дужки
 // (підходить і для українських, і для іноземних номерів).
@@ -20,6 +20,7 @@ export const consentSchema = Yup.boolean().oneOf([true], "Потрібна зг�
 // status: idle | success | error
 export function useLeadSubmit() {
   const [status, setStatus] = useState("idle");
+  const [fallbackText, setFallbackText] = useState("");
 
   const submit = async (values, { resetForm }, cta) => {
     // Honeypot: це поле не бачать люди, його заповнюють лише боти.
@@ -28,20 +29,22 @@ export function useLeadSubmit() {
       setStatus("success");
       return;
     }
+    const lead = {
+      name: values.name.trim(),
+      phone: values.phone.trim(),
+      message: values.message?.trim(),
+      cta,
+    };
     try {
-      await sendOrder({
-        name: values.name.trim(),
-        phone: values.phone.trim(),
-        message: values.message?.trim(),
-        cta,
-      });
+      await sendOrder(lead);
       resetForm();
       setStatus("success");
     } catch (error) {
       console.error(error);
+      setFallbackText(messengerFallbackText(lead));
       setStatus("error");
     }
   };
 
-  return { status, setStatus, submit };
+  return { status, setStatus, submit, fallbackText };
 }

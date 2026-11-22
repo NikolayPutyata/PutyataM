@@ -1,0 +1,59 @@
+# Автозаливка сайту на хостинг (фрихост) по FTP після кожного оновлення гілки main.
+# Поки в налаштуваннях репозиторію не задані FTP-дані, крок заливки пропускається.
+# Що задати (Settings → Secrets and variables → Actions):
+#   Secrets:   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
+#   Variables: FTP_SERVER_DIR (папка сайту на хостингу, з «/» в кінці, напр. /weksar.com/www/)
+#              FTP_PROTOCOL (необовʼязково: ftps за замовчуванням, або ftp)
+#              VITE_GTM_ID (необовʼязково: ID Google Tag Manager, GTM-XXXXXXX)
+# Інструкція: docs/deploy-old-site.md
+
+name: Деплой на хостинг
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-hosting
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HAS_FTP: ${{ secrets.FTP_SERVER != '' && secrets.FTP_USERNAME != '' && secrets.FTP_PASSWORD != '' && vars.FTP_SERVER_DIR != '' }}
+    steps:
+      - name: FTP не налаштовано — пропускаю
+        if: env.HAS_FTP != 'true'
+        run: echo "::notice::FTP-дані не задані (див. docs/deploy-old-site.md), заливку пропущено."
+
+      - uses: actions/checkout@v4
+        if: env.HAS_FTP == 'true'
+
+      - uses: actions/setup-node@v4
+        if: env.HAS_FTP == 'true'
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Встановити залежності
+        if: env.HAS_FTP == 'true'
+        run: npm ci
+
+      - name: Зібрати сайт
+        if: env.HAS_FTP == 'true'
+        run: npm run build
+        env:
+          VITE_GTM_ID: ${{ vars.VITE_GTM_ID }}
+
+      - name: Залити на хостинг
+        if: env.HAS_FTP == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
+          local-dir: ./dist/
+          server-dir: ${{ vars.FTP_SERVER_DIR }}

@@ -48,7 +48,7 @@ function Contact() {
     message: `${uid}-message`,
     agreed: `${uid}-agreed`,
   };
-  const { status, setStatus, submit } = useLeadSubmit();
+  const { status, setStatus, submit, fallbackText } = useLeadSubmit();
 
   return (
     <section id="contact" className="py-18 md:28 px-6 border-t border-gray-200 bg-gray-100">
@@ -145,7 +145,7 @@ function Contact() {
                   {isSubmitting ? "Надсилаємо…" : "Надіслати"}
                 </button>
 
-                <LeadStatus status={status} />
+                <LeadStatus status={status} fallbackText={fallbackText} />
 
                 <MessengerIcons className="md:hidden mt-6" />
               </Form>

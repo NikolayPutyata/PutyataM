@@ -25,6 +25,16 @@ function sourceLabel() {
   return parts.join("; ");
 }
 
+// Текст заявки для відправки вручну через месенджер, якщо сервер недоступний.
+export function messengerFallbackText({ name, phone, message, cta }) {
+  const lines = ["Добрий день! Заявка з сайту weksar.com", `Ім'я: ${name}`, `Телефон: ${phone}`];
+  const h1 = document.querySelector("h1")?.textContent?.replace(/\s+/g, " ").trim();
+  if (window.location.pathname !== "/" && h1) lines.push(`Послуга: ${h1}`);
+  if (cta) lines.push(`Кнопка: ${cta}`);
+  if (message) lines.push(`Питання: ${message}`);
+  return lines.join("\n");
+}
+
 export const sendOrder = async ({ name, phone, message, cta }) => {
   const lines = [`${name}`, `${phone}`];
   if (message) lines.push(message);

@@ -21,7 +21,7 @@ const inputClass = (invalid) =>
 const FormForFeedback = () => {
   const uid = useId();
   const rootRef = useRef(null);
-  const { status, setStatus, submit } = useLeadSubmit();
+  const { status, setStatus, submit, fallbackText } = useLeadSubmit();
 
   // Коли модальне вікно закривають — повертаємо форму до початкового стану.
   useEffect(() => {
@@ -121,7 +121,7 @@ const FormForFeedback = () => {
                   {isSubmitting ? "Надсилаємо…" : "Надіслати заявку"}
                 </button>
 
-                <LeadStatus status={status} />
+                <LeadStatus status={status} fallbackText={fallbackText} />
               </Form>
             )}
           </Formik>
