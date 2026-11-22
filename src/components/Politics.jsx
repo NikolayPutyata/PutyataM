@@ -6,7 +6,6 @@ const Politics = () => {
       <div className=" mx-auto">
         <h1
           className="text-3xl md:text-4xl text-center font-semibold mb-8 text-gray-900"
-          style={{ fontFamily: "'DM Serif Text', serif" }}
         >
           Політика конфіденційності
         </h1>
@@ -111,7 +110,7 @@ const Politics = () => {
           </p>
 
           <p className="text-sm text-gray-500 pt-6">
-            Останнє оновлення: {new Date().toLocaleDateString("uk-UA")}
+            Останнє оновлення: 18.01.2026
           </p>
         </div>
       </div>

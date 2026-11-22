@@ -1,6 +1,7 @@
 import React from "react";
 import Contact from "../components/Contact";
 import FormForFeedback from "../components/FormForFeedback";
+import { openLeadForm } from "../lib/lead";
 
 const Consultation = () => {
   
@@ -31,7 +32,7 @@ const Consultation = () => {
     {/* LEFT: Price + Order */}
     <div className="bg-white shadow-xl rounded-2xl p-10 flex flex-col justify-between h-full">
   <div className="flex flex-col gap-3">
-    <h2 className="text-3xl font-bold text-gray-800 mb-4">Вартість реєстрації</h2>
+    <h2 className="text-3xl font-bold text-gray-800 mb-4">Вартість консультації</h2>
 
     {/* Цена с маленьким текстом для держ.зборів */}
     <p className="text-4xl font-semibold text-gray-900 mb-6">
@@ -43,7 +44,7 @@ const Consultation = () => {
       Можливе погодження індивідуального пакету консультацій залежно від ваших потреб.
     </p>
 
-<button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Замовити консультацію</button>
+<button className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold" onClick={openLeadForm}>Замовити консультацію</button>
     
   </div>
 </div>

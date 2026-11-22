@@ -1,6 +1,7 @@
 import React from "react";
 import Contact from "../components/Contact";
 import FormForFeedback from "../components/FormForFeedback";
+import { openLeadForm } from "../lib/lead";
 
 const Certification = () => {
   const benefits = [
@@ -46,9 +47,7 @@ const Certification = () => {
 
                 <button
                   className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold"
-                  onClick={() =>
-                    document.getElementById("my_modal_2").showModal()
-                  }
+                  onClick={openLeadForm}
                 >
                   Записатися до нотаріуса
                 </button>

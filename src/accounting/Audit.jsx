@@ -1,5 +1,6 @@
 import Contact from "../components/Contact";
 import FormForFeedback from "../components/FormForFeedback";
+import { openLeadForm } from "../lib/lead";
 
 const Audit = () => {
   return (
@@ -15,7 +16,7 @@ const Audit = () => {
             Повна перевірка фінансового та податкового стану ФОП,
             звітності та сплати податків без ризиків і сюрпризів
           </p>
-          <button className="btn w-80 py-5 btn-neutral text-lg font-semibold mt-10" onClick={()=>document.getElementById('my_modal_2').showModal()}>Замовити аудит</button>
+          <button className="btn w-80 py-5 btn-neutral text-lg font-semibold mt-10" onClick={openLeadForm}>Замовити аудит</button>
   
         </div>
       </section>

@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import TopBar from "./components/TopBar.jsx";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import DrawerMenu from "./components/DrawerMenu.jsx";
 import Main from "./components/Main.jsx";
-import Contacts from "./components/Contact.jsx";
+import Contacts from "./components/ContactsPage.jsx";
 
 /* --- Юридичні послуги --- */
 import Registration from "./services/FOP.jsx";
@@ -55,6 +56,7 @@ function App() {
           <input id="nav-drawer" type="checkbox" className="drawer-toggle" />
 
           <div className="drawer-content">
+            <TopBar />
             <Header />
 
             <Routes>

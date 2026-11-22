@@ -15,7 +15,7 @@ function Header() {
         </div>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex space-x-6 text-md tracking-wider items-center">
+        <nav className="hidden xl:flex space-x-6 text-md tracking-wider items-center">
   {[
     {
       label: "Юридичні послуги",
@@ -111,7 +111,7 @@ function Header() {
   
 </nav>
 
-        <div className="hidden lg:flex">
+        <div className="hidden xl:flex">
           <LanguageSelector />
         </div>
 
@@ -119,8 +119,8 @@ function Header() {
         
 
         {/* Mobile burger */}
-        <div className="lg:hidden">
-          <label htmlFor="nav-drawer" className="btn btn-ghost btn-sm">
+        <div className="xl:hidden">
+          <label htmlFor="nav-drawer" className="btn btn-ghost btn-sm" aria-label="Відкрити меню">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"

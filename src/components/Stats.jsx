@@ -24,6 +24,7 @@ const Stats = () => {
         <CountUp
           end={1000}
           duration={4}
+          separator=" "
           enableScrollSpy
           scrollSpyOnce
         />
@@ -40,6 +41,7 @@ const Stats = () => {
         <CountUp
           end={100}
           duration={4}
+          separator=" "
           enableScrollSpy
           scrollSpyOnce
         />
@@ -56,6 +58,7 @@ const Stats = () => {
         <CountUp
           end={3000}
           duration={4}
+          separator=" "
           enableScrollSpy
           scrollSpyOnce
         />
@@ -71,6 +74,7 @@ const Stats = () => {
         <CountUp
           end={100}
           duration={4}
+          separator=" "
           enableScrollSpy
           scrollSpyOnce
         />

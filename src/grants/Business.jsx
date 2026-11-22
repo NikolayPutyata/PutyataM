@@ -1,5 +1,6 @@
 import Contact from "../components/Contact";
 import FormForFeedback from "../components/FormForFeedback";
+import { openLeadForm } from "../lib/lead";
 
 const Business = () => {
   return (
@@ -40,9 +41,7 @@ const Business = () => {
               </div>
               <button
                   className="btn btn-neutral w-full md:w-auto px-8 py-3 text-lg font-semibold"
-                  onClick={() =>
-                    document.getElementById("my_modal_2").showModal()
-                  }
+                  onClick={openLeadForm}
                 >
                   Отримати грант
                 </button>
@@ -194,7 +193,7 @@ const Business = () => {
       Креативні індустрії
     </h2>
     <p className="text-gray-600 text-lg mb-10 max-w-3xl">
-      Розміри гранту для отримувачів що провадять підприємницьку діяльність у сфері креатичних індустрій
+      Розміри гранту для отримувачів що провадять підприємницьку діяльність у сфері креативних індустрій
     </p>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">

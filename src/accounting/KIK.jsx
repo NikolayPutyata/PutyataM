@@ -1,5 +1,6 @@
 import Contact from "../components/Contact";
 import FormForFeedback from "../components/FormForFeedback";
+import { openLeadForm } from "../lib/lead";
 
 const KIK = () => {
   return (
@@ -17,9 +18,7 @@ const KIK = () => {
           </p>
           <button
                     className="btn w-80 py-5 btn-neutral text-lg font-semibold mt-10"
-                    onClick={() =>
-                      document.getElementById("my_modal_2").showModal()
-                    }
+                    onClick={openLeadForm}
                   >
                     Замовити послугу
                   </button>

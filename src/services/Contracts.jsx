@@ -1,6 +1,7 @@
 import React from "react";
 import Contact from "../components/Contact";
 import FormForFeedback from "../components/FormForFeedback";
+import { openLeadForm } from "../lib/lead";
 
 const Contracts = () => {
   const contractCategories = [
@@ -60,7 +61,7 @@ const Contracts = () => {
           </p>
           
         </div>
-        <button className="btn w-80 py-5 btn-neutral text-lg font-semibold" onClick={()=>document.getElementById('my_modal_2').showModal()}>Замовити договір</button>
+        <button className="btn w-80 py-5 btn-neutral text-lg font-semibold" onClick={openLeadForm}>Замовити договір</button>
    
       </section>
 
