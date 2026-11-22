@@ -57,7 +57,7 @@ const Changes = () => {
                 </p>
 
                 <p className="text-4xl font-semibold text-gray-900 mb-6">
-                  від 2500 ₴
+                  від 4000 ₴
                 </p>
 
                 <p className="text-gray-500 mb-6">

@@ -34,7 +34,7 @@ export const PRIMARY_SERVICES = [
     title: "Тендерний супровід",
     href: "/tendernyi-suprovid",
     text: "Для компаній, які готові працювати з державою, але ще не заходили на тендерний ринок.",
-    facts: ["повний цикл", "від оцінки до договору"],
+    facts: ["вся Україна", "від оцінки до договору"],
   },
 ];
 
@@ -44,7 +44,7 @@ export const TOP_SERVICES = [
     title: "Зміни до ТОВ",
     href: "/zminy-tov",
     text: "Директор, учасники, адреса, КВЕД, статут, статутний капітал.",
-    price: "від 2 500 грн",
+    price: "від 4 000 грн",
   },
   {
     title: "Ліцензії",
@@ -71,7 +71,7 @@ export const CATALOG = [
     items: [
       { name: "Торговельна марка", href: "/reiestratsiia-torhovelnoi-marky", price: "4 000 грн" },
       { name: "Реєстрація потужностей", href: "/reiestratsiia-potuzhnostei", price: "2 000 грн" },
-      { name: "Договори", href: "/dohovory" },
+      { name: "Договори", href: "/dohovory", price: "від 2 000 грн" },
       { name: "Консультація юриста", href: "/konsultatsiia-yurysta", price: "2 000 грн/год" },
       { name: "Адвокат у суді", href: "/advokat-u-sudi", price: "від 3 000 грн" },
     ],
@@ -107,6 +107,7 @@ export const NAV = [
   { name: "Ціни", href: "/tsiny" },
   { name: "Контакти", href: "/kontakty" },
 ];
+
 
 export const STATS = [
   { value: "1000+", label: "зареєстрованих ФОП" },

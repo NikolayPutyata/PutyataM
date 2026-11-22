@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCtaBar from "@/components/MobileCtaBar";
 import Tracking from "@/components/Tracking";
+import Gtm from "@/components/Gtm";
 import { SITE_URL } from "@/lib/site";
 
 const isProduction = process.env.NEXT_PUBLIC_SITE_ENV === "production";
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <MobileCtaBar />
         <Tracking />
+        <Gtm />
       </body>
     </html>
   );
