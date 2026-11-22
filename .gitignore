@@ -1,29 +1,20 @@
-# Logs
-logs
+# Залежності і збірка
+node_modules
+.next
+out
+*.zip
+
+# Логи
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+# Редактори і ОС
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
 
 # Env (ID лічильників, ключі — тільки локально)
-.env
-.env.*
+.env*
 !.env.example
