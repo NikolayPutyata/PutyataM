@@ -18,6 +18,13 @@ export const sendOrder = async ({ name, phone, message }) => {
     text,
   });
 
+  // Подія для GTM/GA4: заявка успішно відправлена (без персональних даних).
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "generate_lead",
+    form_page: window.location.pathname,
+  });
+
   return data;
 
 };
