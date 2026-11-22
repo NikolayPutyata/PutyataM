@@ -42,9 +42,12 @@ export default function Footer() {
       <div className="border-t border-graphite-line">
         <div className="container-site flex flex-wrap justify-between gap-3 py-5 text-xs text-on-dark-muted">
           <span>© {new Date().getFullYear()} Weksar</span>
-          <Link href="/polityka-konfidentsiinosti" className="hover:text-on-dark">
-            Політика конфіденційності
-          </Link>
+          <span className="flex gap-5">
+            <Link href="/blog" className="hover:text-on-dark">Блог</Link>
+            <Link href="/tsiny" className="hover:text-on-dark">Ціни</Link>
+            <Link href="/pro-nas" className="hover:text-on-dark">Про нас</Link>
+            <Link href="/polityka-konfidentsiinosti" className="hover:text-on-dark">Політика конфіденційності</Link>
+          </span>
         </div>
       </div>
     </footer>

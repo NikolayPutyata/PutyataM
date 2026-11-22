@@ -4,6 +4,7 @@ import Faq from "./Faq";
 import LeadSection from "./LeadSection";
 import JsonLd from "./JsonLd";
 import ContactsBlock from "./ContactsBlock";
+import ArticlesBlock from "./ArticlesBlock";
 import { Audience, Cards, Highlight, PriceList, Prose, Related, Split, Stats, Steps } from "./sections";
 import { SITE_URL } from "@/lib/site";
 
@@ -27,6 +28,7 @@ export default function ServicePage({ page }) {
         const Block = BLOCKS[s.type];
         return <Block key={i} {...s} />;
       })}
+      <ArticlesBlock path={page.path} />
       {page.faq && <Faq items={page.faq} title={page.faqTitle} />}
       <LeadSection title={page.lead?.title} text={page.lead?.text} cta={page.cta} />
       {page.schema && (
