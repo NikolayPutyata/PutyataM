@@ -1,0 +1,342 @@
+<title>Напрями дизайну Weksar</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;700;800&family=Onest:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Unbounded:wght@500;700&display=swap">
+<style>
+/* Layout: intro → три секції-напрями (опис + палітра + шрифти зліва, макет телефона справа) → спільні правила */
+:root {
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --fg: #16181d;
+  --muted: #5b616e;
+  --line: #dde0e6;
+  --chip: #e9ebf0;
+  --font-ui: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121418; --surface: #1b1e24; --fg: #eceef2; --muted: #a3a9b6; --line: #2c3038; --chip: #262a32;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121418; --surface: #1b1e24; --fg: #eceef2; --muted: #a3a9b6; --line: #2c3038; --chip: #262a32;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font: 15px/1.55 var(--font-ui);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 32px 64px;
+}
+.wrap { max-width: 1080px; margin: 0 auto; display: grid; gap: 40px; }
+h1, h2 { text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(26px, 4vw, 36px); line-height: 1.15; letter-spacing: -0.01em; }
+.lead { color: var(--muted); max-width: 64ch; margin: 10px 0 0; }
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.jump a { color: var(--fg); text-decoration: none; background: var(--chip); padding: 6px 14px; border-radius: 999px; font-weight: 600; font-size: 14px; }
+.jump a:focus-visible, .jump a:hover { outline: 2px solid var(--fg); outline-offset: 2px; }
+
+.dir { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 32px; align-items: start; scroll-margin-top: 16px; }
+@media (max-width: 860px) { .dir { grid-template-columns: minmax(0, 1fr); padding: 20px; } }
+.dir-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.letter { font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.dir h2 { font-size: 26px; line-height: 1.2; }
+.mood { color: var(--muted); margin: 8px 0 0; max-width: 60ch; }
+.block { margin-top: 22px; }
+.block h3 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; font-weight: 600; }
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 10px; }
+.sw { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--surface); }
+.sw i { display: block; height: 44px; }
+.sw div { padding: 8px 10px; font-size: 12px; line-height: 1.35; }
+.sw b { display: block; font-size: 13px; }
+.sw code { color: var(--muted); font-size: 12px; }
+.type { display: grid; gap: 8px; }
+.type .spec { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.type .spec small { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
+.wordmark { border-radius: 12px; padding: 18px 20px; display: flex; align-items: center; gap: 12px; }
+.pros { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 520px) { .pros { grid-template-columns: 1fr; } }
+.pros ul { margin: 0; padding-left: 18px; }
+.pros li { margin: 4px 0; }
+
+/* ---------- Макет телефона (спільна розмітка, кольори задає клас напряму) ---------- */
+.phone { width: 100%; max-width: 340px; justify-self: center; border-radius: 40px; padding: 10px; background: #0d0f12; box-shadow: 0 18px 40px rgba(10, 12, 16, .18); }
+.screen { position: relative; border-radius: 31px; overflow: hidden; background: var(--m-bg); color: var(--m-fg); font-family: var(--m-body); font-size: 13px; line-height: 1.45; padding-bottom: 64px; }
+.m-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; font-size: 11.5px; background: var(--m-top-bg); color: var(--m-top-fg); font-weight: 600; letter-spacing: .02em; }
+.m-top span:last-child { opacity: .85; font-weight: 500; }
+.m-head { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: var(--m-head-bg); border-bottom: 1px solid var(--m-line); }
+.m-burger { width: 20px; height: 12px; border-block: 2px solid var(--m-head-fg); position: relative; }
+.m-burger::after { content: ""; position: absolute; left: 0; right: 0; top: 3px; border-top: 2px solid var(--m-head-fg); }
+.m-hero { padding: 22px 16px 20px; background: var(--m-hero-bg); color: var(--m-hero-fg); }
+.m-eyebrow { font-size: 10.5px; text-transform: uppercase; letter-spacing: .1em; margin: 0 0 10px; color: var(--m-eyebrow); font-weight: 600; }
+.m-h1 { font-family: var(--m-head); margin: 0; font-size: var(--m-h1-size); line-height: 1.12; font-weight: var(--m-h1-weight); letter-spacing: var(--m-h1-track); text-wrap: balance; }
+.m-slogan { margin: 10px 0 0; font-size: 13px; color: var(--m-slogan); }
+.m-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 16px; }
+.m-facts div { background: var(--m-fact-bg); border: 1px solid var(--m-fact-line); border-radius: var(--m-radius-s); padding: 8px 8px; }
+.m-facts b { display: block; font-size: 13px; color: var(--m-fact-strong); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.m-facts span { display: block; font-size: 10.5px; color: var(--m-fact-muted); line-height: 1.3; }
+.m-cta { display: block; text-align: center; margin-top: 16px; padding: 12px; border-radius: var(--m-radius-btn); background: var(--m-cta); color: var(--m-cta-fg); font-weight: 700; font-size: 13.5px; }
+.m-sec { padding: 18px 16px 6px; }
+.m-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: .1em; color: var(--m-muted); margin: 0 0 10px; font-weight: 600; }
+.m-card { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px; margin-bottom: 8px; background: var(--m-card); border: 1px solid var(--m-line); border-radius: var(--m-radius); }
+.m-card b { display: block; font-family: var(--m-head); font-size: 14px; font-weight: var(--m-card-weight); }
+.m-card span { display: block; font-size: 11px; color: var(--m-muted); }
+.m-card em { font-style: normal; font-weight: 700; font-size: 12px; white-space: nowrap; color: var(--m-price); background: var(--m-price-bg); padding: 4px 8px; border-radius: var(--m-radius-s); font-variant-numeric: tabular-nums; }
+.m-sticky { position: absolute; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px 12px 14px; background: var(--m-sticky-bg); border-top: 1px solid var(--m-line); }
+.m-sticky span { text-align: center; padding: 10px 6px; border-radius: var(--m-radius-btn); font-weight: 700; font-size: 12.5px; }
+.m-sticky span:first-child { background: var(--m-cta); color: var(--m-cta-fg); }
+.m-sticky span:last-child { border: 1.5px solid var(--m-fg); color: var(--m-fg); }
+
+/* ---------- A. Класична довіра ---------- */
+.a { --m-bg: #f5f6f8; --m-fg: #13233a; --m-muted: #56627a; --m-line: #d9dee7; --m-card: #ffffff;
+  --m-top-bg: #13233a; --m-top-fg: #f5f6f8; --m-head-bg: #ffffff; --m-head-fg: #13233a;
+  --m-hero-bg: #ffffff; --m-hero-fg: #13233a; --m-eyebrow: #8a6731; --m-slogan: #56627a;
+  --m-fact-bg: #f5f6f8; --m-fact-line: #d9dee7; --m-fact-strong: #13233a; --m-fact-muted: #56627a;
+  --m-cta: #13233a; --m-cta-fg: #ffffff; --m-price: #13233a; --m-price-bg: #efe7da; --m-sticky-bg: #ffffff;
+  --m-head: "Playfair Display", Georgia, serif; --m-body: "Manrope", system-ui, sans-serif;
+  --m-h1-size: 27px; --m-h1-weight: 700; --m-h1-track: 0; --m-card-weight: 700;
+  --m-radius: 4px; --m-radius-s: 3px; --m-radius-btn: 4px; }
+.a .m-hero { border-bottom: 3px solid #a67c3d; }
+.logo-a { font-family: "Playfair Display", Georgia, serif; font-weight: 700; letter-spacing: .14em; color: #13233a; font-size: 17px; }
+.logo-a::after { content: ""; display: block; height: 2px; width: 28px; background: #a67c3d; margin-top: 3px; }
+
+/* ---------- B. Прозорий сервіс ---------- */
+.b { --m-bg: #ffffff; --m-fg: #121417; --m-muted: #5a606b; --m-line: #e6e8ee; --m-card: #ffffff;
+  --m-top-bg: #eef3ff; --m-top-fg: #1a3fb3; --m-head-bg: #ffffff; --m-head-fg: #121417;
+  --m-hero-bg: #ffffff; --m-hero-fg: #121417; --m-eyebrow: #1f4dd8; --m-slogan: #5a606b;
+  --m-fact-bg: #eef3ff; --m-fact-line: #eef3ff; --m-fact-strong: #1a3fb3; --m-fact-muted: #4a5160;
+  --m-cta: #1f4dd8; --m-cta-fg: #ffffff; --m-price: #1a3fb3; --m-price-bg: #eef3ff; --m-sticky-bg: #ffffff;
+  --m-head: "Onest", system-ui, sans-serif; --m-body: "Onest", system-ui, sans-serif;
+  --m-h1-size: 26px; --m-h1-weight: 800; --m-h1-track: -0.02em; --m-card-weight: 700;
+  --m-radius: 16px; --m-radius-s: 10px; --m-radius-btn: 14px; }
+.b .m-card { box-shadow: 0 1px 2px rgba(18, 20, 23, .06); }
+.logo-b { font-family: "Onest", system-ui, sans-serif; font-weight: 800; letter-spacing: -0.03em; color: #121417; font-size: 19px; display: inline-flex; align-items: center; gap: 6px; }
+.logo-b::before { content: ""; width: 14px; height: 14px; border-radius: 4px; background: #1f4dd8; display: inline-block; }
+
+/* ---------- C. Сміливий контраст ---------- */
+.c { --m-bg: #ffffff; --m-fg: #14161a; --m-muted: #5c616b; --m-line: #e4e5e8; --m-card: #ffffff;
+  --m-top-bg: #14161a; --m-top-fg: #f2f2f0; --m-head-bg: #14161a; --m-head-fg: #f2f2f0;
+  --m-hero-bg: #14161a; --m-hero-fg: #f2f2f0; --m-eyebrow: #e8a93a; --m-slogan: #b9bcc3;
+  --m-fact-bg: #1f2228; --m-fact-line: #2c3038; --m-fact-strong: #e8a93a; --m-fact-muted: #b9bcc3;
+  --m-cta: #e8a93a; --m-cta-fg: #14161a; --m-price: #14161a; --m-price-bg: #f6e2bd; --m-sticky-bg: #ffffff;
+  --m-head: "Unbounded", system-ui, sans-serif; --m-body: "Manrope", system-ui, sans-serif;
+  --m-h1-size: 21px; --m-h1-weight: 700; --m-h1-track: -0.01em; --m-card-weight: 500;
+  --m-radius: 10px; --m-radius-s: 6px; --m-radius-btn: 10px; }
+.c .m-head { border-bottom-color: #2c3038; }
+.logo-c { font-family: "Unbounded", system-ui, sans-serif; font-weight: 700; color: #f2f2f0; font-size: 15px; letter-spacing: .02em; }
+.logo-c span { color: #e8a93a; }
+.c .m-card b { font-size: 12.5px; }
+
+.common ul { margin: 8px 0 0; padding-left: 18px; }
+.common li { margin: 6px 0; }
+.foot { color: var(--muted); font-size: 13px; }
+@media (prefers-reduced-motion: no-preference) { .jump a { transition: background .15s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Три напрями дизайну для weksar.com</h1>
+    <p class="lead">Перший крок Фази 3. Кожен напрям показаний на першому екрані головної сторінки з телефона, бо більшість клієнтів прийде саме з телефона. Тексти й цифри справжні, з погодженої структури. Обери одну літеру, або напиши, що взяти з різних варіантів.</p>
+    <nav class="jump" aria-label="Напрями">
+      <a href="#a">A. Класична довіра</a>
+      <a href="#b">B. Прозорий сервіс</a>
+      <a href="#c">C. Сміливий контраст</a>
+    </nav>
+  </header>
+
+  <!-- ===================== A ===================== -->
+  <section class="dir" id="a">
+    <div>
+      <div class="dir-head"><span class="letter">Напрям A</span><h2>Класична довіра</h2></div>
+      <p class="mood">Солідна юридична фірма: глибокий чорнильно-синій, холодний світлий фон, латунь як тонкий акцент. Засічковий шрифт у заголовках продовжує нинішній напис WEKSAR. Читається як «досвідчені, серйозні, без поспіху».</p>
+
+      <div class="block">
+        <h3>Палітра</h3>
+        <div class="swatches">
+          <div class="sw"><i style="background:#13233a"></i><div><b>Чорнило</b><code>#13233A</code> текст, кнопки</div></div>
+          <div class="sw"><i style="background:#a67c3d"></i><div><b>Латунь</b><code>#A67C3D</code> лінії, акценти</div></div>
+          <div class="sw"><i style="background:#f5f6f8"></i><div><b>Папір</b><code>#F5F6F8</code> фон</div></div>
+          <div class="sw"><i style="background:#56627a"></i><div><b>Графіт</b><code>#56627A</code> другорядний текст</div></div>
+        </div>
+      </div>
+
+      <div class="block type">
+        <h3>Шрифти (2 родини)</h3>
+        <div class="spec" style="font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700">Ліквідація ТОВ у Києві<small style="font-family:var(--font-ui)">Playfair Display — заголовки</small></div>
+        <div class="spec" style="font-family:Manrope,system-ui,sans-serif;font-size:15px">Класична, через зміну власника, з боргами. Строк від 2 днів до 2,5 місяця.<small style="font-family:var(--font-ui)">Manrope — текст</small></div>
+      </div>
+
+      <div class="block">
+        <h3>Ідея логотипа</h3>
+        <div class="wordmark" style="background:#ffffff;border:1px solid #d9dee7"><span class="logo-a">WEKSAR</span></div>
+      </div>
+
+      <div class="block pros">
+        <div><h3>Сильні сторони</h3><ul><li>Найвища довіра, звична для юридичних послуг</li><li>Продовжує нинішній стиль</li><li>Добре сидить на сторінках з великими текстами</li></ul></div>
+        <div><h3>Ризики</h3><ul><li>Схожий на багатьох конкурентів, менше запам'ятовується</li><li>Засічки гірше читаються дрібним розміром на телефоні</li></ul></div>
+      </div>
+    </div>
+
+    <div class="phone" aria-label="Макет напряму A на телефоні">
+      <div class="screen a">
+        <div class="m-top"><span>+38 096 198 79 61</span><span>Telegram · Viber</span></div>
+        <div class="m-head"><span class="logo-a">WEKSAR</span><span class="m-burger"></span></div>
+        <div class="m-hero">
+          <p class="m-eyebrow">Київ і Київська область</p>
+          <p class="m-h1">Ліквідація ТОВ і юридичний супровід бізнесу</p>
+          <p class="m-slogan">Ви не клієнт. Ви — Партнер</p>
+          <div class="m-facts">
+            <div><b>12 000 ₴</b><span>ліквідація ТОВ, від</span></div>
+            <div><b>2 дні</b><span>мінімальний строк</span></div>
+            <div><b>10+ років</b><span>досвіду</span></div>
+          </div>
+          <span class="m-cta">Отримати консультацію</span>
+        </div>
+        <div class="m-sec">
+          <p class="m-label">Головні послуги</p>
+          <div class="m-card"><div><b>Ліквідація ТОВ</b><span>4 способи, від 2 днів</span></div><em>від 12 000 ₴</em></div>
+          <div class="m-card"><div><b>Зміни до ТОВ</b><span>директор, учасники, адреса</span></div><em>від 2 500 ₴</em></div>
+          <div class="m-card"><div><b>Ліцензії</b><span>алкоголь, тютюн, будівельна</span></div><em>від 9 000 ₴</em></div>
+        </div>
+        <div class="m-sticky"><span>Подзвонити</span><span>Написати</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== B ===================== -->
+  <section class="dir" id="b">
+    <div>
+      <div class="dir-head"><span class="letter">Напрям B</span><h2>Прозорий сервіс</h2></div>
+      <p class="mood">Сучасний сервіс у дусі банківських застосунків: білий простір, насичений синій для дій і цін, великі чіткі цифри. Головне повідомлення: «зрозуміло, скільки коштує і скільки триває». Один шрифт на весь сайт, тому сторінки найшвидші.</p>
+
+      <div class="block">
+        <h3>Палітра</h3>
+        <div class="swatches">
+          <div class="sw"><i style="background:#1f4dd8"></i><div><b>Кобальт</b><code>#1F4DD8</code> кнопки, ціни</div></div>
+          <div class="sw"><i style="background:#121417"></i><div><b>Графіт</b><code>#121417</code> текст</div></div>
+          <div class="sw"><i style="background:#eef3ff"></i><div><b>Небо</b><code>#EEF3FF</code> плашки</div></div>
+          <div class="sw"><i style="background:#5a606b"></i><div><b>Сірий</b><code>#5A606B</code> підписи</div></div>
+        </div>
+      </div>
+
+      <div class="block type">
+        <h3>Шрифти (1 родина)</h3>
+        <div class="spec" style="font-family:Onest,system-ui,sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.02em">Ліквідація ТОВ у Києві<small style="font-family:var(--font-ui);letter-spacing:0;font-weight:400">Onest ExtraBold — заголовки</small></div>
+        <div class="spec" style="font-family:Onest,system-ui,sans-serif;font-size:15px">Класична, через зміну власника, з боргами. Строк від 2 днів до 2,5 місяця.<small style="font-family:var(--font-ui)">Onest Regular — текст</small></div>
+      </div>
+
+      <div class="block">
+        <h3>Ідея логотипа</h3>
+        <div class="wordmark" style="background:#ffffff;border:1px solid #e6e8ee"><span class="logo-b">weksar</span></div>
+      </div>
+
+      <div class="block pros">
+        <div><h3>Сильні сторони</h3><ul><li>Найкраще працює на телефоні й з рекламою: ціна і строк одразу на виду</li><li>Найшвидший (один шрифт)</li><li>Виглядає сучасніше за більшість юридичних сайтів</li></ul></div>
+        <div><h3>Ризики</h3><ul><li>Менше «юридичної солідності», може виглядати як онлайн-сервіс</li><li>Синій часто трапляється в банків і держсервісів</li></ul></div>
+      </div>
+    </div>
+
+    <div class="phone" aria-label="Макет напряму B на телефоні">
+      <div class="screen b">
+        <div class="m-top"><span>+38 096 198 79 61</span><span>Telegram · Viber</span></div>
+        <div class="m-head"><span class="logo-b">weksar</span><span class="m-burger"></span></div>
+        <div class="m-hero">
+          <p class="m-eyebrow">Київ і Київська область</p>
+          <p class="m-h1">Ліквідація ТОВ і юридичний супровід бізнесу</p>
+          <p class="m-slogan">Ви не клієнт. Ви — Партнер</p>
+          <div class="m-facts">
+            <div><b>12 000 ₴</b><span>ліквідація ТОВ, від</span></div>
+            <div><b>2 дні</b><span>мінімальний строк</span></div>
+            <div><b>10+ років</b><span>досвіду</span></div>
+          </div>
+          <span class="m-cta">Отримати консультацію</span>
+        </div>
+        <div class="m-sec">
+          <p class="m-label">Головні послуги</p>
+          <div class="m-card"><div><b>Ліквідація ТОВ</b><span>4 способи, від 2 днів</span></div><em>від 12 000 ₴</em></div>
+          <div class="m-card"><div><b>Зміни до ТОВ</b><span>директор, учасники, адреса</span></div><em>від 2 500 ₴</em></div>
+          <div class="m-card"><div><b>Ліцензії</b><span>алкоголь, тютюн, будівельна</span></div><em>від 9 000 ₴</em></div>
+        </div>
+        <div class="m-sticky"><span>Подзвонити</span><span>Написати</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== C ===================== -->
+  <section class="dir" id="c">
+    <div>
+      <div class="dir-head"><span class="letter">Напрям C</span><h2>Сміливий контраст</h2></div>
+      <p class="mood">Найпомітніший варіант: темний графітовий перший екран, бурштиново-золотий акцент (розвиток нинішнього золотого WEKSAR), широкий виразний шрифт заголовків. Нижче — світлі чисті блоки. Читається як «енергійна команда, що швидко вирішує».</p>
+
+      <div class="block">
+        <h3>Палітра</h3>
+        <div class="swatches">
+          <div class="sw"><i style="background:#14161a"></i><div><b>Графіт</b><code>#14161A</code> перший екран, текст</div></div>
+          <div class="sw"><i style="background:#e8a93a"></i><div><b>Бурштин</b><code>#E8A93A</code> кнопки, акценти</div></div>
+          <div class="sw"><i style="background:#f6e2bd"></i><div><b>Пісок</b><code>#F6E2BD</code> плашки цін</div></div>
+          <div class="sw"><i style="background:#ffffff;border-bottom:1px solid #e4e5e8"></i><div><b>Білий</b><code>#FFFFFF</code> фон блоків</div></div>
+        </div>
+      </div>
+
+      <div class="block type">
+        <h3>Шрифти (2 родини)</h3>
+        <div class="spec" style="font-family:Unbounded,system-ui,sans-serif;font-size:19px;font-weight:700">Ліквідація ТОВ у Києві<small style="font-family:var(--font-ui);font-weight:400">Unbounded — заголовки</small></div>
+        <div class="spec" style="font-family:Manrope,system-ui,sans-serif;font-size:15px">Класична, через зміну власника, з боргами. Строк від 2 днів до 2,5 місяця.<small style="font-family:var(--font-ui)">Manrope — текст</small></div>
+      </div>
+
+      <div class="block">
+        <h3>Ідея логотипа</h3>
+        <div class="wordmark" style="background:#14161a"><span class="logo-c"><span>W</span>EKSAR</span></div>
+      </div>
+
+      <div class="block pros">
+        <div><h3>Сильні сторони</h3><ul><li>Найсильніше виділяється серед конкурентів</li><li>Зберігає золото як фірмовий колір</li><li>Перший екран запам'ятовується</li></ul></div>
+        <div><h3>Ризики</h3><ul><li>Темний екран і широкий шрифт сприймаються менш «консервативно»</li><li>Потребує дисципліни: акцент лише на кнопках і цінах</li></ul></div>
+      </div>
+    </div>
+
+    <div class="phone" aria-label="Макет напряму C на телефоні">
+      <div class="screen c">
+        <div class="m-top"><span>+38 096 198 79 61</span><span>Telegram · Viber</span></div>
+        <div class="m-head"><span class="logo-c"><span>W</span>EKSAR</span><span class="m-burger"></span></div>
+        <div class="m-hero">
+          <p class="m-eyebrow">Київ і Київська область</p>
+          <p class="m-h1">Ліквідація ТОВ і юридичний супровід бізнесу</p>
+          <p class="m-slogan">Ви не клієнт. Ви — Партнер</p>
+          <div class="m-facts">
+            <div><b>12 000 ₴</b><span>ліквідація ТОВ, від</span></div>
+            <div><b>2 дні</b><span>мінімальний строк</span></div>
+            <div><b>10+ років</b><span>досвіду</span></div>
+          </div>
+          <span class="m-cta">Отримати консультацію</span>
+        </div>
+        <div class="m-sec">
+          <p class="m-label">Головні послуги</p>
+          <div class="m-card"><div><b>Ліквідація ТОВ</b><span>4 способи, від 2 днів</span></div><em>від 12 000 ₴</em></div>
+          <div class="m-card"><div><b>Зміни до ТОВ</b><span>директор, учасники, адреса</span></div><em>від 2 500 ₴</em></div>
+          <div class="m-card"><div><b>Ліцензії</b><span>алкоголь, тютюн, будівельна</span></div><em>від 9 000 ₴</em></div>
+        </div>
+        <div class="m-sticky"><span>Подзвонити</span><span>Написати</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dir common" style="grid-template-columns:minmax(0,1fr)">
+    <div>
+      <h2>Спільне для всіх напрямів</h2>
+      <ul>
+        <li>Слоган «Ви не клієнт. Ви — Партнер» зберігаємо.</li>
+        <li>На телефоні знизу завжди закріплені кнопки «Подзвонити» і «Написати».</li>
+        <li>Ціна «від» і строк видно на першому екрані кожної послуги.</li>
+        <li>Контраст тексту відповідає стандарту доступності WCAG AA.</li>
+        <li>Не більше двох шрифтових родин. Шрифти вантажаться з самого сайту, тож перший екран не чекає Google Fonts.</li>
+        <li>Логотип тут лише ідея. Фінальний зробимо в обраному напрямі: напис і знак для favicon та соцмереж.</li>
+      </ul>
+      <p class="foot">Після вибору: дизайн-система (кольори, шрифти, відступи, компоненти) і прототип головної та сторінки «Ліквідація ТОВ» на Next.js для погодження.</p>
+    </div>
+  </section>
+</div>
