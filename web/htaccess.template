@@ -1,0 +1,40 @@
+# weksar.com — новий сайт (Next.js, статичний експорт) на Apache (фрихост).
+# Файл генерується під час збірки: web/htaccess.template + web/redirects.json → out/.htaccess
+# (scripts/build-htaccess.mjs). Редагуй шаблон або redirects.json, не out/.htaccess.
+# Якщо після заливки щось зламалося — видали .htaccess з кореня сайту через файловий менеджер.
+
+DirectorySlash Off
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1. www і дзеркала (weksar.com.ua) → https://weksar.com з тим самим шляхом
+  RewriteCond %{HTTP_HOST} !^weksar\.com$ [NC]
+  RewriteCond %{HTTP_HOST} ^(www\.)?weksar\.com(\.ua)?$ [NC]
+  RewriteRule ^ https://weksar.com%{REQUEST_URI} [R=301,L]
+
+  # 2. Старі адреси → нові
+# {{REDIRECTS}}
+
+  # 3. Адреса зі слешем у кінці → без слеша
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+)/$ https://weksar.com/$1 [R=301,L]
+
+  # 4. /likvidatsiia-tov → likvidatsiia-tov.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+)$ $1.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(jpe?g|png|svg|webp|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

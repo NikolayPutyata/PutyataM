@@ -14,7 +14,7 @@ export default function DocPage({ page }) {
         <div className="container-site pt-7 pb-10 sm:pt-12">
           <Breadcrumbs items={page.breadcrumbs} />
           <h1 className="mt-5 text-[1.85rem] leading-[1.12] font-bold sm:text-[2.6rem]">{page.title}</h1>
-          {page.updated && <p className="mt-3 text-sm text-on-dark-muted">Редакція від {page.updated}</p>}
+          {page.updated && <p className="mt-3 text-sm text-on-dark-muted">Редакція від <Rich text={page.updated} /></p>}
         </div>
       </section>
       <article className="container-site max-w-3xl space-y-10 py-14">
