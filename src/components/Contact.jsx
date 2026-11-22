@@ -162,10 +162,8 @@ function Contact() {
 
           <div className="relative z-10 p-10 flex flex-col h-full w-full justify-between">
             <div>
-              <h3 className="text-4xl font-bold mb-6 leading-snug">
-                ЗАЛИШАЙ ЗАЯВКУ НА <br />
-                БЕЗКОШТОВНУ КОНСУЛЬТАЦІЮ
-              </h3>
+              <h3 className="text-4xl font-bold mb-6 leading-snug">ЗАЛИШАЙ ЗАЯВКУ</h3>
+              <p className="text-xl text-gray-100">Консультація в межах замовленої послуги — безкоштовна</p>
             </div>
 
             <div>

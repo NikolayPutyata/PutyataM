@@ -45,6 +45,7 @@ import Advokatsu from "./advokat/Advokatsu.jsx";
 import Advokatco from "./advokat/Advokatco.jsx";
 import Public from "./components/Public.jsx";
 import Politics from "./components/Politics.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 
 
@@ -108,6 +109,7 @@ function App() {
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/public" element={<Public />} />
               <Route path="/politics" element={<Politics />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
 
             <Footer />

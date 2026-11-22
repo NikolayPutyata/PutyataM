@@ -8,7 +8,7 @@ function DrawerMenu() {
       items: [
         { name: "Реєстрація ФОП/ТОВ", path: "/services/registration" },
         { name: "Зміни ФОП/ТОВ", path: "/services/changes" },
-        { name: "Ліквідація ФОП/ТОВ", path: "/services/liquidation" },
+        { name: "Ліквідація ТОВ / закриття ФОП", path: "/services/liquidation" },
         { name: "Реєстрація ТМ", path: "/services/tm" },
         { name: "Реєстрація потужностей", path: "/services/power" },
         { name: "Отримання/продовження ліцензій", path: "/services/license" },

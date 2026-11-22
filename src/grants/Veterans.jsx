@@ -1,6 +1,7 @@
 import Contact from "../components/Contact";
 import FormForFeedback from "../components/FormForFeedback";
 import { openLeadForm } from "../lib/lead";
+import GrantAmounts from "./GrantAmounts";
 
 const Veterans = () => {
   return (
@@ -76,104 +77,7 @@ const Veterans = () => {
       </section>
 
       {/* ===== СУМИ ГРАНТІВ ===== */}
-      <section className="pb-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Суми грантів для ветеранів
-          </h2>
-          <p className="text-gray-600 text-lg mb-10 max-w-3xl">
-            Держава передбачає окремі програми підтримки
-            для ветеранів, УБД та членів їх сімей.
-            Ми допомагаємо обрати реальну суму без ризику відмови.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
-              <span className="text-sm text-gray-500 mb-2">Початок</span>
-              <h3 className="text-3xl font-bold text-gray-900 mb-1">
-                250 000 ₴
-              </h3>
-
-              <ul className="space-y-3 text-gray-700 text-base mt-6 flex-1">
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  Бізнес з нуля
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  ФОП
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  2 найманих працівника
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  на 3 або 5 років
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col relative">
-              <span className="absolute top-4 right-4 bg-green-100 text-green-700 text-sm font-semibold px-3 py-1 rounded-full">
-                Найпопулярніший
-              </span>
-
-              <span className="text-sm text-gray-500 mb-2">Розвиток</span>
-              <h3 className="text-3xl font-bold text-gray-900 mb-1">
-                500 000 ₴
-              </h3>
-
-              <ul className="space-y-3 text-gray-700 text-base mt-6 flex-1">
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  Новий або діючий бізнес
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  Повний бізнес-план
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  2 найманих працівника
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  на 3 або 5 років
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
-              <span className="text-sm text-gray-500 mb-2">Масштаб</span>
-              <h3 className="text-3xl font-bold text-gray-900 mb-1">
-                1 000 000 ₴
-              </h3>
-
-              <ul className="space-y-3 text-gray-700 text-base mt-6 flex-1">
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  Діючий бізнес
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  Детальний фінансовий план
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  Наймані працівники
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  на 5 та більше років
-                </li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <GrantAmounts veterans />
 <section className="pb-24">
   <div className="max-w-6xl mx-auto px-6">
     <h2 className="text-3xl font-bold text-gray-900 mb-4">

@@ -1,0 +1,30 @@
+# weksar.com — налаштування Apache на хостингу (фрихост).
+# Якщо після заливки сайт поводиться дивно: видали цей файл через файловий
+# менеджер хостингу, і все повернеться до попереднього стану.
+# Список адрес у правилі 2 має збігатися з маршрутами в src/App.jsx.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1. www.weksar.com, weksar.com.ua, www.weksar.com.ua → https://weksar.com з тим самим шляхом
+  RewriteCond %{HTTP_HOST} !^weksar\.com$ [NC]
+  RewriteCond %{HTTP_HOST} ^(www\.)?weksar\.com(\.ua)?$ [NC]
+  RewriteRule ^ https://weksar.com%{REQUEST_URI} [R=301,L]
+
+  # 2. Сторінки сайту (React) → index.html зі статусом 200
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(services/(registration|changes|liquidation|tm|power|license|consultation|contracts)|accounting/(fop|tov|paper|rro|kik|audit)|grants/(business|veterans)|notary/(certification|registration)|advokat/(sud|cons)|translate/(doc|per)|ino/(ipn|pos|work)|about|contacts|public|politics)/?$ /index.html [L]
+
+  # 3. Усе інше, чого немає → сторінка «Не знайдено» зі статусом 404
+  ErrorDocument 404 /index.html
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Зображення — кеш на 30 днів; index.html — завжди перевіряти свіжість
+  <FilesMatch "\.(jpe?g|png|svg|webp|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "^index\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
