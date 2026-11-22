@@ -3,12 +3,12 @@ import Hero from "@/components/Hero";
 import Faq from "@/components/Faq";
 import LeadSection from "@/components/LeadSection";
 import JsonLd from "@/components/JsonLd";
-import { CATALOG, CONTACTS, FACTS, SITE_URL, STATS, TOP_SERVICES } from "@/lib/site";
+import { CATALOG, CONTACTS, FACTS, PRIMARY_SERVICES, SITE_URL, STATS, TOP_SERVICES } from "@/lib/site";
 
 export const metadata = {
-  title: { absolute: "Weksar — ліквідація ТОВ і юридичні послуги в Києві" },
+  title: { absolute: "Weksar — ліквідація ТОВ і тендерний супровід бізнесу" },
   description:
-    "Ліквідація і зміни ТОВ, ліцензії, реєстрація бізнесу, бухгалтерія, адвокат і переклади. Київ і область, понад 10 років досвіду. Ціни на сайті.",
+    "Ліквідація ТОВ від 12 000 грн, тендерний супровід у Prozorro, зміни ТОВ, ліцензії, бухгалтерія. Понад 10 років досвіду. Ціни на сайті.",
   alternates: { canonical: "/" },
 };
 
@@ -29,6 +29,7 @@ const WHY = [
 const FAQ = [
   { q: "Скільки коштує ліквідація ТОВ?", a: `Від ${FACTS.liquidationFrom}. Остаточна ціна залежить від способу ліквідації і стану компанії. Її називаємо після короткого аналізу, який у межах послуги безкоштовний.` },
   { q: "Скільки часу займає ліквідація?", a: "Від 2 днів, якщо ТОВ переходить до нового власника, до 2,5 місяця для класичної ліквідації через ліквідаційну комісію." },
+  { q: "Ми ще не брали участь у тендерах. З чого почати?", a: "З оцінки можливостей: дивимося на документи, досвід і ресурси компанії, підбираємо замовників і тендери, які вам реально підходять, і супроводжуємо до укладення та виконання договору." },
   { q: "Консультація безкоштовна?", a: "Так, якщо ви замовляєте послугу: консультація входить у неї. Окрема консультація юриста коштує 2 000 грн за годину." },
   { q: "Де ви працюєте?", a: "З клієнтами з Києва і Київської області. Команда працює дистанційно, тож більшість питань вирішуємо телефоном і в месенджерах." },
 ];
@@ -37,22 +38,34 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        eyebrow={FACTS.area}
-        title="Ліквідація ТОВ і юридичний супровід бізнесу в Києві"
+        eyebrow="Понад 10 років досвіду"
+        title="Ліквідація ТОВ і тендерний супровід бізнесу"
         slogan={FACTS.slogan}
-        facts={[
-          { value: FACTS.liquidationFrom, label: "ліквідація ТОВ, від" },
-          { value: "від 2 днів", label: "строк ліквідації" },
-          { value: FACTS.experience, label: "досвіду команди" },
-        ]}
+        offers={PRIMARY_SERVICES}
       />
 
       {/* Головні послуги */}
       <section className="py-16 sm:py-20">
         <div className="container-site">
           <p className="eyebrow text-amber-ink">Головні послуги</p>
-          <h2 className="h2 mt-3 max-w-2xl">Закриваємо, змінюємо і ліцензуємо бізнес</h2>
-          <ul className="mt-10 grid gap-4 md:grid-cols-3">
+          <h2 className="h2 mt-3 max-w-2xl">Закриваємо компанії і заводимо їх на тендерний ринок</h2>
+          <ul className="mt-10 grid gap-4 md:grid-cols-2">
+            {PRIMARY_SERVICES.map((s) => (
+              <li key={s.href}>
+                <Link href={s.href} className="group flex h-full flex-col rounded-[var(--radius-card)] bg-graphite p-7 text-on-dark sm:p-8">
+                  <span className="font-display text-2xl font-semibold">{s.title}</span>
+                  <span className="mt-3 flex-1 text-on-dark-muted">{s.text}</span>
+                  <span className="mt-6 flex items-center justify-between gap-4">
+                    <span className="flex flex-wrap gap-2">
+                      {s.facts.map((f) => <span key={f} className="rounded-[var(--radius-chip)] bg-amber px-2.5 py-1 text-sm font-bold text-graphite">{f}</span>)}
+                    </span>
+                    <span aria-hidden className="text-2xl text-amber transition-transform group-hover:translate-x-1">→</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ul className="mt-4 grid gap-4 md:grid-cols-2">
             {TOP_SERVICES.map((s) => (
               <li key={s.href}>
                 <Link href={s.href} className="group flex h-full flex-col rounded-[var(--radius-card)] border border-line bg-paper p-6 transition-shadow hover:shadow-[0_10px_30px_-12px_rgba(20,22,26,0.25)]">

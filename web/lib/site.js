@@ -22,14 +22,24 @@ export const FACTS = {
   slogan: "Ви не клієнт. Ви — Партнер",
 };
 
-// Головні послуги (великі картки)
-export const TOP_SERVICES = [
+// Два головні напрями (рекламуються нарівні) — великі картки
+export const PRIMARY_SERVICES = [
   {
     title: "Ліквідація ТОВ",
     href: "/likvidatsiia-tov",
-    text: "Класична, через зміну власника, з боргами, реорганізація. Строк від 2 днів.",
-    price: "від 12 000 грн",
+    text: "Класична, через зміну власника, з боргами, реорганізація.",
+    facts: ["від 12 000 грн", "від 2 днів"],
   },
+  {
+    title: "Тендерний супровід",
+    href: "/tendernyi-suprovid",
+    text: "Для компаній, які готові працювати з державою, але ще не заходили на тендерний ринок.",
+    facts: ["повний цикл", "від оцінки до договору"],
+  },
+];
+
+// Інші головні послуги (менші картки)
+export const TOP_SERVICES = [
   {
     title: "Зміни до ТОВ",
     href: "/zminy-tov",
@@ -90,6 +100,7 @@ export const CATALOG = [
 
 export const NAV = [
   { name: "Ліквідація ТОВ", href: "/likvidatsiia-tov" },
+  { name: "Тендери", href: "/tendernyi-suprovid" },
   { name: "Зміни ТОВ", href: "/zminy-tov" },
   { name: "Ліцензії", href: "/litsenzii" },
   { name: "Усі послуги", href: "/#poslugy" },
