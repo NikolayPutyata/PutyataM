@@ -16,21 +16,27 @@ const AREAS = {
     { "@type": "AdministrativeArea", name: "Київська область" },
   ],
   ukraine: [{ "@type": "Country", name: "Україна" }],
+  kyiv_en: [
+    { "@type": "City", name: "Kyiv" },
+    { "@type": "AdministrativeArea", name: "Kyiv Oblast" },
+  ],
+  ukraine_en: [{ "@type": "Country", name: "Ukraine" }],
 };
 
 // Сторінка послуги, зібрана з даних (web/content/*).
 export default function ServicePage({ page }) {
   const crumbs = page.breadcrumbs;
+  const locale = page.locale || "uk";
   return (
     <>
-      <Hero top={<Breadcrumbs items={crumbs} />} cta={page.cta} {...page.hero} />
+      <Hero top={<Breadcrumbs items={crumbs} locale={locale} />} cta={page.cta} locale={locale} {...page.hero} />
       {page.sections.map((s, i) => {
         const Block = BLOCKS[s.type];
-        return <Block key={i} {...s} />;
+        return <Block key={i} locale={locale} {...s} />;
       })}
-      <ArticlesBlock path={page.path} />
-      {page.faq && <Faq items={page.faq} title={page.faqTitle} />}
-      <LeadSection title={page.lead?.title} text={page.lead?.text} cta={page.cta} />
+      {locale === "uk" && <ArticlesBlock path={page.path} />}
+      {page.faq && <Faq items={page.faq} title={page.faqTitle} locale={locale} />}
+      <LeadSection title={page.lead?.title} text={page.lead?.text} cta={page.cta} locale={locale} />
       {page.schema && (
         <JsonLd
           data={{
@@ -39,7 +45,7 @@ export default function ServicePage({ page }) {
             name: page.schema.name,
             serviceType: page.schema.serviceType,
             url: `${SITE_URL}/${page.path}`,
-            areaServed: AREAS[page.schema.area || "kyiv"],
+            areaServed: AREAS[`${page.schema.area || "kyiv"}${locale === "en" ? "_en" : ""}`],
             provider: { "@type": "LegalService", name: "Weksar", url: SITE_URL },
             ...(page.schema.price && { offers: { "@type": "Offer", priceCurrency: "UAH", price: page.schema.price } }),
           }}

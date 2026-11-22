@@ -1,10 +1,11 @@
 import { PAGES, privacyPage } from "@/content";
 import { ARTICLES } from "@/content/blog";
+import { EN_PAGES, enPrivacyPage } from "@/content/en/pages";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
 
 export default function sitemap() {
-  const paths = ["", ...Object.keys(PAGES), privacyPage.path, "blog", ...ARTICLES.map((a) => `blog/${a.slug}`)];
+  const paths = ["", ...Object.keys(PAGES), privacyPage.path, "blog", ...ARTICLES.map((a) => `blog/${a.slug}`), "en", ...Object.keys(EN_PAGES), enPrivacyPage.path];
   return paths.map((p) => ({ url: p ? `${SITE_URL}/${p}` : SITE_URL }));
 }

@@ -4,18 +4,20 @@ import { useId, useState } from "react";
 import Link from "next/link";
 import { CONTACTS } from "@/lib/site";
 import { sendLead, whatsappFallbackHref } from "@/lib/lead-client";
+import { t } from "@/lib/i18n";
 
-function validate(v) {
+function validate(v, f) {
   const e = {};
-  if (v.name.trim().length < 2) e.name = "Вкажіть ім’я (мінімум 2 символи)";
+  if (v.name.trim().length < 2) e.name = f.errName;
   const digits = v.phone.replace(/\D/g, "").length;
-  if (!/^[+\d\s\-()]+$/.test(v.phone.trim()) || digits < 10 || digits > 15) e.phone = "Перевірте номер, напр. 096 123 45 67";
-  if (!v.agreed) e.agreed = "Потрібна згода на обробку даних";
+  if (!/^[+\d\s\-()]+$/.test(v.phone.trim()) || digits < 10 || digits > 15) e.phone = f.errPhone;
+  if (!v.agreed) e.agreed = f.errConsent;
   return e;
 }
 
 // Форма заявки. dark — варіант для темного фону.
-export default function LeadForm({ cta = "", dark = false, withMessage = true }) {
+export default function LeadForm({ cta = "", dark = false, withMessage = true, locale = "uk" }) {
+  const f = t(locale).form;
   const id = useId();
   const [values, setValues] = useState({ name: "", phone: "", message: "", agreed: false, website: "" });
   const [errors, setErrors] = useState({});
@@ -30,7 +32,7 @@ export default function LeadForm({ cta = "", dark = false, withMessage = true })
 
   async function onSubmit(e) {
     e.preventDefault();
-    const errs = validate(values);
+    const errs = validate(values, f);
     setErrors(errs);
     if (Object.keys(errs).length) return;
     if (values.website) return setStatus("success"); // honeypot
@@ -42,7 +44,7 @@ export default function LeadForm({ cta = "", dark = false, withMessage = true })
       setStatus("success");
     } catch (err) {
       console.error(err);
-      setFallback(whatsappFallbackHref(lead));
+      setFallback(whatsappFallbackHref(lead, locale));
       setStatus("error");
     }
   }
@@ -56,8 +58,8 @@ export default function LeadForm({ cta = "", dark = false, withMessage = true })
   if (status === "success") {
     return (
       <div role="status" className={`rounded-[var(--radius-card)] p-6 ${dark ? "bg-graphite-2 text-on-dark" : "bg-mist"}`}>
-        <p className="font-display text-lg font-semibold">Дякуємо! Заявку отримано.</p>
-        <p className={`mt-2 ${dark ? "text-on-dark-muted" : "text-muted"}`}>Ми звʼяжемося з вами найближчим часом.</p>
+        <p className="font-display text-lg font-semibold">{f.okTitle}</p>
+        <p className={`mt-2 ${dark ? "text-on-dark-muted" : "text-muted"}`}>{f.okText}</p>
       </div>
     );
   }
@@ -71,18 +73,18 @@ export default function LeadForm({ cta = "", dark = false, withMessage = true })
         </label>
       </div>
       <div>
-        <label htmlFor={`${id}-name`} className={label}>Ім’я</label>
+        <label htmlFor={`${id}-name`} className={label}>{f.name}</label>
         <input id={`${id}-name`} name="name" autoComplete="name" className={field} value={values.name} onChange={set("name")} aria-invalid={!!errors.name} />
         {errors.name && <p className={err}>{errors.name}</p>}
       </div>
       <div>
-        <label htmlFor={`${id}-phone`} className={label}>Телефон</label>
+        <label htmlFor={`${id}-phone`} className={label}>{f.phone}</label>
         <input id={`${id}-phone`} name="phone" type="tel" autoComplete="tel" placeholder="096 123 45 67" className={field} value={values.phone} onChange={set("phone")} aria-invalid={!!errors.phone} />
         {errors.phone && <p className={err}>{errors.phone}</p>}
       </div>
       {withMessage && (
         <div>
-          <label htmlFor={`${id}-msg`} className={label}>Коротко про ситуацію <span className="font-normal opacity-70">(необовʼязково)</span></label>
+          <label htmlFor={`${id}-msg`} className={label}>{f.message} <span className="font-normal opacity-70">{f.optional}</span></label>
           <textarea id={`${id}-msg`} name="message" rows={3} className={`${field} resize-none`} value={values.message} onChange={set("message")} />
         </div>
       )}
@@ -90,23 +92,23 @@ export default function LeadForm({ cta = "", dark = false, withMessage = true })
         <label htmlFor={`${id}-agreed`} className={`flex items-start gap-3 text-xs leading-relaxed ${dark ? "text-on-dark-muted" : "text-muted"}`}>
           <input id={`${id}-agreed`} type="checkbox" className="mt-0.5 h-4 w-4 accent-[var(--color-amber)]" checked={values.agreed} onChange={set("agreed")} />
           <span>
-            Даю згоду на обробку персональних даних відповідно до{" "}
-            <Link href="/polityka-konfidentsiinosti" className="underline">Політики конфіденційності</Link>.
+            {f.consentBefore}{" "}
+            <Link href={f.privacyHref} className="underline">{f.consentLink}</Link>.
           </span>
         </label>
         {errors.agreed && <p className={err}>{errors.agreed}</p>}
       </div>
       <button type="submit" disabled={status === "sending"} className="btn-primary w-full py-3.5 disabled:opacity-60 sm:w-auto">
-        {status === "sending" ? "Надсилаємо…" : "Отримати консультацію"}
+        {status === "sending" ? f.sending : f.submit}
       </button>
       {status === "error" && (
         <div role="alert" className={`rounded-[var(--radius-card)] border p-4 text-sm ${dark ? "border-graphite-line bg-graphite-2 text-on-dark" : "border-[#f3c6c7] bg-[#fdf1f1] text-ink"}`}>
-          <p className="font-bold">Не вдалося надіслати заявку.</p>
+          <p className="font-bold">{f.failTitle}</p>
           <a href={fallback} target="_blank" rel="noreferrer" className="btn mt-3 bg-[#1f8f4e] py-2 text-white hover:bg-[#1a7a43]">
-            Надіслати цю заявку у WhatsApp
+            {f.failWhatsapp}
           </a>
           <p className="mt-2">
-            Або зателефонуйте: <a href={CONTACTS.phoneHref} className="font-bold underline">{CONTACTS.phoneDisplay}</a>
+            {f.failCall} <a href={CONTACTS.phoneHref} className="font-bold underline">{CONTACTS.phoneDisplay}</a>
           </p>
         </div>
       )}

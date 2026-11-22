@@ -1,7 +1,9 @@
 import JsonLd from "./JsonLd";
+import { t } from "@/lib/i18n";
 
 // FAQ на <details>: без JS, з розміткою FAQPage.
-export default function Faq({ items, title = "Часті питання" }) {
+export default function Faq({ items, title, locale = "uk" }) {
+  title = title || t(locale).faq;
   return (
     <section className="bg-paper py-16 sm:py-20">
       <div className="container-site grid gap-8 lg:grid-cols-[1fr_2fr]">

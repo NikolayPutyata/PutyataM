@@ -1,5 +1,6 @@
 // Клієнтська логіка заявок: атрибуція (UTM), події для GTM/GA4, відправка, запасний канал.
 import { CONTACTS, LEAD_ENDPOINT } from "./site";
+import { t } from "./i18n";
 
 const ATTR_KEY = "weksar_attribution";
 const UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "fbclid"];
@@ -55,6 +56,7 @@ export async function sendLead({ name, phone, message, cta }) {
   const lines = [name, phone];
   if (message) lines.push(message);
   lines.push("", `Сторінка: ${pageLabel()}`);
+  if (window.location.pathname.startsWith("/en")) lines.push("Мова сайту: англійська");
   if (cta) lines.push(`Кнопка: ${cta}`);
   const source = attributionLine();
   if (source) lines.push(`Джерело: ${source}`);
@@ -76,12 +78,13 @@ export async function sendLead({ name, phone, message, cta }) {
   pushEvent("generate_lead", { form_page: window.location.pathname });
 }
 
-export function whatsappFallbackHref({ name, phone, message, cta }) {
-  const lines = ["Добрий день! Заявка з сайту weksar.com", `Ім'я: ${name}`, `Телефон: ${phone}`];
+export function whatsappFallbackHref({ name, phone, message, cta }, locale = "uk") {
+  const f = t(locale).form;
+  const lines = [f.waGreeting, `${f.waName}: ${name}`, `${f.waPhone}: ${phone}`];
   const h1 = document.querySelector("h1")?.textContent?.replace(/\s+/g, " ").trim();
-  if (window.location.pathname !== "/" && h1) lines.push(`Послуга: ${h1}`);
-  if (cta) lines.push(`Кнопка: ${cta}`);
-  if (message) lines.push(`Питання: ${message}`);
+  if (!["/", "/en"].includes(window.location.pathname) && h1) lines.push(`${f.waService}: ${h1}`);
+  if (cta) lines.push(`${f.waButton}: ${cta}`);
+  if (message) lines.push(`${f.waQuestion}: ${message}`);
   return `https://wa.me/${CONTACTS.whatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`;
 }
 

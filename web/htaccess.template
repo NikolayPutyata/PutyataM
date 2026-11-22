@@ -4,7 +4,7 @@
 # Якщо після заливки щось зламалося — видали .htaccess з кореня сайту через файловий менеджер.
 
 DirectorySlash Off
-ErrorDocument 404 /404.html
+ErrorDocument 404 /nenaideno.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On

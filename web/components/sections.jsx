@@ -1,9 +1,10 @@
 import Link from "next/link";
 import NeedsData from "./NeedsData";
+import { t } from "@/lib/i18n";
 
 // Блоки сторінок послуг. Кожен блок отримує дані з web/content/*.
 
-const Price = ({ value }) => (value ? <span className="price-chip">{value}</span> : <NeedsData>ціна</NeedsData>);
+const Price = ({ value, locale }) => (value ? <span className="price-chip">{value}</span> : <NeedsData locale={locale}>ціна</NeedsData>);
 
 function SectionHead({ eyebrow, title, intro }) {
   return (
@@ -16,7 +17,8 @@ function SectionHead({ eyebrow, title, intro }) {
 }
 
 // Картки (способи, варіанти, формати) з необовʼязковими строком, ціною і посиланням
-export function Cards({ eyebrow, title, intro, items, columns = 2 }) {
+export function Cards({ eyebrow, title, intro, items, columns = 2, locale = "uk" }) {
+  const d = t(locale);
   return (
     <section className="py-16 sm:py-20">
       <div className="container-site">
@@ -30,21 +32,21 @@ export function Cards({ eyebrow, title, intro, items, columns = 2 }) {
                 <dl className="mt-5 grid grid-cols-2 gap-3 border-t border-line pt-4 text-sm">
                   {m.term !== undefined && (
                     <div>
-                      <dt className="text-muted">Строк</dt>
-                      <dd className="mt-1 font-bold">{m.term || <NeedsData>строк</NeedsData>}</dd>
+                      <dt className="text-muted">{d.term}</dt>
+                      <dd className="mt-1 font-bold">{m.term || <NeedsData locale={locale}>строк</NeedsData>}</dd>
                     </div>
                   )}
                   {m.price !== undefined && (
                     <div>
-                      <dt className="text-muted">Ціна</dt>
-                      <dd className="mt-1"><Price value={m.price} /></dd>
+                      <dt className="text-muted">{d.price}</dt>
+                      <dd className="mt-1"><Price value={m.price} locale={locale} /></dd>
                     </div>
                   )}
                 </dl>
               )}
               {m.href && (
                 <Link href={m.href} className="mt-5 font-bold underline decoration-amber decoration-2 underline-offset-4">
-                  Докладніше
+                  {d.more}
                 </Link>
               )}
             </li>
@@ -76,7 +78,7 @@ export function Steps({ title, intro, items, tone = "mist" }) {
 }
 
 // Два стовпці: світлий список (що входить) + темна картка (складні випадки / ризики)
-export function Split({ left, right }) {
+export function Split({ left, right, locale = "uk" }) {
   return (
     <section className="py-16 sm:py-20">
       <div className="container-site grid gap-12 lg:grid-cols-2">
@@ -104,7 +106,7 @@ export function Split({ left, right }) {
               </li>
             ))}
           </ul>
-          <a href="#zaiavka" className="btn-primary mt-8">{right.cta || "Розібрати мою ситуацію"}</a>
+          <a href="#zaiavka" className="btn-primary mt-8">{right.cta || t(locale).sortOut}</a>
         </div>
       </div>
     </section>
@@ -112,7 +114,7 @@ export function Split({ left, right }) {
 }
 
 // Таблиця цін / форматів
-export function PriceList({ title, intro, items, note, tone = "mist" }) {
+export function PriceList({ title, intro, items, note, tone = "mist", locale = "uk" }) {
   return (
     <section className={`${tone === "mist" ? "bg-mist" : ""} py-16 sm:py-20`}>
       <div className="container-site grid gap-10 lg:grid-cols-[1fr_1.4fr]">
@@ -131,7 +133,7 @@ export function PriceList({ title, intro, items, note, tone = "mist" }) {
                   )}
                   {r.text && <span className="block text-sm text-muted">{r.text}</span>}
                 </dt>
-                <dd><Price value={r.price} /></dd>
+                <dd><Price value={r.price} locale={locale} /></dd>
               </div>
             ))}
           </dl>
@@ -194,7 +196,8 @@ export function Highlight({ label, text }) {
 }
 
 // Суміжні послуги (внутрішня перелінковка)
-export function Related({ title = "Суміжні послуги", items }) {
+export function Related({ title, items, locale = "uk" }) {
+  title = title || t(locale).related;
   return (
     <section className="border-t border-line py-14">
       <div className="container-site">

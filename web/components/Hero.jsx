@@ -1,9 +1,11 @@
 import Link from "next/link";
 import LeadForm from "./LeadForm";
 import { CONTACTS } from "@/lib/site";
+import { t } from "@/lib/i18n";
 
 // Темний перший екран: заголовок, факти або дві головні пропозиції, кнопки; на десктопі — форма праворуч.
-export default function Hero({ eyebrow, title, lead, slogan, facts = null, offers = null, note = "", top = null, cta = "" }) {
+export default function Hero({ eyebrow, title, lead, slogan, facts = null, offers = null, note = "", top = null, cta = "", locale = "uk" }) {
+  const d = t(locale);
   return (
     <section className="bg-graphite text-on-dark">
       <div className="container-site grid gap-10 pt-7 pb-12 sm:pt-12 lg:grid-cols-[1.25fr_1fr] lg:items-start lg:gap-14 lg:pb-20">
@@ -43,14 +45,14 @@ export default function Hero({ eyebrow, title, lead, slogan, facts = null, offer
           </dl>
           )}
           <div className="mt-7 flex flex-wrap gap-3">
-            <a href="#zaiavka" className="btn-primary">Отримати консультацію</a>
-            <a href={CONTACTS.messengers[0].href} target="_blank" rel="noreferrer" className="btn-ghost-dark">Написати в Telegram</a>
+            <a href="#zaiavka" className="btn-primary">{d.getConsult}</a>
+            <a href={CONTACTS.messengers[0].href} target="_blank" rel="noreferrer" className="btn-ghost-dark">{d.writeTelegram}</a>
           </div>
         </div>
         <div className="hidden rounded-[var(--radius-card)] border border-graphite-line bg-graphite-2 p-7 lg:block">
-          <p className="font-display text-lg font-semibold">Консультація щодо вашої ситуації</p>
-          <p className="mt-2 mb-5 text-sm text-on-dark-muted">У межах замовленої послуги — безкоштовно. Зателефонуємо найближчим часом.</p>
-          <LeadForm dark withMessage={false} cta={cta} />
+          <p className="font-display text-lg font-semibold">{d.heroFormTitle}</p>
+          <p className="mt-2 mb-5 text-sm text-on-dark-muted">{d.heroFormText}</p>
+          <LeadForm dark withMessage={false} cta={cta} locale={locale} />
         </div>
       </div>
     </section>

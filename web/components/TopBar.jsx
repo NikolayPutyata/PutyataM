@@ -1,4 +1,5 @@
 import { CONTACTS } from "@/lib/site";
+import LangSwitch from "./LangSwitch";
 
 export default function TopBar() {
   return (
@@ -15,6 +16,7 @@ export default function TopBar() {
               </a>
             </li>
           ))}
+          <li className="border-l border-graphite-line pl-4"><LangSwitch /></li>
         </ul>
       </div>
     </div>

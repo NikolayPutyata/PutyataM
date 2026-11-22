@@ -1,11 +1,13 @@
 import Link from "next/link";
 import JsonLd from "./JsonLd";
 import { SITE_URL } from "@/lib/site";
+import { t } from "@/lib/i18n";
 
-export default function Breadcrumbs({ items }) {
-  const all = [{ name: "Головна", href: "/" }, ...items];
+export default function Breadcrumbs({ items, locale = "uk" }) {
+  const d = t(locale);
+  const all = [{ name: d.homeLabel, href: d.home }, ...items];
   return (
-    <nav aria-label="Хлібні крихти" className="text-[0.8rem] text-on-dark-muted">
+    <nav aria-label={d.breadcrumbs} className="text-[0.8rem] text-on-dark-muted">
       <ol className="flex flex-wrap gap-1.5">
         {all.map((c, i) => (
           <li key={c.href} className="flex items-center gap-1.5">

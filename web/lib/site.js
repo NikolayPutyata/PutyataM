@@ -134,6 +134,22 @@ export const NAV = [
 ];
 
 
+// Англійська версія: навігація і факти
+export const NAV_EN = [
+  { name: "Company registration", href: "/en/company-registration-ukraine" },
+  { name: "LLC liquidation", href: "/en/llc-liquidation-ukraine" },
+  { name: "Tenders", href: "/en/tender-support-ukraine" },
+  { name: "Licenses", href: "/en/business-licenses-ukraine" },
+  { name: "Prices", href: "/en/prices" },
+  { name: "Contacts", href: "/en/contacts" },
+];
+
+export const FACTS_EN = {
+  experience: "10+ years",
+  area: "Kyiv and the Kyiv region",
+  slogan: "You are not a client. You are a Partner",
+};
+
 export const STATS = [
   { value: "1000+", label: "зареєстрованих ФОП" },
   { value: "100+", label: "відкритих підприємств" },

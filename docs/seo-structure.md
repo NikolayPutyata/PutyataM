@@ -338,26 +338,26 @@
 
 ## 6. Англійська версія (`/en/`)
 
-**Рекомендація:** не перекладати весь сайт. Робимо англійською лише сторінки, які потрібні іноземцям і компаніям з іноземними власниками. Гранти, закриття ФОП чи ліцензію на алкоголь для українського магазину англійською ніхто не шукає. Підтверди або розшир список.
+**Рішення Колі (22.11):** перекладаємо весь сайт.
 
-| URL | Запити | Title | H1 |
-|---|---|---|---|
-| `/en` | lawyer in kyiv, legal services kyiv | Weksar — Legal & Accounting Services in Kyiv, Ukraine | Legal Services for Business in Kyiv |
-| `/en/company-registration-ukraine` | company registration in ukraine, register company in ukraine, llc registration ukraine | Company Registration in Ukraine (LLC) \| Weksar | Company Registration in Ukraine |
-| `/en/llc-liquidation-ukraine` | liquidation of company in ukraine, close company in ukraine | LLC Liquidation in Ukraine — from UAH 12,000 \| Weksar | LLC Liquidation in Ukraine |
-| `/en/llc-changes-ukraine` | change director llc ukraine, change of shareholders | Changes to a Ukrainian LLC: Director, Shareholders \| Weksar | Corporate Changes for Ukrainian LLCs |
-| `/en/accounting-services-ukraine` | accounting services ukraine | Accounting Services in Ukraine for LLCs \| Weksar | Accounting Services in Ukraine |
-| `/en/tax-id-number-ukraine` | ukraine tax number for foreigners, ipn for foreigners | Ukrainian Tax ID Number (IPN) for Foreigners \| Weksar | Tax ID Number for Foreigners |
-| `/en/temporary-residence-permit-ukraine` | temporary residence permit ukraine | Temporary Residence Permit in Ukraine \| Weksar | Temporary Residence Permit in Ukraine |
-| `/en/work-permit-ukraine` | work permit in ukraine for foreigners | Work Permit in Ukraine for Foreigners \| Weksar | Work Permit in Ukraine |
-| `/en/certified-translation-kyiv` | notarized translation kyiv | Certified & Notarized Translation in Kyiv \| Weksar | Certified Translation in Kyiv |
-| `/en/contacts`, `/en/privacy-policy` | — | Contacts \| Weksar; Privacy Policy \| Weksar | — |
+**Зроблено (22.11):**
+- **Основа:** окремий кореневий шаблон з `lang="en"`, словник інтерфейсу (`web/lib/i18n.js`), перемикач UA/EN, hreflang uk/en/x-default для кожної пари сторінок (`web/lib/alternates.js`), англійські сторінки в sitemap.
+- **8 сторінок** (`web/content/en/pages.js`):
 
-- Технічно: `hreflang` uk / en / x-default (x-default → українська), перемикач мов лише між реальними версіями (замість нинішніх 7 прапорців).
-- Мовний закон: інтернет-представництва бізнесу в Україні мають бути державною мовою. Інші версії дозволені, українська вантажиться за замовчуванням і не може бути меншою за них. Наша схема цьому відповідає.
-- Description для англійських сторінок напишемо разом з текстами у Фазі 4.
+| UA | EN |
+|---|---|
+| `/` | `/en` |
+| `/reiestratsiia-tov` | `/en/company-registration-ukraine` |
+| `/likvidatsiia-tov` | `/en/llc-liquidation-ukraine` |
+| `/tendernyi-suprovid` | `/en/tender-support-ukraine` |
+| `/litsenzii` | `/en/business-licenses-ukraine` |
+| `/tsiny` | `/en/prices` |
+| `/kontakty` | `/en/contacts` |
+| `/polityka-konfidentsiinosti` | `/en/privacy-policy` |
 
----
+**Далі:** решта сторінок (підсторінки ліквідації, тендерів і ліцензій, зміни ТОВ, бухгалтерія, послуги для іноземців, «Про нас», блог). Нова пара додається так: сторінка в `web/content/en/pages.js` + пара в `web/lib/alternates.js`.
+
+- Мовний закон: українська версія основна і вантажиться за замовчуванням; англійська — додаткова. Схема відповідає вимогам.
 
 ## 7. Карта 301-редиректів (для Фази 5)
 
