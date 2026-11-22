@@ -1,9 +1,9 @@
 // Клієнтська логіка заявок: атрибуція (UTM), події для GTM/GA4, відправка, запасний канал.
-import { CONTACTS } from "./site";
+import { CONTACTS, LEAD_ENDPOINT } from "./site";
 
 const ATTR_KEY = "weksar_attribution";
 const UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "fbclid"];
-const ENDPOINT = process.env.NEXT_PUBLIC_LEAD_ENDPOINT || "";
+const ENDPOINT = LEAD_ENDPOINT;
 
 export function pushEvent(event, params = {}) {
   window.dataLayer = window.dataLayer || [];

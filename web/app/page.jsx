@@ -1,3 +1,4 @@
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import Faq from "@/components/Faq";
@@ -5,12 +6,11 @@ import LeadSection from "@/components/LeadSection";
 import JsonLd from "@/components/JsonLd";
 import { CATALOG, CONTACTS, FACTS, PRIMARY_SERVICES, SITE_URL, STATS, TOP_SERVICES } from "@/lib/site";
 
-export const metadata = {
-  title: { absolute: "Weksar — реєстрація і ліквідація ТОВ, тендери, ліцензії" },
+export const metadata = pageMeta({
+  title: "Weksar — реєстрація і ліквідація ТОВ, тендери, ліцензії",
   description:
     "Реєстрація ТОВ і ФОП, ліквідація ТОВ від 20 000 грн, тендерний супровід у Prozorro, ліцензії. Понад 10 років досвіду. Ціни на сайті.",
-  alternates: { canonical: "/" },
-};
+});
 
 const STEPS = [
   { t: "Заявка або дзвінок", d: "Залишаєте телефон на сайті або пишете в месенджер." },

@@ -3,6 +3,13 @@
 
 export const SITE_URL = "https://weksar.com";
 
+// Збірка за замовчуванням — продакшн (для заливки на weksar.com).
+// Для тестової копії, закритої від Google: NEXT_PUBLIC_SITE_ENV=staging.
+export const IS_PRODUCTION = process.env.NEXT_PUBLIC_SITE_ENV !== "staging";
+
+// Сервер заявок (можна перевизначити змінною NEXT_PUBLIC_LEAD_ENDPOINT).
+export const LEAD_ENDPOINT = process.env.NEXT_PUBLIC_LEAD_ENDPOINT || "https://unium-server-q8g7u.ondigitalocean.app/telegram/send";
+
 export const CONTACTS = {
   phoneDisplay: "+38 096 198 79 61",
   phoneHref: "tel:+380961987961",

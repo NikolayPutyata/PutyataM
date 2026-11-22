@@ -6,18 +6,17 @@ import Footer from "@/components/Footer";
 import MobileCtaBar from "@/components/MobileCtaBar";
 import Tracking from "@/components/Tracking";
 import Gtm from "@/components/Gtm";
-import { SITE_URL } from "@/lib/site";
+import { IS_PRODUCTION as isProduction, SITE_URL } from "@/lib/site";
 
-const isProduction = process.env.NEXT_PUBLIC_SITE_ENV === "production";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Weksar — ліквідація ТОВ і юридичні послуги в Києві",
   description:
     "Ліквідація і зміни ТОВ, ліцензії, реєстрація бізнесу, бухгалтерія, адвокат і переклади. Київ і область, понад 10 років досвіду. Ціни на сайті.",
-  // Поки сайт не на продакшні — закритий від індексації (ROADMAP, Фаза 5).
+  // Тестова збірка (NEXT_PUBLIC_SITE_ENV=staging) — закрита від індексації.
   robots: isProduction ? { index: true, follow: true } : { index: false, follow: false },
-  openGraph: { type: "website", locale: "uk_UA", siteName: "Weksar" },
+  openGraph: { type: "website", locale: "uk_UA", siteName: "Weksar", images: [{ url: "/og.png", width: 1200, height: 630 }] },
   formatDetection: { telephone: false },
 };
 
