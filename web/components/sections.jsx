@@ -112,9 +112,9 @@ export function Split({ left, right }) {
 }
 
 // Таблиця цін / форматів
-export function PriceList({ title, intro, items, note }) {
+export function PriceList({ title, intro, items, note, tone = "mist" }) {
   return (
-    <section className="bg-mist py-16 sm:py-20">
+    <section className={`${tone === "mist" ? "bg-mist" : ""} py-16 sm:py-20`}>
       <div className="container-site grid gap-10 lg:grid-cols-[1fr_1.4fr]">
         <div>
           <SectionHead title={title} intro={intro} />
@@ -124,7 +124,11 @@ export function PriceList({ title, intro, items, note }) {
             {items.map((r) => (
               <div key={r.name} className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 py-4">
                 <dt>
-                  <span className="font-semibold">{r.name}</span>
+                  {r.href ? (
+                    <Link href={r.href} className="font-semibold underline decoration-line decoration-2 underline-offset-4 hover:decoration-amber">{r.name}</Link>
+                  ) : (
+                    <span className="font-semibold">{r.name}</span>
+                  )}
                   {r.text && <span className="block text-sm text-muted">{r.text}</span>}
                 </dt>
                 <dd><Price value={r.price} /></dd>
@@ -209,6 +213,23 @@ export function Related({ title = "Суміжні послуги", items }) {
           ))}
         </ul>
       </div>
+    </section>
+  );
+}
+
+// Цифри (статистика) на темному тлі
+export function Stats({ items }) {
+  return (
+    <section className="bg-graphite py-14 text-on-dark">
+      <dl className="container-site grid grid-cols-2 gap-8 lg:grid-cols-4">
+        {items.map((s) => (
+          <div key={s.label}>
+            <dt className="sr-only">{s.label}</dt>
+            <dd className="font-display text-[2rem] font-bold text-amber tabular-nums sm:text-[2.6rem]">{s.value}</dd>
+            <dd className="mt-1 text-on-dark-muted">{s.label}</dd>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 }

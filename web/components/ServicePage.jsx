@@ -4,10 +4,10 @@ import Faq from "./Faq";
 import LeadSection from "./LeadSection";
 import JsonLd from "./JsonLd";
 import ContactsBlock from "./ContactsBlock";
-import { Audience, Cards, Highlight, PriceList, Prose, Related, Split, Steps } from "./sections";
+import { Audience, Cards, Highlight, PriceList, Prose, Related, Split, Stats, Steps } from "./sections";
 import { SITE_URL } from "@/lib/site";
 
-const BLOCKS = { cards: Cards, steps: Steps, split: Split, prices: PriceList, audience: Audience, prose: Prose, highlight: Highlight, related: Related, contacts: ContactsBlock };
+const BLOCKS = { cards: Cards, steps: Steps, split: Split, prices: PriceList, audience: Audience, prose: Prose, highlight: Highlight, related: Related, contacts: ContactsBlock, stats: Stats };
 
 const AREAS = {
   kyiv: [
