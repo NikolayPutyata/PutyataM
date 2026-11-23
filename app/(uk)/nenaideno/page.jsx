@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 
 // Сторінка для помилки 404 на хостингу: .htaccess → ErrorDocument 404 /nenaideno.html (статус 404 зберігається).
 export const metadata = { title: { absolute: "Сторінку не знайдено | Weksar" }, robots: { index: false, follow: true } };

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 import LeadForm from "./LeadForm";
 import { CONTACTS } from "@/lib/site";
 import { t } from "@/lib/i18n";

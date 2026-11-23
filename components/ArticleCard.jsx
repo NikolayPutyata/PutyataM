@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 import { t } from "@/lib/i18n";
 
 export const formatDate = (d, locale = "uk") => new Date(d).toLocaleDateString(t(locale).blog.dateLocale, { day: "numeric", month: "long", year: "numeric" });

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 import Logo from "./Logo";
 import { CATALOG, CATALOG_EN, CONTACTS, FACTS, FACTS_EN } from "@/lib/site";
 import { t } from "@/lib/i18n";

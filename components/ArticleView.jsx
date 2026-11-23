@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard, { formatDate } from "@/components/ArticleCard";
 import LeadSection from "@/components/LeadSection";

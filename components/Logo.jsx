@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 import { t } from "@/lib/i18n";
 
 // Ідея логотипа напряму C: WEKSAR шрифтом Unbounded, «W» бурштином.

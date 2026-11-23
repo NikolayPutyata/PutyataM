@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 import { CONTACTS } from "@/lib/site";
 import { sendLead, whatsappFallbackHref } from "@/lib/lead-client";
 import { t } from "@/lib/i18n";

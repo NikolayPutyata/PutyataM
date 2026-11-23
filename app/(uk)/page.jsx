@@ -1,5 +1,5 @@
 import { pageMeta } from "@/lib/seo";
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 import Hero from "@/components/Hero";
 import Faq from "@/components/Faq";
 import LeadSection from "@/components/LeadSection";

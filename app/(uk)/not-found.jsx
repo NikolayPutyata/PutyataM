@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 
 export const metadata = { title: { absolute: "Сторінку не знайдено | Weksar" }, robots: { index: false } };
 

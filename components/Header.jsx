@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
 import { NAV, NAV_EN } from "@/lib/site";
