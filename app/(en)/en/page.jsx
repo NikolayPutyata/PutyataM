@@ -14,10 +14,10 @@ export const metadata = pageMeta({
 });
 
 const OFFERS = [
-  { title: "Company registration", href: "/en/company-registration-ukraine", facts: ["LLC from UAH 2,500", "sole proprietor UAH 1,000"] },
-  { title: "LLC liquidation", href: "/en/llc-liquidation-ukraine", facts: ["from UAH 20,000", "from 2 days"] },
-  { title: "Tender support", href: "/en/tender-support-ukraine", facts: ["all of Ukraine", "from UAH 3,000"] },
-  { title: "Licenses", href: "/en/business-licenses-ukraine", facts: ["from UAH 9,000", "+ state fee"] },
+  { title: "Company registration", href: "/en/company-registration-ukraine", facts: ["LLC from UAH 2,500", "sole proprietor UAH 1,000"], price: "from UAH 1,000" },
+  { title: "LLC liquidation", href: "/en/llc-liquidation-ukraine", facts: ["from UAH 20,000", "from 2 days"], price: "from UAH 20,000" },
+  { title: "Tender support", href: "/en/tender-support-ukraine", facts: ["all of Ukraine", "from UAH 3,000"], price: "from UAH 3,000" },
+  { title: "Licenses", href: "/en/business-licenses-ukraine", facts: ["from UAH 9,000", "+ state fee"], price: "from UAH 9,000" },
 ];
 
 const WHY = [
@@ -71,7 +71,7 @@ export default function HomeEn() {
               </div>
             ))}
           </div>
-          <Link href="/en/prices" className="btn-ghost-light mt-10">All prices</Link>
+          <Link href="/en/prices" className="btn-ghost-light mt-10 w-full sm:w-auto">All prices</Link>
         </div>
       </section>
       <Faq items={FAQ} locale="en" />

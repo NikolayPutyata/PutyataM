@@ -26,9 +26,7 @@ export default function Hero({ eyebrow, title, lead, slogan, facts = null, offer
                       {o.title}
                       <span aria-hidden className="text-amber transition-transform group-hover:translate-x-1">→</span>
                     </span>
-                    <span className="mt-2 flex flex-col gap-0.5 text-[0.78rem] font-bold text-amber sm:flex-row sm:flex-wrap sm:gap-x-3 sm:text-sm">
-                      {o.facts.map((f) => <span key={f}>{f}</span>)}
-                    </span>
+                    <span className="mt-2 text-[0.78rem] font-bold text-amber tabular-nums sm:text-sm">{o.price}</span>
                   </Link>
                 </li>
               ))}
@@ -46,7 +44,7 @@ export default function Hero({ eyebrow, title, lead, slogan, facts = null, offer
             ))}
           </dl>
           )}
-          <div className="mt-7 flex flex-wrap gap-3">
+          <div className="mt-7 grid gap-3 sm:grid-cols-2">
             <a href="#zaiavka" className="btn-primary">{d.getConsult}</a>
             <a href={CONTACTS.messengers[0].href} target="_blank" rel="noreferrer" className="btn-ghost-dark">{d.writeTelegram}</a>
           </div>

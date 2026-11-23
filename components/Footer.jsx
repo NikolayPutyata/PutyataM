@@ -8,11 +8,11 @@ export default function Footer({ locale = "uk" }) {
   const groups = (locale === "en" ? CATALOG_EN : CATALOG).slice(0, 2);
   const slogan = locale === "en" ? FACTS_EN.slogan : FACTS.slogan;
   return (
-    <footer className="bg-graphite pb-24 text-on-dark md:pb-0">
+    <footer className="bg-graphite text-on-dark">
       <div className="container-site grid gap-10 py-12 md:grid-cols-[1.2fr_2fr]">
         <div className="space-y-4">
           <Logo locale={locale} />
-          <p className="max-w-xs text-sm text-on-dark-muted">{slogan}. {d.footerTagline}</p>
+          <p className="max-w-xs text-sm text-on-dark-muted">{slogan}</p>
           <a href={CONTACTS.phoneHref} className="block text-lg font-bold hover:text-amber">
             {CONTACTS.phoneDisplay}
           </a>

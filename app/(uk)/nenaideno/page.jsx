@@ -24,7 +24,7 @@ export default function NotFoundPage() {
             </li>
           ))}
         </ul>
-        <Link href="/" className="btn-primary mt-10">На головну</Link>
+        <Link href="/" className="btn-primary mt-10 w-full sm:w-auto">На головну</Link>
       </div>
     </section>
   );

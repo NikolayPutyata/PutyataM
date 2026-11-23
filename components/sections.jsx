@@ -106,7 +106,7 @@ export function Split({ left, right, locale = "uk" }) {
               </li>
             ))}
           </ul>
-          <a href="#zaiavka" className="btn-primary mt-8">{right.cta || t(locale).sortOut}</a>
+          <a href="#zaiavka" className="btn-primary mt-8 w-full sm:w-auto">{right.cta || t(locale).sortOut}</a>
         </div>
       </div>
     </section>

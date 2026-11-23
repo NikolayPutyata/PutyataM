@@ -3,13 +3,12 @@ import { fontVariables } from "../app/fonts";
 import TopBar from "./TopBar";
 import Header from "./Header";
 import Footer from "./Footer";
-import MobileCtaBar from "./MobileCtaBar";
 import Tracking from "./Tracking";
 import Gtm from "./Gtm";
 import { t } from "@/lib/i18n";
 import { IS_PRODUCTION, SITE_URL } from "@/lib/site";
 
-// Спільний кореневий шаблон для обох мов: <html lang>, шапка, футер, кнопки внизу, аналітика.
+// Спільний кореневий шаблон для обох мов: <html lang>, шапка, футер, аналітика.
 export const baseMetadata = (locale) => ({
   metadataBase: new URL(SITE_URL),
   // Тестова збірка (NEXT_PUBLIC_SITE_ENV=staging) — закрита від індексації.
@@ -32,7 +31,6 @@ export default function SiteShell({ locale, children }) {
         <Header locale={locale} />
         <main id="main">{children}</main>
         <Footer locale={locale} />
-        <MobileCtaBar locale={locale} />
         <Tracking />
         <Gtm />
       </body>

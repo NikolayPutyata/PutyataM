@@ -48,7 +48,7 @@ export default function HomePage() {
       <section className="py-16 sm:py-20">
         <div className="container-site">
           <p className="eyebrow text-amber-ink">Головні послуги</p>
-          <h2 className="h2 mt-3 max-w-2xl">Відкриваємо, закриваємо, ліцензуємо і виводимо на тендери</h2>
+          <h2 className="h2 mt-3 max-w-2xl">Відкриваємо, ліцензуємо і виводимо на тендери</h2>
           <ul className="mt-10 grid gap-4 md:grid-cols-2">
             {PRIMARY_SERVICES.map((s) => (
               <li key={s.href}>
@@ -103,7 +103,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <Link href="/tsiny" className="btn-ghost-light mt-10">Усі ціни</Link>
+          <Link href="/tsiny" className="btn-ghost-light mt-10 w-full sm:w-auto">Усі ціни</Link>
         </div>
       </section>
 
