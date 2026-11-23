@@ -24,7 +24,6 @@ const COMMON_STEPS = [
 ];
 
 const hero = (title, lead, extraFact = { value: "особисто", label: "супровід у нотаріуса" }) => ({
-  eyebrow: FACTS.area,
   title,
   lead,
   facts: [{ value: "4 000 грн", label: "ціна, від" }, extraFact, { value: FACTS.experience, label: "досвіду команди" }],
@@ -187,12 +186,11 @@ export const changesPages = {
   "zminy-fop": {
     meta: {
       title: "Внесення змін до ФОП: КВЕД, адреса — 1 000 ₴ | Weksar",
-      description: "Додавання і зміна КВЕД, адреси та інших даних ФОП у ЄДР, перехід між групами єдиного податку. 1 000 ₴. Київ і область.",
+      description: "Додавання і зміна КВЕД, адреси та інших даних ФОП у ЄДР, перехід між групами єдиного податку. 1 000 ₴. По всій Україні.",
     },
     breadcrumbs: [{ name: "Зміни ФОП", href: "/zminy-fop" }],
     cta: "Зміни ФОП",
     hero: {
-      eyebrow: FACTS.area,
       title: "Внесення змін до ФОП",
       lead: "Додаємо і змінюємо КВЕД, адресу та інші дані ФОП, допомагаємо з переходом на іншу групу єдиного податку.",
       facts: [{ value: "1 000 грн", label: "ціна" }, { value: "КВЕД", label: "адреса, група" }, { value: FACTS.experience, label: "досвіду команди" }],

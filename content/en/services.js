@@ -11,11 +11,11 @@ const R = {
   contracts: { name: "Contracts", href: "/en/contracts", price: "from UAH 2,000" },
   lawyer: { name: "Legal consultation", href: "/en/legal-consultation", price: "UAH 2,000/hour" },
   attorney: { name: "Attorney consultation", href: "/en/attorney-consultation", price: "from UAH 1,000" },
-  court: { name: "Attorney in court", href: "/en/litigation-attorney-kyiv", price: "from UAH 3,000" },
+  court: { name: "Attorney in court", href: "/en/litigation-attorney-ukraine", price: "from UAH 3,000" },
   notary: { name: "Notarization", href: "/en/notarization-kyiv", price: "from UAH 300" },
   notaryReg: { name: "Notary registration services", href: "/en/notary-registration-services", price: "from UAH 1,500" },
-  translation: { name: "Certified translation", href: "/en/certified-translation-kyiv", price: "from UAH 400" },
-  interpreter: { name: "Interpreter", href: "/en/interpreter-kyiv", price: "from UAH 500" },
+  translation: { name: "Certified translation", href: "/en/certified-translation-ukraine", price: "from UAH 400" },
+  interpreter: { name: "Interpreter", href: "/en/interpreter-ukraine", price: "from UAH 500" },
   foreigners: { name: "Services for foreigners", href: "/en/services-for-foreigners" },
   tm: { name: "Trademark registration", href: "/en/trademark-registration-ukraine", price: "UAH 4,000" },
   tender: { name: "Tender support", href: "/en/tender-support-ukraine", price: "from UAH 3,000" },
@@ -31,7 +31,7 @@ const R = {
   accLlc: { name: "Accounting for an LLC", href: "/en/accounting-services-ukraine/llc", price: "from UAH 6,000/month" },
 };
 
-const simple = ({ path, crumbs, metaTitle, description, title, eyebrow = FACTS_EN.area, lead, facts, included, why, extra = [], faq, related, leadTitle = "Tell us about your situation", serviceType, price, area = "kyiv" }) => ({
+const simple = ({ path, crumbs, metaTitle, description, title, eyebrow, lead, facts, included, why, extra = [], faq, related, leadTitle = "Tell us about your situation", serviceType, price, area }) => ({
   [path]: {
     meta: { title: metaTitle, description },
     breadcrumbs: crumbs || [{ name: title, href: `/${path}` }],
@@ -96,7 +96,7 @@ export const enServicePages = {
 
   ...simple({
     path: "en/legal-consultation",
-    metaTitle: "Legal Consultation in Kyiv — UAH 2,000/hour | Weksar",
+    metaTitle: "Legal Consultation in Ukraine — UAH 2,000/hour | Weksar",
     description: "One-to-one consultation with a lawyer on corporate, tax and contract matters in Ukraine: UAH 2,000 per hour. Free when you order a service.",
     title: "Legal Consultation",
     lead: "A personal consultation on business matters: registration, changes, liquidation, licenses, contracts and taxes. If you order a service, the consultation within it is free.",
@@ -110,8 +110,8 @@ export const enServicePages = {
   }),
 
   ...simple({
-    path: "en/litigation-attorney-kyiv",
-    metaTitle: "Litigation Attorney in Kyiv — from UAH 3,000 | Weksar",
+    path: "en/litigation-attorney-ukraine",
+    metaTitle: "Litigation Attorney in Ukraine — from UAH 3,000 | Weksar",
     description: "Representation of businesses and individuals in Ukrainian courts: claims, statements of defence, hearings. From UAH 3,000 per case.",
     title: "Representation in Court",
     lead: "An attorney — a partner of the association — represents you in civil, commercial and administrative courts, from the legal position to the judgment.",
@@ -126,8 +126,8 @@ export const enServicePages = {
 
   ...simple({
     path: "en/attorney-consultation",
-    metaTitle: "Attorney Consultation in Kyiv — from UAH 1,000 | Weksar",
-    description: "Consultation with an attorney in Kyiv: analysis of your situation, documents and prospects of the case, and an action plan. From UAH 1,000.",
+    metaTitle: "Attorney Consultation in Ukraine — from UAH 1,000 | Weksar",
+    description: "Consultation with an attorney in Ukraine: analysis of your situation, documents and prospects of the case, and an action plan. From UAH 1,000.",
     title: "Attorney Consultation",
     lead: "An attorney — a partner of the association — analyses your situation and documents, explains your rights and prospects and proposes an action plan.",
     facts: [{ value: "UAH 1,000", label: "price, from" }, { value: "attorney", label: "association partner" }, exp],
@@ -170,9 +170,9 @@ export const enServicePages = {
   }),
 
   ...simple({
-    path: "en/certified-translation-kyiv",
-    metaTitle: "Certified Translation in Kyiv — from UAH 400 | Weksar",
-    description: "Translation of documents with notarization in Kyiv: passports, diplomas, certificates, contracts. Notarized or apostilled. From UAH 400 per document.",
+    path: "en/certified-translation-ukraine",
+    metaTitle: "Certified Translation in Ukraine — from UAH 400 | Weksar",
+    description: "Translation of documents with notarization in Ukraine: passports, diplomas, certificates, contracts. Notarized or apostilled. From UAH 400 per document.",
     title: "Certified Translation of Documents",
     lead: "We translate documents and have the translation notarized or apostilled for use in Ukraine and abroad.",
     facts: [{ value: "UAH 400", label: "per document, from" }, { value: "notary", label: "or apostille" }, exp],
@@ -185,9 +185,9 @@ export const enServicePages = {
   }),
 
   ...simple({
-    path: "en/interpreter-kyiv",
-    metaTitle: "Interpreter in Kyiv — from UAH 500 | Weksar",
-    description: "Interpreter for negotiations, notary and registration procedures in Kyiv, plus written translations. From UAH 500 per hour or per document.",
+    path: "en/interpreter-ukraine",
+    metaTitle: "Interpreter in Ukraine — from UAH 500 | Weksar",
+    description: "Interpreter for negotiations, notary and registration procedures in Ukraine, plus written translations. From UAH 500 per hour or per document.",
     title: "Interpreter Services",
     lead: "An interpreter for negotiations, a visit to a notary or a state body, and written translations — on site or online.",
     facts: [{ value: "UAH 500", label: "per hour or document, from" }, { value: "on site", label: "or online" }, exp],
@@ -242,7 +242,6 @@ export const enServicePages = {
     breadcrumbs: [FOR],
     cta: "EN: Services for foreigners",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "Services for Foreigners in Ukraine",
       lead: "We help foreigners with documents in Ukraine: tax number, temporary residence permit, work permit, translations and company registration.",
       facts: [{ value: "UAH 2,000", label: "price, from" }, { value: "translator", label: "and notary at hand" }, exp],
@@ -269,7 +268,7 @@ export const enServicePages = {
     path: "en/services-for-foreigners/tax-number",
     crumbs: [FOR, { name: "Tax number (RNOKPP)", href: "/en/services-for-foreigners/tax-number" }],
     metaTitle: "Ukrainian Tax Number for Foreigners — UAH 2,000 | Weksar",
-    description: "Getting a Ukrainian tax number (RNOKPP, “IPN”) for a foreigner: documents, passport translation, filing with the tax service. UAH 2,000. Kyiv.",
+    description: "Getting a Ukrainian tax number (RNOKPP, “IPN”) for a foreigner: documents, passport translation, filing with the tax service. UAH 2,000. All of Ukraine.",
     title: "Tax Number (RNOKPP) for a Foreigner",
     lead: "We arrange the taxpayer registration number (RNOKPP, often called “IPN”) for a foreigner: documents, passport translation and filing with the tax service.",
     facts: [{ value: "UAH 2,000", label: "price" }, { value: "tax service", label: "filing" }, exp],
@@ -316,7 +315,7 @@ export const enServicePages = {
   "en/about": {
     meta: {
       title: "About Weksar — Partnership of Lawyers in Kyiv",
-      description: "Weksar is a partnership of lawyers, accountants and translators with 10+ years of experience; a notary and an attorney are partners. Kyiv and Ukraine.",
+      description: "Weksar is a partnership of lawyers, accountants and translators with 10+ years of experience; a notary and an attorney are partners. All of Ukraine.",
     },
     breadcrumbs: [{ name: "About us", href: "/en/about" }],
     cta: "EN: About",
@@ -345,7 +344,7 @@ export const enServicePages = {
         title: "How we work",
         paragraphs: [
           "We meet clients in person and accompany them to the notary. Our prices are public, and for LLC liquidation the quoted price covers everything.",
-          "We work with businesses in Kyiv and the Kyiv region; tender support and grants — across Ukraine.",
+          "Most services are available across Ukraine. LLC changes and liquidation are handled in Kyiv and the Kyiv region, where an in-person visit to the notary is required — and we accompany you in person.",
         ],
       },
     ],

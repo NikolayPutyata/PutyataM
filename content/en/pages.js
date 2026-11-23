@@ -16,7 +16,6 @@ export const enCorePages = {
     breadcrumbs: [{ name: "Company registration", href: "/en/company-registration-ukraine" }],
     cta: "EN: Company registration",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "Company Registration in Ukraine",
       lead: "We register Ukrainian limited liability companies (TOV) and sole proprietors (FOP) turnkey: business activity codes (KVED), tax system, charter, registration in the Unified State Register and tax registration.",
       facts: [{ value: "UAH 2,500", label: "LLC, from" }, { value: "UAH 1,000", label: "sole proprietor" }, exp],
@@ -71,7 +70,6 @@ export const enCorePages = {
     breadcrumbs: [{ name: "LLC liquidation", href: "/en/llc-liquidation-ukraine" }],
     cta: "EN: LLC liquidation",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "LLC Liquidation in Ukraine",
       lead: "We close Ukrainian limited liability companies (TOV) by any lawful method and quote a price that covers everything.",
       facts: [{ value: "UAH 20,000", label: "price, from" }, { value: "from 2 days", label: "to 2.5 months" }, exp],
@@ -167,7 +165,6 @@ export const enCorePages = {
     breadcrumbs: [{ name: "Licenses", href: "/en/business-licenses-ukraine" }],
     cta: "EN: Licenses",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "Business Licenses in Ukraine",
       lead: "We obtain and renew licenses for retail sale of alcohol, cider and perry, tobacco products, and construction licenses for CC2 and CC3 consequence class objects.",
       facts: [{ value: "UAH 9,000", label: "from, + state fee" }, { value: "turnkey", label: "documents and filing" }, exp],
@@ -200,7 +197,6 @@ export const enCorePages = {
     breadcrumbs: [{ name: "Prices", href: "/en/prices" }],
     cta: "EN: Prices",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "Prices",
       lead: "“From” prices are starting prices. We give the exact price after a short consultation, which is free when you order a service.",
       facts: [{ value: "UAH 1,000", label: "from" }, { value: "no extras", label: "for LLC liquidation" }, exp],
@@ -248,12 +244,12 @@ export const enCorePages = {
         row("Contracts", "/en/contracts", "from UAH 2,000"),
         row("Trademark registration", "/en/trademark-registration-ukraine", "UAH 4,000", "+ official fees"),
         row("Food facility registration", "/en/food-facility-registration-ukraine", "UAH 2,000"),
-        row("Attorney in court", "/en/litigation-attorney-kyiv", "from UAH 3,000"),
+        row("Attorney in court", "/en/litigation-attorney-ukraine", "from UAH 3,000"),
         row("Attorney consultation", "/en/attorney-consultation", "from UAH 1,000"),
         row("Notarization", "/en/notarization-kyiv", "from UAH 300"),
         row("Notary registration services", "/en/notary-registration-services", "from UAH 1,500"),
-        row("Certified translation", "/en/certified-translation-kyiv", "from UAH 400"),
-        row("Interpreter", "/en/interpreter-kyiv", "from UAH 500"),
+        row("Certified translation", "/en/certified-translation-ukraine", "from UAH 400"),
+        row("Interpreter", "/en/interpreter-ukraine", "from UAH 500"),
         row("“Own Business” grants", "/en/business-grants-ukraine", "UAH 10,000"),
         row("Tax number for a foreigner", "/en/services-for-foreigners/tax-number", "UAH 2,000"),
         row("Temporary residence permit", "/en/services-for-foreigners/temporary-residence-permit", "UAH 10,000"),
@@ -266,15 +262,14 @@ export const enCorePages = {
   "en/contacts": {
     meta: {
       title: "Contacts — Weksar, Legal Services in Kyiv",
-      description: "Phone, Telegram, WhatsApp and Viber. We meet clients in person in Kyiv and the Kyiv region; tender support across Ukraine.",
+      description: "Phone, Telegram, WhatsApp and Viber. We work across Ukraine and meet clients in person in Kyiv and the Kyiv region.",
     },
     breadcrumbs: [{ name: "Contacts", href: "/en/contacts" }],
     cta: "EN: Contacts",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "Contacts",
-      lead: "Call us or message us in your preferred messenger. We meet clients in person and accompany them to the notary. Tender support — across Ukraine.",
-      facts: [exp, { value: "Kyiv", label: "in-person meetings" }, { value: "Ukraine", label: "tender support" }],
+      lead: "Call us or message us in your preferred messenger. We work across Ukraine; in Kyiv and the Kyiv region we meet clients in person and accompany them to the notary.",
+      facts: [exp, { value: "Kyiv", label: "in-person meetings" }, { value: "Ukraine", label: "most services" }],
     },
     sections: [{ type: "contacts" }],
     lead: { title: "Or leave a request" },

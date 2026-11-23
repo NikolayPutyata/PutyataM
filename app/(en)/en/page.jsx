@@ -9,7 +9,7 @@ import { pageMeta } from "@/lib/seo";
 
 export const metadata = pageMeta({
   title: "Weksar — company registration and liquidation in Ukraine",
-  description: "LLC registration and liquidation in Kyiv, tender support across Ukraine, business licenses, accounting. 10+ years of experience. Prices on the website.",
+  description: "Company registration, tender support, licenses and accounting across Ukraine; LLC changes and liquidation in Kyiv. 10+ years of experience.",
   path: "en",
 });
 
@@ -22,7 +22,7 @@ const OFFERS = [
 
 const WHY = [
   { t: "10+ years of experience", d: "Every member of the team has extensive hands-on experience." },
-  { t: "Kyiv and the Kyiv region", d: "We meet clients in person and accompany them to the notary. Tender support — across Ukraine." },
+  { t: "All of Ukraine", d: "Most services — across Ukraine. In Kyiv and the Kyiv region we meet clients in person and accompany them to the notary for LLC changes and liquidation." },
   { t: "Open prices", d: "A “from” price for every service, right on the website." },
   { t: "One team", d: "Lawyers, accountants and translators; a notary and an attorney as partners." },
 ];
@@ -30,7 +30,7 @@ const WHY = [
 const FAQ = [
   { q: "Do you work with foreigners?", a: "Yes. We help foreign founders with company registration, tax numbers, residence and work permits, translations and notarization." },
   { q: "Is the consultation free?", a: "Yes, if you order a service — the consultation is included. A separate legal consultation costs UAH 2,000 per hour." },
-  { q: "Where do you work?", a: "Company services — for businesses in Kyiv and the Kyiv region, with in-person meetings. Tender support — across Ukraine." },
+  { q: "Where do you work?", a: "Most services — registration, licenses, tender support, accounting, contracts — across Ukraine. LLC changes and liquidation and notary services — in Kyiv and the Kyiv region, where an in-person visit to the notary is required." },
 ];
 
 export default function HomeEn() {

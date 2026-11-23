@@ -359,9 +359,9 @@
 | `/bukhhalteriia` (+ `/fop`, `/tov`, `/zvitnist`, `/kik`, `/rro-prro`, `/audyt-fop`) | `/en/accounting-services-ukraine` (+ `/sole-proprietor`, `/llc`, `/tax-reporting`, `/cfc-reporting`, `/cash-registers`, `/sole-proprietor-audit`) |
 | `/reiestratsiia-torhovelnoi-marky`, `/reiestratsiia-potuzhnostei` | `/en/trademark-registration-ukraine`, `/en/food-facility-registration-ukraine` |
 | `/dohovory`, `/konsultatsiia-yurysta` | `/en/contracts`, `/en/legal-consultation` |
-| `/advokat-u-sudi`, `/konsultatsiia-advokata` | `/en/litigation-attorney-kyiv`, `/en/attorney-consultation` |
+| `/advokat-u-sudi`, `/konsultatsiia-advokata` | `/en/litigation-attorney-ukraine`, `/en/attorney-consultation` |
 | `/notarialne-zasvidchennia-dokumentiv`, `/notarialni-reiestratsiini-dii` | `/en/notarization-kyiv`, `/en/notary-registration-services` |
-| `/pereklad-dokumentiv`, `/posluhy-perekladacha` | `/en/certified-translation-kyiv`, `/en/interpreter-kyiv` |
+| `/pereklad-dokumentiv`, `/posluhy-perekladacha` | `/en/certified-translation-ukraine`, `/en/interpreter-ukraine` |
 | `/hrant-vlasna-sprava`, `/hrant-dlia-veteraniv` | `/en/business-grants-ukraine`, `/en/veteran-business-grants-ukraine` |
 | `/inozemtsiam` (+ `/rnokpp`, `/posvidka`, `/dozvil-na-pratsevlashtuvannia`) | `/en/services-for-foreigners` (+ `/tax-number`, `/temporary-residence-permit`, `/work-permit`) |
 | `/tsiny`, `/kontakty`, `/pro-nas`, `/polityka-konfidentsiinosti` | `/en/prices`, `/en/contacts`, `/en/about`, `/en/privacy-policy` |

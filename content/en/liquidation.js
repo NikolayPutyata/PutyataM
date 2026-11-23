@@ -25,7 +25,6 @@ export const enLiquidationPages = {
     breadcrumbs: [LIQ, { name: "Change of owner", href: "/en/llc-liquidation-ukraine/change-of-owner" }],
     cta: "EN: Change of owner",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "“Alternative liquidation” through a change of owner",
       lead: "The fastest way to leave a company: your shares pass to a new owner, a new director is appointed and the changes are registered. From 2 days.",
       facts: [{ value: "UAH 20,000", label: "price, from" }, { value: "from 2 days", label: "timeline" }, { value: "turnkey", label: "no extras" }],
@@ -59,7 +58,6 @@ export const enLiquidationPages = {
     breadcrumbs: [LIQ, { name: "With debts and bankruptcy", href: "/en/llc-liquidation-ukraine/with-debts-bankruptcy" }],
     cta: "EN: Liquidation with debts",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "LLC Liquidation with Debts and Bankruptcy",
       lead: "Debts do not make closing a company impossible, but they change the procedure. We analyse whom and how much the company owes and choose a lawful way — from repayment to bankruptcy.",
       facts: [{ value: "UAH 25,000", label: "price, from" }, { value: "from 2 days", label: "to 2.5 months" }, { value: "turnkey", label: "no extras" }],
@@ -95,7 +93,6 @@ export const enLiquidationPages = {
     breadcrumbs: [LIQ, { name: "Reorganization", href: "/en/llc-reorganization-ukraine" }],
     cta: "EN: Reorganization",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "LLC Reorganization",
       lead: "Accession, merger, division, spin-off or transformation. We prepare the decisions and the transfer act and see the procedure through to registration.",
       facts: [{ value: "UAH 25,000", label: "price, from" }, { value: "2.5 months", label: "timeline" }, { value: "turnkey", label: "no extras" }],
@@ -134,7 +131,6 @@ export const enLiquidationPages = {
     breadcrumbs: [{ name: "Closing a sole proprietorship", href: "/en/close-sole-proprietorship-ukraine" }],
     cta: "EN: Closing FOP",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "Closing a Sole Proprietorship (FOP)",
       lead: "We terminate the business activity of a Ukrainian sole proprietor turnkey: application, final reporting, reconciliation with the tax office. For all single tax groups and the general system.",
       facts: [{ value: "UAH 3,500", label: "price" }, { value: "3 days", label: "timeline" }, exp],
@@ -160,7 +156,6 @@ export const enLiquidationPages = {
     breadcrumbs: [{ name: "Sole proprietor registration", href: "/en/sole-proprietor-registration-ukraine" }],
     cta: "EN: FOP registration",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "Sole Proprietor (FOP) Registration",
       lead: "We register a Ukrainian sole proprietor turnkey: activity codes, single tax group, registration and an explanation of upcoming reports and payments.",
       facts: [{ value: "UAH 1,000", label: "price" }, { value: "groups 1–3", label: "or general system" }, exp],

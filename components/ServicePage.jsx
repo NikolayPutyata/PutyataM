@@ -6,7 +6,7 @@ import JsonLd from "./JsonLd";
 import ContactsBlock from "./ContactsBlock";
 import ArticlesBlock from "./ArticlesBlock";
 import { Audience, Cards, Highlight, PriceList, Prose, Related, Split, Stats, Steps } from "./sections";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, areaLabel, isKyivOnly } from "@/lib/site";
 
 const BLOCKS = { cards: Cards, steps: Steps, split: Split, prices: PriceList, audience: Audience, prose: Prose, highlight: Highlight, related: Related, contacts: ContactsBlock, stats: Stats };
 
@@ -29,7 +29,7 @@ export default function ServicePage({ page }) {
   const locale = page.locale || "uk";
   return (
     <>
-      <Hero top={<Breadcrumbs items={crumbs} locale={locale} />} cta={page.cta} locale={locale} {...page.hero} />
+      <Hero top={<Breadcrumbs items={crumbs} locale={locale} />} cta={page.cta} locale={locale} {...page.hero} eyebrow={page.hero.eyebrow ?? areaLabel(page.path, locale)} />
       {page.sections.map((s, i) => {
         const Block = BLOCKS[s.type];
         return <Block key={i} locale={locale} {...s} />;
@@ -45,7 +45,7 @@ export default function ServicePage({ page }) {
             name: page.schema.name,
             serviceType: page.schema.serviceType,
             url: `${SITE_URL}/${page.path}`,
-            areaServed: AREAS[`${page.schema.area || "kyiv"}${locale === "en" ? "_en" : ""}`],
+            areaServed: AREAS[`${page.schema.area || (isKyivOnly(page.path) ? "kyiv" : "ukraine")}${locale === "en" ? "_en" : ""}`],
             provider: { "@type": "LegalService", name: "Weksar", url: SITE_URL },
             ...(page.schema.price && { offers: { "@type": "Offer", priceCurrency: "UAH", price: page.schema.price } }),
           }}

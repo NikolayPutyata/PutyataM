@@ -3,7 +3,7 @@ import SiteShell, { baseMetadata, viewport as shellViewport } from "@/components
 export const metadata = {
   ...baseMetadata("en"),
   title: "Weksar — company registration, liquidation and tenders in Ukraine",
-  description: "Company registration and LLC liquidation in Kyiv, tender support across Ukraine, business licenses. 10+ years of experience.",
+  description: "Company registration, tender support, licenses and accounting across Ukraine; LLC changes and liquidation in Kyiv. 10+ years of experience.",
 };
 
 export const viewport = shellViewport;

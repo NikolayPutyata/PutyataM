@@ -88,13 +88,12 @@ export const enTenderLicensePages = {
 
   "en/business-licenses-ukraine/alcohol": {
     meta: {
-      title: "Alcohol License in Kyiv, Ukraine | Weksar",
+      title: "Alcohol License in Ukraine for FOPs and LLCs | Weksar",
       description: "Retail alcohol license for sole proprietors and LLCs in Ukraine: UAH 12,000 + state fee; cider and perry — UAH 9,000 + state fee. Renewal UAH 2,000.",
     },
     breadcrumbs: [LIC, { name: "Alcohol", href: "/en/business-licenses-ukraine/alcohol" }],
     cta: "EN: Alcohol license",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "Retail Alcohol License",
       lead: "For shops, cafes and restaurants — sole proprietors and LLCs. We check activity codes, the cash register and the point of sale, prepare documents and obtain the license.",
       facts: [{ value: "UAH 12,000", label: "+ state fee" }, { value: "UAH 9,000", label: "cider and perry" }, { value: "UAH 2,000", label: "renewal" }],
@@ -119,13 +118,12 @@ export const enTenderLicensePages = {
 
   "en/business-licenses-ukraine/tobacco": {
     meta: {
-      title: "Tobacco License in Kyiv, Ukraine | Weksar",
+      title: "Tobacco License in Ukraine for FOPs and LLCs | Weksar",
       description: "Retail tobacco license in Ukraine: documents, cash register, filing with the tax authority. UAH 10,000 + state fee; renewal UAH 2,000.",
     },
     breadcrumbs: [LIC, { name: "Tobacco", href: "/en/business-licenses-ukraine/tobacco" }],
     cta: "EN: Tobacco license",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "Retail Tobacco License",
       lead: "For shops and kiosks — sole proprietors and LLCs. We check activity codes, the cash register and the point of sale, prepare documents and obtain the license.",
       facts: [{ value: "UAH 10,000", label: "+ state fee" }, { value: "UAH 2,000", label: "renewal" }, exp],
@@ -155,7 +153,6 @@ export const enTenderLicensePages = {
     breadcrumbs: [LIC, { name: "Construction", href: "/en/business-licenses-ukraine/construction" }],
     cta: "EN: Construction license",
     hero: {
-      eyebrow: FACTS_EN.area,
       title: "Construction License (CC2, CC3)",
       lead: "We obtain construction licenses for medium (CC2) and significant (CC3) consequence class objects and amend existing licenses — for example, to add types of work.",
       facts: [{ value: "UAH 15,000", label: "+ state fee" }, { value: "UAH 4,000", label: "amendments" }, exp],

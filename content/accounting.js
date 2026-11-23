@@ -20,7 +20,7 @@ const page = ({ path, name, metaTitle, description, title, lead, facts, sections
     meta: { title: metaTitle, description },
     breadcrumbs: [HUB, { name, href: `/${path}` }],
     cta: title,
-    hero: { eyebrow: FACTS.area, title, lead, facts },
+    hero: { title, lead, facts },
     sections: [...sections, { type: "related", items: others(`/${path}`) }],
     faq,
     lead: { title: "Розкажіть про ваш бізнес" },
@@ -31,13 +31,12 @@ const page = ({ path, name, metaTitle, description, title, lead, facts, sections
 export const accountingPages = {
   bukhhalteriia: {
     meta: {
-      title: "Бухгалтерські послуги в Києві для ФОП і ТОВ | Weksar",
-      description: "Ведення обліку ФОП і ТОВ, подання звітності, КІК, РРО і ПРРО, аудит ФОП. Ціни від 1 000 грн. Київ і область.",
+      title: "Бухгалтерські послуги для ФОП і ТОВ | Weksar",
+      description: "Ведення обліку ФОП і ТОВ, подання звітності, КІК, РРО і ПРРО, аудит ФОП. Ціни від 1 000 грн. По всій Україні.",
     },
     breadcrumbs: [HUB],
     cta: "Бухгалтерія",
     hero: {
-      eyebrow: FACTS.area,
       title: "Бухгалтерські послуги для ФОП і ТОВ",
       lead: "Ведемо облік, подаємо звітність, реєструємо РРО і ПРРО, готуємо звітність КІК і перевіряємо облік ФОП до перевірки податкової.",
       facts: [{ value: "1 000 грн", label: "ціна, від" }, { value: "ФОП і ТОВ", label: "будь-яка система" }, { value: FACTS.experience, label: "досвіду команди" }],
@@ -75,7 +74,7 @@ export const accountingPages = {
     path: "bukhhalteriia/tov",
     name: "Бухгалтерія ТОВ",
     metaTitle: "Бухгалтерський супровід ТОВ — від 6 000 ₴/міс | Weksar",
-    description: "Ведення бухгалтерії ТОВ: облік, звітність, зарплата, ПДВ, взаємодія з податковою. Від 6 000 грн на місяць. Київ і область.",
+    description: "Ведення бухгалтерії ТОВ: облік, звітність, зарплата, ПДВ, взаємодія з податковою. Від 6 000 грн на місяць. По всій Україні.",
     title: "Бухгалтерський супровід ТОВ",
     lead: "Повний фінансовий і податковий облік ТОВ: первинні документи, звітність, зарплата, ПДВ і відповіді податковій.",
     facts: [{ value: "6 000 грн", label: "на місяць, від" }, { value: "ПДВ", label: "єдиний податок, загальна" }, { value: FACTS.experience, label: "досвіду команди" }],
